@@ -1,0 +1,29 @@
+---
+interface Props {
+  variant?: 'primary' | 'secondary' | 'warm';
+  href?: string;
+  class?: string;
+}
+
+const { variant = 'primary', href, class: className } = Astro.props;
+
+const baseStyles = 'inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer';
+
+const variantStyles = {
+  primary: 'bg-shoreline text-white hover:bg-deep-sea',
+  secondary: 'bg-transparent text-shoreline border-2 border-shoreline hover:bg-shoreline hover:text-white',
+  warm: 'bg-sunrise text-white hover:brightness-110',
+};
+
+const classes = `${baseStyles} ${variantStyles[variant]} ${className || ''}`.trim();
+---
+
+{href ? (
+  <a href={href} class={classes}>
+    <slot />
+  </a>
+) : (
+  <button class={classes}>
+    <slot />
+  </button>
+)}

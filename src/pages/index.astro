@@ -1,11 +1,167 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20"
+    style="background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <!-- Subtle texture overlay -->
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-7xl font-medium mb-6 leading-tight">
+        Shoreline Scholars
+      </h1>
+      <p class="font-body font-light text-shell-white/90 text-lg md:text-xl tracking-wide mb-10 max-w-xl mx-auto">
+        Where curiosity meets the coastline
+      </p>
+      <Button variant="secondary" href="#about">
+        <span class="text-shell-white border-shell-white hover:bg-shell-white/10">Learn More</span>
+      </Button>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="rgba(250,247,242,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Learning Without Walls</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto mb-8"></div>
+        <p class="text-lg leading-relaxed max-w-2xl mx-auto">
+          A relational, hands-on learning community designed to support the whole-child
+          development of homeschooled students in Indialantic, Florida. Our approach
+          integrates nature-based exploration, academic enrichment, and trauma-informed
+          care in a beachside setting.
+        </p>
+      </div>
+
+      <!-- Brand Pillars -->
+      <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <div class="bg-warm-sand/20 rounded-xl p-8">
+          <h3 class="font-heading text-deep-sea text-xl mb-3">Grounded Expertise</h3>
+          <p class="text-sm leading-relaxed">
+            Rachel's doctorate and Chi's 20 years of teaching — the brand carries
+            quiet authority. Clinical knowledge meets real-world classroom wisdom.
+          </p>
+        </div>
+        <div class="bg-warm-sand/20 rounded-xl p-8">
+          <h3 class="font-heading text-deep-sea text-xl mb-3">Nature as Classroom</h3>
+          <p class="text-sm leading-relaxed">
+            Beach, ocean, sand, sunlight — learning happens outdoors, in the real
+            world. The Indialantic shoreline is both our campus and our curriculum.
+          </p>
+        </div>
+        <div class="bg-warm-sand/20 rounded-xl p-8">
+          <h3 class="font-heading text-deep-sea text-xl mb-3">Whole-Child Care</h3>
+          <p class="text-sm leading-relaxed">
+            Trauma-informed, attachment-focused, social-emotional — not just academics.
+            We nurture the complete child: mind, body, and heart.
+          </p>
+        </div>
+        <div class="bg-warm-sand/20 rounded-xl p-8">
+          <h3 class="font-heading text-deep-sea text-xl mb-3">Community</h3>
+          <p class="text-sm leading-relaxed">
+            Homeschool families supporting each other — this is a village, not a
+            service. Connection is at the heart of everything we do.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEAM ═══ -->
+  <section id="team" class="bg-warm-sand/15 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Meet the Founders</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Rachel -->
+        <div class="bg-warm-sand/40 rounded-2xl p-10 text-center">
+          <div class="w-24 h-24 rounded-full bg-deep-sea/10 mx-auto mb-6 flex items-center justify-center">
+            <span class="font-heading text-deep-sea text-3xl font-medium">RG</span>
+          </div>
+          <h3 class="font-heading text-deep-sea text-2xl mb-1">Rachel Glover</h3>
+          <p class="text-shoreline font-body font-medium text-sm uppercase tracking-wider mb-4">
+            Founder &amp; Executive Director
+          </p>
+          <div class="w-10 h-px bg-driftwood mx-auto mb-4"></div>
+          <p class="text-sm leading-relaxed">
+            NCC, LMHC with a Doctorate in Developmental Psychology. Rachel brings
+            clinical depth and a trauma-informed lens to every aspect of the program,
+            ensuring each child feels seen and supported.
+          </p>
+        </div>
+
+        <!-- Chi -->
+        <div class="bg-warm-sand/40 rounded-2xl p-10 text-center">
+          <div class="w-24 h-24 rounded-full bg-deep-sea/10 mx-auto mb-6 flex items-center justify-center">
+            <span class="font-heading text-deep-sea text-3xl font-medium">CR</span>
+          </div>
+          <h3 class="font-heading text-deep-sea text-2xl mb-1">Chi Reece</h3>
+          <p class="text-shoreline font-body font-medium text-sm uppercase tracking-wider mb-4">
+            Founder &amp; Program Director
+          </p>
+          <div class="w-10 h-px bg-driftwood mx-auto mb-4"></div>
+          <p class="text-sm leading-relaxed">
+            B.S. in Chemistry &amp; Mathematics with 20 years of teaching experience
+            and a Certified Yoga Instructor. Chi weaves academic rigor with
+            mindfulness and movement into every learning experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT / CTA ═══ -->
+  <section id="contact" class="bg-deep-sea py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
+        Ready to explore?
+      </h2>
+      <p class="text-shell-white/80 text-lg font-light leading-relaxed mb-10 max-w-xl mx-auto">
+        We'd love to hear from you. Whether you're curious about our program, want
+        to visit, or are ready to enroll — reach out and let's start the conversation.
+      </p>
+      <Button variant="warm" href="mailto:hello@shorelinescholars.org">
+        Get in Touch
+      </Button>
+    </div>
+  </section>
+
+  <Footer />
 </Layout>
+
+<style>
+  /* Hero button override for the outlined-on-dark style */
+  section:first-of-type :global(a) {
+    border-color: rgba(250, 247, 242, 0.6);
+    color: #FAF7F2;
+    background: transparent;
+  }
+  section:first-of-type :global(a:hover) {
+    background: rgba(250, 247, 242, 0.12);
+    border-color: #FAF7F2;
+    color: #FAF7F2;
+  }
+  section:first-of-type :global(a span) {
+    color: inherit;
+  }
+</style>

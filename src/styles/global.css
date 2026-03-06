@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* ─── Brand Color Variables ─── */
+@theme {
+  --color-deep-sea: #1B4F52;
+  --color-shoreline: #2A7F62;
+  --color-sea-glass: #5AAFA6;
+  --color-warm-sand: #E8D5B7;
+  --color-driftwood: #B8977E;
+  --color-shell-white: #FAF7F2;
+  --color-sunrise: #E8956D;
+
+  /* Font families */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Raleway', system-ui, sans-serif;
+}
+
+/* ─── Base Styles ─── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-shell-white);
+    color: #4A5859;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Typography scale from brand guide */
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-deep-sea);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--color-shoreline);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-sea-glass);
+  }
+}
