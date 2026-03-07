@@ -1,16 +1,17 @@
 ---
 const navLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'About', href: '#about' },
-  { label: 'Team', href: '#team' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Our Vision', href: '/vision' },
+  { label: 'About', href: '/#about' },
+  { label: 'Team', href: '/#team' },
+  { label: 'Contact', href: '/#contact' },
 ];
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-shell-white/95 backdrop-blur-sm border-b border-warm-sand/30">
   <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo + Wordmark -->
-    <a href="#" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
+    <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
       <img src="/logo.png" alt="" class="h-8 md:h-9 w-auto" />
       <span class="font-heading text-deep-sea text-2xl md:text-[1.7rem] font-bold tracking-wide">Shoreline Scholars</span>
     </a>
@@ -65,5 +66,34 @@ const navLinks = [
   const menu = document.getElementById('mobile-menu');
   btn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
+  });
+
+  // Smooth scroll for same-page navigation
+  document.querySelectorAll('header a[href]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+
+      if (!isHomePage) return; // Let normal navigation happen on other pages
+
+      // "Home" link — scroll to top
+      if (href === '/') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        menu?.classList.add('hidden');
+        return;
+      }
+
+      // Anchor links like /#about, /#team, /#contact
+      if (href?.startsWith('/#')) {
+        const targetId = href.slice(2); // remove "/#"
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          menu?.classList.add('hidden');
+        }
+      }
+    });
   });
 </script>

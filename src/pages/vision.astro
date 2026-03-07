@@ -1,0 +1,370 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Our Vision — Shoreline Scholars" description="A week in the life of a Shoreline Scholar. Discover our integrated educational ecosystem blending academics, nature, creativity, and real-world skills.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Our Vision</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        A week in the life of a Shoreline Scholar
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ INTRODUCTION ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-[0.95rem] leading-relaxed">
+        Shoreline Scholars is building a learning community where academics, nature,
+        creativity, and real-world skills work together — not in isolation. Our educational
+        ecosystem integrates eight pillars: academics, outdoor learning, creative arts,
+        social-emotional growth, entrepreneurship, trade skills, financial literacy, and
+        life skills. Every day touches multiple pillars. Every week tells a complete story.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ A WEEK AT SHORELINE SCHOLARS ═══ -->
+  <section class="bg-warm-sand/15 py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">A Week at Shoreline Scholars</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="flex flex-col gap-8">
+        <!-- Monday & Wednesday -->
+        <div class="bg-shell-white rounded-2xl p-8 md:p-10">
+          <p class="font-body font-medium text-shoreline text-xs uppercase tracking-widest mb-2">Ages 9–12</p>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-1">Monday &amp; Wednesday</h3>
+          <p class="text-driftwood font-body font-medium text-xs tracking-wide mb-6">9:00 AM – 2:00 PM &nbsp;·&nbsp; Full Day Program</p>
+          <p class="text-[0.95rem] leading-relaxed">
+            The day begins outdoors with gardening and gentle movement before shifting into
+            focused academic blocks — math, science, reading and writing, and geography. After
+            lunch outside, the afternoon opens into self-directed projects and individual
+            tutoring, where students pursue their own curiosities with guidance from their
+            advisor. The day closes with a community meeting.
+          </p>
+        </div>
+
+        <!-- Tuesday & Thursday -->
+        <div class="bg-shell-white rounded-2xl p-8 md:p-10">
+          <p class="font-body font-medium text-shoreline text-xs uppercase tracking-widest mb-2">Ages 5–8</p>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-1">Tuesday &amp; Thursday</h3>
+          <p class="text-driftwood font-body font-medium text-xs tracking-wide mb-6">Morning: 9:00–11:30 AM &nbsp;·&nbsp; Afternoon: 11:30 AM–2:00 PM</p>
+          <p class="text-[0.95rem] leading-relaxed">
+            Two sessions designed for younger learners. Each session blends guided play,
+            gentle stretching, hands-on science projects, and early reading and writing — all
+            in shorter, age-appropriate blocks that honor how young children learn best.
+            Families choose the morning session, the afternoon session, or both.
+          </p>
+        </div>
+
+        <!-- Friday -->
+        <div class="bg-shell-white rounded-2xl p-8 md:p-10">
+          <p class="font-body font-medium text-shoreline text-xs uppercase tracking-widest mb-2">All Ages 5–12</p>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-1">Friday</h3>
+          <p class="text-driftwood font-body font-medium text-xs tracking-wide mb-6">9:00 AM – 2:00 PM &nbsp;·&nbsp; Available with 3-day program</p>
+          <p class="text-[0.95rem] leading-relaxed">
+            Friday is the heartbeat of the week. The morning starts on the beach with surfing
+            or somatic movement, followed by community service like beach cleanup. After lunch,
+            students return to the center for animal science, entrepreneurship, and collaborative
+            time — older kids reading to younger kids, sessions with therapy dogs, and
+            self-directed projects. It's the day that ties everything together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DETAILED SCHEDULES ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Detailed Daily Schedules</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="flex flex-col" style="gap: 1.25rem;">
+        <!-- Panel 1: Mon/Wed -->
+        <details class="group accordion-panel">
+          <summary class="accordion-summary">
+            <div>
+              <h3 class="font-heading text-deep-sea text-xl md:text-[1.5rem] font-semibold">Monday &amp; Wednesday</h3>
+              <p class="text-driftwood font-body font-medium text-xs tracking-wide mt-1">Ages 9–12 &nbsp;·&nbsp; 9:00 AM – 2:00 PM</p>
+            </div>
+            <span class="accordion-chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            <div class="schedule-grid">
+              <div class="schedule-row"><span class="schedule-time">9:00 AM</span><span>Morning meeting and check-in with advisor</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Gardening and gentle exercise outside (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:40 AM</span><span>Academic Lesson 1: Math (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:15 AM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:20 AM</span><span>Academic Lesson 2: Science (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:55 AM</span><span>Lunch outside (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Academic Lesson 3: Reading &amp; Writing (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:05 PM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:10 PM</span><span>Academic Lesson 4: Geography (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:45 PM</span><span>Self-projects / Individual tutoring with guidance (1 hr)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:45 PM</span><span>Clean up and end-of-day meeting</span></div>
+              <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Panel 2: Tue/Thu Morning -->
+        <details class="group accordion-panel">
+          <summary class="accordion-summary">
+            <div>
+              <h3 class="font-heading text-deep-sea text-xl md:text-[1.5rem] font-semibold">Tuesday &amp; Thursday Morning</h3>
+              <p class="text-driftwood font-body font-medium text-xs tracking-wide mt-1">Ages 5–8 &nbsp;·&nbsp; 9:00–11:30 AM</p>
+            </div>
+            <span class="accordion-chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            <div class="schedule-grid">
+              <div class="schedule-row"><span class="schedule-time">9:00 AM</span><span>Morning meeting and check-in with advisor</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Gentle stretching exercises and guided play (40 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:50 AM</span><span>Academic Lesson 1: Science with hands-on projects (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:20 AM</span><span>Rest and play (10 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Academic Lesson 2: Reading &amp; Writing (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch and play outside (25 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:25 AM</span><span>Closing circle (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Dismissal and pick-up</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Panel 3: Tue/Thu Afternoon -->
+        <details class="group accordion-panel">
+          <summary class="accordion-summary">
+            <div>
+              <h3 class="font-heading text-deep-sea text-xl md:text-[1.5rem] font-semibold">Tuesday &amp; Thursday Afternoon</h3>
+              <p class="text-driftwood font-body font-medium text-xs tracking-wide mt-1">Ages 5–8 &nbsp;·&nbsp; 11:30 AM–2:00 PM</p>
+            </div>
+            <span class="accordion-chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            <div class="schedule-grid">
+              <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Greeting, meet with advisor, and lunch outside (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Science with hands-on projects (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:30 PM</span><span>Rest and play (10 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:40 PM</span><span>Academic Lesson 2: Reading &amp; Writing (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:10 PM</span><span>Gentle stretching exercises and guided play (40 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:50 PM</span><span>Closing circle (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Panel 4: Friday -->
+        <details class="group accordion-panel">
+          <summary class="accordion-summary">
+            <div>
+              <h3 class="font-heading text-deep-sea text-xl md:text-[1.5rem] font-semibold">Friday — All Ages</h3>
+              <p class="text-driftwood font-body font-medium text-xs tracking-wide mt-1">Ages 5–12 &nbsp;·&nbsp; 9:00 AM – 2:00 PM</p>
+            </div>
+            <span class="accordion-chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            <div class="schedule-grid">
+              <div class="schedule-row"><span class="schedule-time">9:00 AM</span><span>Meeting on the beach, greeting</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Surfing (if available) or somatic exercises (80 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Community service: beach cleanup (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch and clean-up (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:45 AM</span><span>Return to center</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Animal Science (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:35 PM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:40 PM</span><span>Academic Lesson 2: Entrepreneurship (35 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:15 PM</span><span>Self-projects / Older kids read to younger kids / Reading with therapy dogs / Individual tutoring (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:45 PM</span><span>Clean up and end-of-day meeting</span></div>
+              <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATIONAL ECOSYSTEM ═══ -->
+  <section class="bg-warm-sand/15 py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">The Educational Ecosystem</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="flex justify-center mb-16">
+        <img src="/ecosystem.png" alt="Shoreline Scholars Educational Ecosystem — eight interconnected pillars: Academics, Outdoor Learning, Creative Arts, Social-Emotional Growth, Entrepreneurship, Trade Skills, Financial Literacy, and Life Skills" class="w-full max-w-md" />
+      </div>
+
+      <p class="text-[0.95rem] leading-relaxed text-center max-w-2xl mx-auto">
+        Each pillar of the Shoreline Scholars Educational Ecosystem strengthens the others.
+        A Friday morning spent cleaning the beach is outdoor learning, community service,
+        and environmental science in one activity. A Wednesday afternoon self-project might
+        combine entrepreneurship, creative arts, and financial literacy. This isn't a
+        checklist — it's how learning naturally works when you stop separating it into boxes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-deep-sea py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
+        Be Part of the Journey
+      </h2>
+      <p class="text-shell-white/80 text-[0.95rem] font-light leading-relaxed mb-10 max-w-xl mx-auto">
+        We're building something special in Indialantic. Whether you're a family looking
+        to enroll, a community member who wants to volunteer, or a supporter who believes
+        in our mission — we'd love to hear from you.
+      </p>
+      <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
+        <Button variant="primary" href="mailto:shorelinescholars@gmail.com">Enroll</Button>
+        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate</Button>
+        <Button variant="secondary" href="mailto:shorelinescholars@gmail.com">
+          <span class="text-shell-white border-shell-white">Get in Touch</span>
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* CTA button overrides for dark background */
+  section:last-of-type :global(.bg-shoreline) {
+    /* primary stays as-is */
+  }
+  section:last-of-type :global(.bg-transparent) {
+    border-color: rgba(250, 247, 242, 0.6);
+    color: #FAF7F2;
+  }
+  section:last-of-type :global(.bg-transparent:hover) {
+    background: rgba(250, 247, 242, 0.12);
+    border-color: #FAF7F2;
+  }
+  section:last-of-type :global(.bg-transparent span) {
+    color: inherit;
+  }
+
+  /* ─── Accordion ─── */
+  details summary::-webkit-details-marker,
+  details summary::marker {
+    display: none;
+    content: '';
+  }
+  details summary {
+    list-style: none;
+  }
+
+  .accordion-panel {
+    background: rgba(232, 213, 183, 0.25);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+  }
+  .accordion-panel:hover {
+    box-shadow: 0 2px 12px rgba(27, 79, 82, 0.06);
+  }
+  .accordion-panel[open] {
+    box-shadow: 0 2px 16px rgba(27, 79, 82, 0.08);
+  }
+
+  /* Remove focus outline gaps */
+  .accordion-summary:focus {
+    outline: none;
+  }
+  .accordion-summary:focus-visible {
+    outline: 2px solid #5AAFA6;
+    outline-offset: -2px;
+    border-radius: 1rem;
+  }
+
+  .accordion-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    transition: background 0.2s ease;
+  }
+  .accordion-summary:hover {
+    background: rgba(232, 213, 183, 0.2);
+  }
+
+  .accordion-chevron {
+    color: #5AAFA6; /* sea-glass */
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+  [open] .accordion-chevron {
+    transform: rotate(180deg);
+  }
+
+  .accordion-content {
+    padding: 0 2rem 1.75rem;
+  }
+
+  /* ─── Schedule Grid ─── */
+  .schedule-grid {
+    border-top: 1px solid rgba(232, 213, 183, 0.5);
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .schedule-row {
+    display: flex;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(232, 213, 183, 0.3);
+    font-size: 0.95rem;
+  }
+  .schedule-row:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-time {
+    color: #B8977E; /* driftwood */
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    width: 5.5rem;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    .accordion-summary {
+      padding: 1.75rem 2.5rem;
+    }
+    .accordion-content {
+      padding: 0 2.5rem 2rem;
+    }
+  }
+</style>
