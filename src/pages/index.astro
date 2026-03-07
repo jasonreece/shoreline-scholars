@@ -17,6 +17,7 @@ import Button from '../components/Button.astro';
     </div>
 
     <div class="relative z-10 max-w-3xl mx-auto">
+      <img src="/logo-white.png" alt="" class="h-20 md:h-28 w-auto mx-auto" />
       <h1 class="font-heading text-shell-white text-5xl md:text-7xl font-medium mb-6 leading-tight">
         Shoreline Scholars
       </h1>
@@ -29,11 +30,11 @@ import Button from '../components/Button.astro';
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-label="Scroll to About section">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="rgba(250,247,242,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 5v14M19 12l-7 7-7-7"/>
       </svg>
-    </div>
+    </a>
   </section>
 
   <!-- ═══ ABOUT ═══ -->
