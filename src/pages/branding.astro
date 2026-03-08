@@ -1,0 +1,655 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Brand Identity Guide — Shoreline Scholars" description="Internal brand identity guide for the Shoreline Scholars visual system.">
+  <Header />
+
+  <!-- ═══ COVER ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 12rem; padding-bottom: 8rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Shoreline Scholars</h1>
+      <p class="font-body font-semibold text-shell-white/70 text-sm uppercase tracking-[0.2em] mb-6">
+        Brand Identity Guide
+      </p>
+      <div class="w-12 h-0.5 bg-shell-white/40 mx-auto mb-6"></div>
+      <p class="font-body font-light text-shell-white/60 text-sm tracking-wide">
+        March 2026 — Indialantic, Florida
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ BRAND ESSENCE ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Brand Essence</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <div class="space-y-6 text-[0.95rem] leading-relaxed">
+        <p>
+          Shoreline Scholars is a nature-oriented, whole-child learning community for homeschooled
+          students in Indialantic, Florida. The brand lives at the intersection of
+          <strong>clinical expertise</strong> and <strong>beachside warmth</strong> — a program that
+          feels as grounded and intentional as its founders' credentials, but as open and inviting
+          as the ocean it sits beside.
+        </p>
+        <p>
+          The visual identity draws from the coastal landscape: deep sea greens, warm sand tones,
+          the translucent quality of sea glass, and the golden softness of a sunrise walk on the
+          beach. It should feel <strong>organic, calm, professional, and alive</strong> — never
+          clinical, never corporate, never generic.
+        </p>
+      </div>
+
+      <!-- Brand Pillars -->
+      <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mt-16 mb-8">Brand Pillars</h3>
+
+      <div class="brand-table">
+        <div class="brand-table-header">
+          <span>Pillar</span>
+          <span>Expression</span>
+        </div>
+        <div class="brand-table-row sand">
+          <span class="font-semibold">Grounded Expertise</span>
+          <span>Rachel's doctorate + LMHC, Chi's 20 years of teaching — the brand carries quiet authority</span>
+        </div>
+        <div class="brand-table-row">
+          <span class="font-semibold">Nature as Classroom</span>
+          <span>Beach, ocean, sand, sunlight — learning happens outdoors, in the real world</span>
+        </div>
+        <div class="brand-table-row sand">
+          <span class="font-semibold">Whole-Child Care</span>
+          <span>Trauma-informed, attachment-focused, social-emotional — not just academics</span>
+        </div>
+        <div class="brand-table-row">
+          <span class="font-semibold">Community</span>
+          <span>Homeschool families supporting each other — this is a village, not a service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COLOR PALETTE ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Color Palette</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <p class="text-[0.95rem] leading-relaxed max-w-3xl mb-12">
+        The palette is drawn from the Indialantic shoreline — deep ocean, coastal vegetation,
+        sun-bleached sand, and the warm glow of a Florida sunrise. Colors should be used with
+        restraint; the brand breathes through whitespace, not saturation.
+      </p>
+
+      <!-- Primary Colors -->
+      <p class="font-body font-semibold text-xs uppercase tracking-[0.15em] text-driftwood mb-6">Primary Colors</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3" style="gap: 1.25rem;">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1B4F52;"></div>
+          <div class="color-info">
+            <span class="color-name">Deep Sea</span>
+            <span class="color-hex">#1B4F52</span>
+            <span class="color-use">Headlines, nav, footer, primary text</span>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #2A7F62;"></div>
+          <div class="color-info">
+            <span class="color-name">Shoreline</span>
+            <span class="color-hex">#2A7F62</span>
+            <span class="color-use">Buttons, links, accents, CTAs</span>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #5AAFA6;"></div>
+          <div class="color-info">
+            <span class="color-name">Sea Glass</span>
+            <span class="color-hex">#5AAFA6</span>
+            <span class="color-use">Highlights, hover states, decorative accents</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Colors -->
+      <p class="font-body font-semibold text-xs uppercase tracking-[0.15em] text-driftwood mb-6 mt-14">Supporting Colors</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style="gap: 1.25rem;">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #E8D5B7;"></div>
+          <div class="color-info">
+            <span class="color-name">Warm Sand</span>
+            <span class="color-hex">#E8D5B7</span>
+            <span class="color-use">Backgrounds, cards, section dividers</span>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #B8977E;"></div>
+          <div class="color-info">
+            <span class="color-name">Driftwood</span>
+            <span class="color-hex">#B8977E</span>
+            <span class="color-use">Captions, metadata, subtle borders</span>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #FAF7F2;"></div>
+          <div class="color-info">
+            <span class="color-name">Shell White</span>
+            <span class="color-hex">#FAF7F2</span>
+            <span class="color-use">Page background — warmer than pure white</span>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #E8956D;"></div>
+          <div class="color-info">
+            <span class="color-name">Sunrise</span>
+            <span class="color-hex">#E8956D</span>
+            <span class="color-use">Warm accent — enrollment CTAs, highlights</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS Variables -->
+      <div class="code-block mt-14">
+        <pre><code>/* CSS Variables */
+--deep-sea: #1B4F52;
+--shoreline: #2A7F62;
+--sea-glass: #5AAFA6;
+--warm-sand: #E8D5B7;
+--driftwood: #B8977E;
+--shell-white: #FAF7F2;
+--sunrise: #E8956D;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TYPOGRAPHY ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Typography</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <p class="text-[0.95rem] leading-relaxed max-w-3xl mb-14">
+        Two Google Fonts form the typographic system. The pairing creates a clear hierarchy:
+        an elegant serif for headlines and the wordmark, and a clean sans-serif for everything else.
+      </p>
+
+      <!-- Heading Font -->
+      <h3 class="font-heading text-shoreline text-[1.5rem] font-semibold mb-4">Heading Font — Cormorant Garamond</h3>
+      <p class="text-[0.95rem] leading-relaxed mb-8">
+        An elegant, high-contrast serif with a literary feel. Use for all headings (H1–H3),
+        the wordmark, pull quotes, and any display text. Its refined character communicates the
+        depth of Rachel and Chi's credentials without feeling stiff.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2" style="gap: 1.25rem; margin-bottom: 2.5rem;">
+        <div class="type-sample-card">
+          <span class="font-heading text-deep-sea text-3xl" style="font-weight: 400;">Shoreline Scholars</span>
+          <p class="type-label">Regular 400 — Subheadings</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-heading text-deep-sea text-3xl font-medium">Shoreline Scholars</span>
+          <p class="type-label">Medium 500 — Primary Headings, Wordmark</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-heading text-deep-sea text-3xl font-semibold">Shoreline Scholars</span>
+          <p class="type-label">SemiBold 600 — Section Titles</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-heading text-deep-sea text-3xl font-bold">Shoreline Scholars</span>
+          <p class="type-label">Bold 700 — Emphasis (Use Sparingly)</p>
+        </div>
+      </div>
+
+      <!-- Body Font -->
+      <h3 class="font-heading text-shoreline text-[1.5rem] font-semibold mb-4 mt-14">Body Font — Raleway</h3>
+      <p class="text-[0.95rem] leading-relaxed mb-8">
+        A clean, geometric sans-serif with a friendly warmth. Use for body text, navigation,
+        buttons, captions, and all UI elements. Its lighter weights feel airy and modern; heavier
+        weights provide structure for labels and CTAs.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2" style="gap: 1.25rem; margin-bottom: 2.5rem;">
+        <div class="type-sample-card">
+          <span class="font-body text-deep-sea text-2xl font-light">Learning happens everywhere — especially outside.</span>
+          <p class="type-label">Light 300 — Taglines, Large Body Text</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-body text-deep-sea text-2xl" style="font-weight: 400;">Learning happens everywhere — especially outside.</span>
+          <p class="type-label">Regular 400 — Body Copy</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-body text-deep-sea text-2xl font-medium">Learning happens everywhere — especially outside.</span>
+          <p class="type-label">Medium 500 — Navigation, Labels</p>
+        </div>
+        <div class="type-sample-card">
+          <span class="font-body text-deep-sea text-sm font-semibold uppercase tracking-[0.15em]">Enroll Now</span>
+          <p class="type-label">SemiBold 600 — Buttons, CTAs, All-Caps Labels</p>
+        </div>
+      </div>
+
+      <!-- Type Scale -->
+      <h3 class="font-heading text-shoreline text-[1.5rem] font-semibold mb-8 mt-14">Type Scale</h3>
+
+      <div class="brand-table">
+        <div class="brand-table-header five-col">
+          <span>Element</span>
+          <span>Font</span>
+          <span>Weight</span>
+          <span>Size</span>
+          <span>Use</span>
+        </div>
+        <div class="brand-table-row five-col sand">
+          <span>H1</span>
+          <span>Cormorant Garamond</span>
+          <span>500</span>
+          <span>3rem / 48px</span>
+          <span>Page titles, hero headlines</span>
+        </div>
+        <div class="brand-table-row five-col">
+          <span>H2</span>
+          <span>Cormorant Garamond</span>
+          <span>500</span>
+          <span>2.4rem / 38px</span>
+          <span>Section headings</span>
+        </div>
+        <div class="brand-table-row five-col sand">
+          <span>H3</span>
+          <span>Cormorant Garamond</span>
+          <span>600</span>
+          <span>1.5rem / 24px</span>
+          <span>Subsection titles</span>
+        </div>
+        <div class="brand-table-row five-col">
+          <span>Body</span>
+          <span>Raleway</span>
+          <span>400</span>
+          <span>0.95rem / 15px</span>
+          <span>Paragraphs, descriptions</span>
+        </div>
+        <div class="brand-table-row five-col sand">
+          <span>Small / Caption</span>
+          <span>Raleway</span>
+          <span>500</span>
+          <span>0.75rem / 12px</span>
+          <span>Metadata, captions</span>
+        </div>
+        <div class="brand-table-row five-col">
+          <span>Button</span>
+          <span>Raleway</span>
+          <span>600</span>
+          <span>0.8rem / 13px</span>
+          <span>CTAs — uppercase, tracked</span>
+        </div>
+        <div class="brand-table-row five-col sand">
+          <span>Nav</span>
+          <span>Raleway</span>
+          <span>500</span>
+          <span>0.85rem / 14px</span>
+          <span>Navigation links</span>
+        </div>
+      </div>
+
+      <!-- Google Fonts Embed -->
+      <div class="code-block mt-10">
+        <pre><code>&lt;!-- Google Fonts embed --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=
+  Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500
+  &amp;family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400
+  &amp;display=swap" rel="stylesheet"&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WORDMARK & LOGO USAGE ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Wordmark &amp; Logo Usage</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <p class="text-[0.95rem] leading-relaxed max-w-3xl mb-12">
+        The primary logo is a typographic wordmark — no icon or graphic mark at launch. The name
+        "Shoreline Scholars" in Cormorant Garamond carries enough personality and distinction. A
+        graphic mark (wave, shell, leaf motif) can be developed later once the brand is established.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2" style="gap: 1.25rem;">
+        <!-- Light background -->
+        <div class="wordmark-card bg-shell-white border border-warm-sand/40">
+          <span class="font-heading text-deep-sea text-3xl md:text-4xl font-medium">Shoreline Scholars</span>
+          <p class="font-body font-semibold text-shoreline text-xs uppercase tracking-[0.2em] mt-2">Where Curiosity Meets the Coastline</p>
+          <p class="type-label mt-4">Primary — light backgrounds</p>
+        </div>
+        <!-- Dark background -->
+        <div class="wordmark-card bg-deep-sea">
+          <span class="font-heading text-shell-white text-3xl md:text-4xl font-medium">Shoreline Scholars</span>
+          <p class="font-body font-semibold text-shell-white/70 text-xs uppercase tracking-[0.2em] mt-2">Where Curiosity Meets the Coastline</p>
+          <p class="type-label mt-4 text-shell-white/40">Reversed — dark backgrounds</p>
+        </div>
+        <!-- Warm sand background -->
+        <div class="wordmark-card" style="background: #E8D5B7;">
+          <span class="font-heading text-deep-sea text-3xl md:text-4xl font-medium">Shoreline Scholars</span>
+          <p class="font-body font-semibold text-shoreline text-xs uppercase tracking-[0.2em] mt-2">Where Curiosity Meets the Coastline</p>
+          <p class="type-label mt-4">On warm sand backgrounds</p>
+        </div>
+        <!-- Gradient background -->
+        <div class="wordmark-card" style="background: linear-gradient(135deg, #1B4F52, #2A7F62, #5AAFA6);">
+          <span class="font-heading text-shell-white text-3xl md:text-4xl font-medium">Shoreline Scholars</span>
+          <p class="font-body font-semibold text-shell-white/70 text-xs uppercase tracking-[0.2em] mt-2">Where Curiosity Meets the Coastline</p>
+          <p class="type-label mt-4 text-shell-white/40">On gradient backgrounds</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BUTTONS & INTERACTIVE ELEMENTS ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Buttons &amp; Interactive Elements</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <div class="flex flex-wrap items-center mb-12" style="gap: 1.25rem;">
+        <Button variant="primary" href="#">Enroll Now</Button>
+        <Button variant="secondary" href="#">Learn More</Button>
+        <Button variant="warm" href="#">Contact Us</Button>
+      </div>
+
+      <div class="brand-table">
+        <div class="brand-table-header three-col">
+          <span>Button</span>
+          <span>Background</span>
+          <span>Use</span>
+        </div>
+        <div class="brand-table-row three-col sand">
+          <span>Primary</span>
+          <span>Shoreline (#2A7F62)</span>
+          <span>Main CTAs — enroll, register, sign up</span>
+        </div>
+        <div class="brand-table-row three-col">
+          <span>Secondary</span>
+          <span>Outlined Shoreline</span>
+          <span>Supporting actions — learn more, details</span>
+        </div>
+        <div class="brand-table-row three-col sand">
+          <span>Warm</span>
+          <span>Sunrise (#E8956D)</span>
+          <span>High-attention CTAs — limited spots, events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ IMAGERY & PHOTOGRAPHY DIRECTION ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Imagery &amp; Photography Direction</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <p class="text-[0.95rem] leading-relaxed max-w-3xl mb-12">
+        Photography should feel natural, warm, and real — never staged or stock-like. Golden hour
+        light is the default. Images should feature the beach, ocean, sand, kids exploring, hands
+        in nature, small groups engaged in learning. Avoid: fluorescent lighting, indoor classroom
+        shots, kids sitting at desks, anything that looks like a traditional school.
+      </p>
+
+      <!-- Photo mood bars -->
+      <div class="grid grid-cols-3 mb-20" style="gap: 1rem;">
+        <div class="mood-bar" style="background: linear-gradient(135deg, #1B4F52, #5AAFA6); padding: 3rem 1.5rem;">
+          <span class="font-body font-semibold text-xs uppercase tracking-[0.15em] text-shell-white">Ocean + Learning</span>
+        </div>
+        <div class="mood-bar" style="background: linear-gradient(135deg, #E8956D, #E8D5B7); padding: 3rem 1.5rem;">
+          <span class="font-body font-semibold text-xs uppercase tracking-[0.15em] text-shell-white">Warm Light</span>
+        </div>
+        <div class="mood-bar" style="background: linear-gradient(135deg, #E8D5B7, #FAF7F2); padding: 3rem 1.5rem;">
+          <span class="font-body font-semibold text-xs uppercase tracking-[0.15em] text-driftwood">Sand + Shell</span>
+        </div>
+      </div>
+
+      <!-- Photography Guidelines -->
+      <h3 class="font-heading text-shoreline text-[1.5rem] font-semibold mt-10 mb-8">Photography Guidelines</h3>
+
+      <div class="brand-table">
+        <div class="brand-table-header two-col">
+          <span>Do</span>
+          <span>Don't</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Natural light, golden hour, soft shadows</span>
+          <span>Flash, fluorescent, harsh overhead light</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Kids exploring, moving, discovering</span>
+          <span>Kids sitting still, posed, looking at camera</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Beach, ocean, sand, trees, parks</span>
+          <span>Classrooms, desks, whiteboards, cubicles</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Small groups (3–8 kids), close-up hands</span>
+          <span>Large crowds, distant/anonymous shots</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Warm color grading, slightly desaturated</span>
+          <span>Over-saturated, HDR, heavy filters</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Candid moments, genuine expressions</span>
+          <span>Stock photography, staged diversity shots</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOICE & TONE ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-heading text-deep-sea mb-6">Voice &amp; Tone</h2>
+      <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
+
+      <div class="brand-table mb-14">
+        <div class="brand-table-header two-col">
+          <span>We Are</span>
+          <span>We Are Not</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Warm and welcoming</span>
+          <span>Casual or sloppy</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Confident and knowledgeable</span>
+          <span>Academic or jargon-heavy</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Nature-connected</span>
+          <span>Crunchy or preachy</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Community-oriented</span>
+          <span>Exclusive or elitist</span>
+        </div>
+        <div class="brand-table-row two-col sand">
+          <span>Clinically informed</span>
+          <span>Clinical in tone</span>
+        </div>
+        <div class="brand-table-row two-col">
+          <span>Calm and grounded</span>
+          <span>Urgent or sales-driven</span>
+        </div>
+      </div>
+
+      <!-- Example Copy -->
+      <h3 class="font-heading text-shoreline text-[1.5rem] font-semibold mb-8">Example Copy</h3>
+
+      <div class="example-copy-card">
+        <h4 class="font-heading text-deep-sea text-2xl md:text-3xl font-medium mb-4">Learning doesn't need four walls.</h4>
+        <p class="text-[0.95rem] leading-relaxed">
+          At Shoreline Scholars, the ocean is our hallway and the sand is our classroom floor.
+          We believe children learn best when they feel safe, connected, and free to explore —
+          and there's no better place for that than the beach in Indialantic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ─── Brand Tables ─── */
+  .brand-table {
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .brand-table-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    background: #1B4F52;
+    color: #FAF7F2;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand-table-header.two-col { grid-template-columns: 1fr 1fr; }
+  .brand-table-header.three-col { grid-template-columns: 1fr 1.5fr 2fr; }
+  .brand-table-header.five-col { grid-template-columns: 1fr 1.5fr 0.75fr 1fr 1.5fr; }
+
+  .brand-table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    align-items: start;
+  }
+  .brand-table-row.two-col { grid-template-columns: 1fr 1fr; }
+  .brand-table-row.three-col { grid-template-columns: 1fr 1.5fr 2fr; }
+  .brand-table-row.five-col { grid-template-columns: 1fr 1.5fr 0.75fr 1fr 1.5fr; }
+
+  .brand-table-row.sand {
+    background: rgba(232, 213, 183, 0.25);
+  }
+
+  /* ─── Color Cards ─── */
+  .color-card {
+    background: #FAF7F2;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(27, 79, 82, 0.06);
+  }
+  .color-swatch {
+    height: 6rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .color-info {
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .color-name {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #1B4F52;
+  }
+  .color-hex {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #5AAFA6;
+  }
+  .color-use {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: #B8977E;
+    margin-top: 0.25rem;
+  }
+
+  /* ─── Type Samples ─── */
+  .type-sample-card {
+    background: rgba(232, 213, 183, 0.2);
+    border-radius: 0.75rem;
+    padding: 2rem;
+  }
+  .type-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #B8977E;
+    margin-top: 1rem;
+  }
+
+  /* ─── Wordmark Cards ─── */
+  .wordmark-card {
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  /* ─── Mood Bars ─── */
+  .mood-bar {
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  /* ─── Code Blocks ─── */
+  .code-block {
+    background: rgba(232, 213, 183, 0.3);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    overflow-x: auto;
+  }
+  .code-block pre {
+    margin: 0;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #1B4F52;
+  }
+  code.code-inline {
+    background: rgba(90, 175, 166, 0.15);
+    color: #1B4F52;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85em;
+  }
+
+  /* ─── Example Copy Card ─── */
+  .example-copy-card {
+    background: rgba(232, 213, 183, 0.2);
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+  }
+
+  /* ─── Mobile: stack tables ─── */
+  @media (max-width: 640px) {
+    .brand-table-header.five-col,
+    .brand-table-row.five-col {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+    .brand-table-header.five-col { display: none; }
+    .brand-table-header.three-col,
+    .brand-table-row.three-col {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+    .brand-table-header.three-col { display: none; }
+  }
+</style>
