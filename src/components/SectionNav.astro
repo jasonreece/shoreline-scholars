@@ -48,12 +48,13 @@ const { sections } = Astro.props;
   let isScrollingToSection = false;
   const hero = document.querySelector('section:first-of-type') as HTMLElement;
   if (hero) {
+    const topMargin = getOffset() + 4; // +4 for sub-pixel rounding
     const heroObserver = new IntersectionObserver(
       ([entry]) => {
-        if (isScrollingToSection) return; // Don't fight programmatic scrolls
+        if (isScrollingToSection) return;
         nav.classList.toggle('section-nav--visible', !entry.isIntersecting);
       },
-      { threshold: 0, rootMargin: '-60px 0px 0px 0px' }
+      { threshold: 0, rootMargin: `-${topMargin}px 0px 0px 0px` }
     );
     heroObserver.observe(hero);
   }
@@ -93,14 +94,18 @@ const { sections } = Astro.props;
   const scrollToSection = (id: string) => {
     const target = document.getElementById(id);
     if (!target) return;
-    // Lock subnav visible during scroll so the hero observer can't hide it
     isScrollingToSection = true;
     nav.classList.add('section-nav--visible');
     const top = target.getBoundingClientRect().top + window.scrollY - getOffset();
     window.scrollTo({ top, behavior: 'smooth' });
     history.replaceState(null, '', `#${id}`);
-    // Release lock after scroll animation completes
-    setTimeout(() => { isScrollingToSection = false; }, 600);
+    // Release after scroll animation completes
+    const release = () => { isScrollingToSection = false; };
+    if ('onscrollend' in window) {
+      window.addEventListener('scrollend', release, { once: true });
+    } else {
+      setTimeout(release, 800);
+    }
   };
 
   // Smooth scroll on click — subnav links
