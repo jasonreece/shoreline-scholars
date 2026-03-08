@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
 import SectionNav from '../components/SectionNav.astro';
 import CallToAction from '../components/CallToAction.astro';
+import Ecosystem from '../components/Ecosystem.jsx';
 ---
 
 <Layout title="Our Vision — Shoreline Scholars" description="A week in the life of a Shoreline Scholar. Discover our integrated educational ecosystem blending academics, nature, creativity, and real-world skills.">
@@ -321,9 +322,7 @@ import CallToAction from '../components/CallToAction.astro';
         <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
       </div>
 
-      <div class="flex justify-center mb-16">
-        <img src="/ecosystem.png" alt="Shoreline Scholars Educational Ecosystem — eight interconnected pillars: Academics, Outdoor Learning, Creative Arts, Social-Emotional Growth, Entrepreneurship, Trade Skills, Financial Literacy, and Life Skills" class="w-full max-w-md" />
-      </div>
+      <Ecosystem client:load />
 
       <p class="text-[0.95rem] leading-relaxed text-center max-w-2xl mx-auto">
         Each pillar of the Shoreline Scholars Educational Ecosystem strengthens the others.
@@ -508,5 +507,216 @@ import CallToAction from '../components/CallToAction.astro';
 
   .enrichment-group--single {
     padding-top: 0.25rem;
+  }
+
+  /* ─── Ecosystem Interactive ─── */
+  :global(.ecosystem-root) {
+    margin-bottom: 2.5rem;
+  }
+
+  /* --- Desktop orbital layout --- */
+  :global(.ecosystem-orbital) {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    :global(.ecosystem-orbital) {
+      display: block;
+    }
+    :global(.ecosystem-grid) {
+      display: none !important;
+    }
+  }
+
+  :global(.ecosystem-lines) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  :global(.ecosystem-line) {
+    stroke: #B8977E;
+    stroke-width: 1.5;
+    opacity: 0.25;
+    transition: opacity 0.3s ease, stroke 0.3s ease;
+  }
+
+  :global(.ecosystem-line--active) {
+    opacity: 0.7;
+    stroke: #E8956D;
+    stroke-width: 2;
+  }
+
+  /* Center hub */
+  :global(.ecosystem-center) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #1B4F52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 4px 24px rgba(27, 79, 82, 0.2);
+    overflow: hidden;
+  }
+
+  :global(.ecosystem-center-default),
+  :global(.ecosystem-center-detail) {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    transition: opacity 0.25s ease;
+  }
+
+  :global(.ecosystem-center-default) {
+    opacity: 1;
+  }
+
+  :global(.ecosystem-center-default--hidden) {
+    opacity: 0;
+  }
+
+  :global(.ecosystem-center-detail) {
+    opacity: 0;
+  }
+
+  :global(.ecosystem-center-detail--visible) {
+    opacity: 1;
+  }
+
+  :global(.ecosystem-center-text) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #FAF7F2;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  :global(.ecosystem-center-detail-title) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #E8956D;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  :global(.ecosystem-center-detail-desc) {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 0.68rem;
+    color: #FAF7F2;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  /* Pillar circles */
+  :global(.ecosystem-pillar) {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #5AAFA6;
+    border: 3px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    z-index: 1;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 2px 12px rgba(90, 175, 166, 0.15);
+  }
+
+  :global(.ecosystem-pillar:hover),
+  :global(.ecosystem-pillar--active) {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: #5AAFA6;
+    border-color: #E8956D;
+    box-shadow: 0 6px 24px rgba(232, 149, 109, 0.3);
+  }
+
+  :global(.ecosystem-pillar-name) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #FAF7F2;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  /* --- Mobile grid layout --- */
+  :global(.ecosystem-grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    :global(.ecosystem-grid) {
+      display: none;
+    }
+  }
+
+  :global(.ecosystem-grid-item) {
+    background: rgba(90, 175, 166, 0.12);
+    border: 1px solid rgba(90, 175, 166, 0.2);
+    border-radius: 1rem;
+    padding: 1.25rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  :global(.ecosystem-grid-item--active) {
+    background: rgba(232, 149, 109, 0.08);
+    border-color: #E8956D;
+  }
+
+  :global(.ecosystem-grid-name) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #1B4F52;
+    display: block;
+  }
+
+  :global(.ecosystem-grid-desc) {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 0.82rem;
+    color: #4A5859;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-top: 0;
+  }
+
+  :global(.ecosystem-grid-desc--visible) {
+    max-height: 10rem;
+    opacity: 1;
+    margin-top: 0.75rem;
   }
 </style>
