@@ -3,10 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import SectionNav from '../components/SectionNav.astro';
+import CallToAction from '../components/CallToAction.astro';
 ---
 
 <Layout title="Our Vision — Shoreline Scholars" description="A week in the life of a Shoreline Scholar. Discover our integrated educational ecosystem blending academics, nature, creativity, and real-world skills.">
   <Header />
+  <SectionNav sections={[
+    { label: 'Overview', id: 'overview' },
+    { label: 'Weekly Schedule', id: 'weekly-schedule' },
+    { label: 'Daily Schedules', id: 'daily-schedules' },
+    { label: 'After School', id: 'after-school' },
+    { label: 'Ecosystem', id: 'ecosystem' },
+  ]} />
 
   <!-- ═══ HERO ═══ -->
   <section class="relative flex items-center justify-center text-center px-6"
@@ -23,7 +32,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ INTRODUCTION ═══ -->
-  <section class="bg-shell-white py-24 md:py-32">
+  <section id="overview" class="bg-shell-white py-24 md:py-32">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <p class="text-[0.95rem] leading-relaxed">
         Shoreline Scholars is building a learning community where academics, nature,
@@ -36,7 +45,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ A WEEK AT SHORELINE SCHOLARS ═══ -->
-  <section class="bg-warm-sand/15 py-24 md:py-32">
+  <section id="weekly-schedule" class="bg-warm-sand/15 py-24 md:py-32">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">A Week at Shoreline Scholars</h2>
@@ -89,7 +98,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ DETAILED SCHEDULES ═══ -->
-  <section class="bg-shell-white py-24 md:py-32">
+  <section id="daily-schedules" class="bg-shell-white py-24 md:py-32">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">Detailed Daily Schedules</h2>
@@ -207,7 +216,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ AFTER SCHOOL ENRICHMENT ═══ -->
-  <section class="py-20" style="background-color: #E8D5B7;">
+  <section id="after-school" class="py-20" style="background-color: #E8D5B7;">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-heading text-deep-sea mb-6">After School Enrichment</h2>
@@ -305,7 +314,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ EDUCATIONAL ECOSYSTEM ═══ -->
-  <section class="bg-warm-sand/15 py-24 md:py-32">
+  <section id="ecosystem" class="bg-warm-sand/15 py-24 md:py-32">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">The Educational Ecosystem</h2>
@@ -326,47 +335,15 @@ import Button from '../components/Button.astro';
     </div>
   </section>
 
-  <!-- ═══ CTA ═══ -->
-  <section class="bg-deep-sea py-24 md:py-32">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
-        Be Part of the Journey
-      </h2>
-      <p class="text-shell-white/80 text-[0.95rem] font-light leading-relaxed mb-10 max-w-xl mx-auto">
-        We're building something special in Indialantic. Whether you're a family looking
-        to enroll, a community member who wants to volunteer, or a supporter who believes
-        in our mission — we'd love to hear from you.
-      </p>
-      <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
-        <Button variant="primary" href="mailto:shorelinescholars@gmail.com">Enroll</Button>
-        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate</Button>
-        <Button variant="secondary" href="mailto:shorelinescholars@gmail.com">
-          <span class="text-shell-white border-shell-white">Get in Touch</span>
-        </Button>
-      </div>
-    </div>
-  </section>
+  <CallToAction
+    heading="Be Part of the Journey"
+    description="We're building something special in Indialantic. Whether you're a family looking to enroll, a community member who wants to volunteer, or a supporter who believes in our mission — we'd love to hear from you."
+  />
 
   <Footer />
 </Layout>
 
 <style>
-  /* CTA button overrides for dark background */
-  section:last-of-type :global(.bg-shoreline) {
-    /* primary stays as-is */
-  }
-  section:last-of-type :global(.bg-transparent) {
-    border-color: rgba(250, 247, 242, 0.6);
-    color: #FAF7F2;
-  }
-  section:last-of-type :global(.bg-transparent:hover) {
-    background: rgba(250, 247, 242, 0.12);
-    border-color: #FAF7F2;
-  }
-  section:last-of-type :global(.bg-transparent span) {
-    color: inherit;
-  }
-
   /* ─── Accordion ─── */
   details summary::-webkit-details-marker,
   details summary::marker {

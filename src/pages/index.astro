@@ -3,10 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import SectionNav from '../components/SectionNav.astro';
+import CallToAction from '../components/CallToAction.astro';
 ---
 
 <Layout>
   <Header />
+  <SectionNav sections={[
+    { label: 'About', id: 'about' },
+    { label: 'Our Story', id: 'our-story' },
+    { label: 'Founders', id: 'team' },
+    { label: 'Contact', id: 'get-involved' },
+  ]} />
 
   <!-- ═══ HERO ═══ -->
   <section class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20"
@@ -33,12 +41,6 @@ import Button from '../components/Button.astro';
       </Button>
     </div>
 
-    <!-- Scroll indicator -->
-    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-label="Scroll to About section">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="rgba(250,247,242,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 5v14M19 12l-7 7-7-7"/>
-      </svg>
-    </a>
   </section>
 
   <!-- ═══ ABOUT ═══ -->
@@ -90,7 +92,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ OUR STORY ═══ -->
-  <section class="py-20" style="background-color: #E8D5B7;">
+  <section id="our-story" class="py-20" style="background-color: #E8D5B7;">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="font-heading text-deep-sea mb-6">Our Story</h2>
       <div class="w-12 h-0.5 bg-sea-glass mx-auto mb-12"></div>
@@ -222,21 +224,10 @@ import Button from '../components/Button.astro';
     </div>
   </section>
 
-  <!-- ═══ CONTACT / CTA ═══ -->
-  <section id="contact" class="bg-deep-sea py-24 md:py-32">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
-        Ready to explore?
-      </h2>
-      <p class="text-shell-white/80 text-lg font-light leading-relaxed mb-10 max-w-xl mx-auto">
-        We'd love to hear from you. Whether you're curious about our program, want
-        to visit, or are ready to enroll — reach out and let's start the conversation.
-      </p>
-      <Button variant="warm" href="mailto:shorelinescholars@gmail.com">
-        Get in Touch
-      </Button>
-    </div>
-  </section>
+  <CallToAction
+    heading="Ready to explore?"
+    description="We'd love to hear from you. Whether you're curious about our program, want to visit, or are ready to enroll — reach out and let's start the conversation."
+  />
 
   <Footer />
 </Layout>

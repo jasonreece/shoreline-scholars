@@ -1,0 +1,201 @@
+---
+interface Props {
+  sections: Array<{ label: string; id: string }>;
+}
+
+const { sections } = Astro.props;
+---
+
+<nav class="section-nav" aria-label="Page sections">
+  <div class="section-nav-inner">
+    {sections.map(section => (
+      <a
+        href={`#${section.id}`}
+        class="section-nav-link"
+        data-section-id={section.id}
+      >
+        {section.label}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector('.section-nav') as HTMLElement;
+  if (!nav) throw new Error('SectionNav not found');
+
+  const links = nav.querySelectorAll<HTMLAnchorElement>('.section-nav-link');
+  const sectionIds = Array.from(links).map(link => link.dataset.sectionId!);
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+
+  // Get header height for offset calculations
+  const header = document.querySelector('header') as HTMLElement;
+  const getOffset = () => {
+    const headerH = header?.offsetHeight || 0;
+    const navH = nav.offsetHeight || 0;
+    return headerH + navH;
+  };
+
+  // Position subnav below header dynamically
+  const positionNav = () => {
+    const headerH = header?.offsetHeight || 0;
+    nav.style.top = `${headerH}px`;
+  };
+  positionNav();
+  window.addEventListener('resize', positionNav);
+
+  // Show/hide nav based on hero scroll position
+  let isScrollingToSection = false;
+  const hero = document.querySelector('section:first-of-type') as HTMLElement;
+  if (hero) {
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (isScrollingToSection) return; // Don't fight programmatic scrolls
+        nav.classList.toggle('section-nav--visible', !entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: '-60px 0px 0px 0px' }
+    );
+    heroObserver.observe(hero);
+  }
+
+  // Active state tracking via Intersection Observer
+  const activeObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          links.forEach(link => {
+            link.classList.toggle('section-nav-link--active', link.dataset.sectionId === id);
+          });
+
+          // Auto-scroll active link into view on mobile
+          const activeLink = nav.querySelector('.section-nav-link--active') as HTMLElement;
+          if (activeLink) {
+            const inner = nav.querySelector('.section-nav-inner') as HTMLElement;
+            const linkLeft = activeLink.offsetLeft;
+            const linkWidth = activeLink.offsetWidth;
+            const innerWidth = inner.offsetWidth;
+            const scrollLeft = linkLeft - (innerWidth / 2) + (linkWidth / 2);
+            inner.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0,
+    }
+  );
+
+  sections.forEach(section => activeObserver.observe(section));
+
+  // Shared scroll handler: show subnav first, then scroll with correct offset
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    // Lock subnav visible during scroll so the hero observer can't hide it
+    isScrollingToSection = true;
+    nav.classList.add('section-nav--visible');
+    const top = target.getBoundingClientRect().top + window.scrollY - getOffset();
+    window.scrollTo({ top, behavior: 'smooth' });
+    history.replaceState(null, '', `#${id}`);
+    // Release lock after scroll animation completes
+    setTimeout(() => { isScrollingToSection = false; }, 600);
+  };
+
+  // Smooth scroll on click — subnav links
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToSection(link.dataset.sectionId!);
+    });
+  });
+
+  // Intercept ALL anchor links on the page so they get the same offset
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(anchor => {
+    if (anchor.closest('.section-nav') || anchor.getAttribute('href') === '#') return;
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToSection(anchor.getAttribute('href')!.slice(1));
+    });
+  });
+</script>
+
+<style>
+  .section-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(232, 213, 183, 0.3);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .section-nav--visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .section-nav-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .section-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-nav-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    color: #B8977E;
+    text-decoration: none;
+    padding: 0.85rem 1.25rem;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .section-nav-link:hover {
+    color: #2A7F62;
+  }
+
+  .section-nav-link--active {
+    color: #2A7F62;
+  }
+
+  .section-nav-link--active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.25rem;
+    right: 1.25rem;
+    height: 2px;
+    background: #5AAFA6;
+    border-radius: 1px;
+  }
+
+  @media (max-width: 767px) {
+    .section-nav-inner {
+      justify-content: flex-start;
+    }
+  }
+</style>

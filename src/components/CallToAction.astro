@@ -1,0 +1,67 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  heading: string;
+  description?: string;
+  showEnroll?: boolean;
+  showDonate?: boolean;
+  showContact?: boolean;
+}
+
+const {
+  heading,
+  description,
+  showEnroll = true,
+  showDonate = true,
+  showContact = true,
+} = Astro.props;
+---
+
+<section id="get-involved" class="cta-section bg-deep-sea py-24 md:py-32">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
+      {heading}
+    </h2>
+    {description && (
+      <p class="text-shell-white/80 text-[0.95rem] font-light leading-relaxed mb-10 max-w-xl mx-auto">
+        {description}
+      </p>
+    )}
+    <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
+      {showEnroll && (
+        <Button variant="primary" href="mailto:shorelinescholars@gmail.com">Enroll</Button>
+      )}
+      {showDonate && (
+        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate</Button>
+      )}
+      {showContact && (
+        <a
+          href="mailto:shorelinescholars@gmail.com"
+          class="cta-outline-btn inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer border-2"
+        >
+          Get in Touch
+        </a>
+      )}
+    </div>
+    <p class="text-shell-white/60 text-sm mt-8 font-body">
+      shorelinescholars@gmail.com
+    </p>
+    <p class="text-shell-white/40 text-xs mt-3 font-body max-w-md mx-auto leading-relaxed">
+      Shoreline Scholars is a registered nonprofit organization based in Indialantic, Florida.
+    </p>
+  </div>
+</section>
+
+<style>
+  .cta-outline-btn {
+    border-color: rgba(250, 247, 242, 0.6);
+    color: #FAF7F2;
+    background: transparent;
+  }
+  .cta-outline-btn:hover {
+    background: rgba(250, 247, 242, 0.12);
+    border-color: #FAF7F2;
+    color: #FAF7F2;
+  }
+</style>

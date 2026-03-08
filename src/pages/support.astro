@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import SectionNav from '../components/SectionNav.astro';
+import CallToAction from '../components/CallToAction.astro';
 
 const goalAmount = 150000;
 const raisedAmount = 0;
@@ -11,6 +13,15 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
 
 <Layout title="Support — Shoreline Scholars" description="Help us build a beachside home for learning. Support Shoreline Scholars, a nonprofit beachside learning community in Indialantic, Florida.">
   <Header />
+  <SectionNav sections={[
+    { label: 'Our Story', id: 'story' },
+    { label: 'Campaign', id: 'campaign' },
+    { label: 'Donations', id: 'donations' },
+    { label: 'Road Ahead', id: 'road-ahead' },
+    { label: 'Your Gift', id: 'your-gift' },
+    { label: 'Recognition', id: 'recognition' },
+    { label: 'Get Involved', id: 'get-involved' },
+  ]} />
 
   <!-- ═══ SECTION 1: HERO ═══ -->
   <section class="relative flex items-center justify-center text-center px-6"
@@ -27,7 +38,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 2: THE STORY ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="story" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-heading text-deep-sea mb-6">What We're Building</h2>
@@ -56,7 +67,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 3: CAMPAIGN GOAL ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
+  <section id="campaign" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-heading text-deep-sea mb-3">Our Goal: $150,000</h2>
@@ -92,7 +103,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 4: WHERE YOUR DONATION GOES ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="donations" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-heading text-deep-sea mb-4">Where Your Donation Goes</h2>
@@ -151,7 +162,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 5: THE ROAD AHEAD ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+  <section id="road-ahead" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">The Road Ahead</h2>
@@ -199,7 +210,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 6: WHAT YOUR GIFT PROVIDES ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
+  <section id="your-gift" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">What Your Gift Provides</h2>
@@ -244,7 +255,7 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   </section>
 
   <!-- ═══ SECTION 7: DONOR RECOGNITION ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="recognition" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-heading text-deep-sea mb-4">Founding Supporters</h2>
@@ -342,52 +353,15 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
     </div>
   </section>
 
-  <!-- ═══ SECTION 9: EMOTIONAL CLOSE & CTA ═══ -->
-  <section class="bg-deep-sea py-24 md:py-32">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
-        Every Contribution Builds Something&nbsp;Real
-      </h2>
-      <p class="text-shell-white/80 text-[0.95rem] font-light leading-relaxed mb-10 max-w-xl mx-auto">
-        A donation to Shoreline Scholars isn't an abstraction — it's a surfboard for Friday mornings,
-        a microscope for tide pool science, a seat at the table for a child whose family couldn't
-        afford it otherwise. It's a home by the beach where learning feels alive.
-      </p>
-      <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
-        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate Now</Button>
-        <Button variant="secondary" href="mailto:shorelinescholars@gmail.com">
-          <span class="cta-outline-text">Get in Touch</span>
-        </Button>
-      </div>
-      <p class="text-shell-white/60 text-sm mt-8 font-body">
-        shorelinescholars@gmail.com
-      </p>
-      <p class="text-shell-white/40 text-xs mt-3 font-body max-w-md mx-auto leading-relaxed">
-        Shoreline Scholars is a registered nonprofit organization based in Indialantic, Florida.
-      </p>
-    </div>
-  </section>
+  <CallToAction
+    heading="Every Contribution Builds Something Real"
+    description="A donation to Shoreline Scholars isn't an abstraction — it's a surfboard for Friday mornings, a microscope for tide pool science, a seat at the table for a child whose family couldn't afford it otherwise. It's a home by the beach where learning feels alive."
+  />
 
   <Footer />
 </Layout>
 
 <style>
-  /* ─── CTA button overrides for dark background ─── */
-  .cta-outline-text {
-    color: #FAF7F2;
-  }
-  section:last-of-type :global(.bg-transparent) {
-    border-color: rgba(250, 247, 242, 0.6);
-    color: #FAF7F2;
-  }
-  section:last-of-type :global(.bg-transparent:hover) {
-    background: rgba(250, 247, 242, 0.12);
-    border-color: #FAF7F2;
-  }
-  section:last-of-type :global(.bg-transparent span) {
-    color: inherit;
-  }
-
   /* ─── Progress Bar ─── */
   .progress-track {
     width: 100%;
