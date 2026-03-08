@@ -1,0 +1,550 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+
+const goalAmount = 150000;
+const raisedAmount = 0;
+const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
+---
+
+<Layout title="Support — Shoreline Scholars" description="Help us build a beachside home for learning. Support Shoreline Scholars with a tax-deductible donation to our 501(c)(3) nonprofit.">
+  <Header />
+
+  <!-- ═══ SECTION 1: HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Support Shoreline Scholars</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        Help us build a beachside home for learning
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 2: THE STORY ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-deep-sea mb-6">What We're Building</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="space-y-6 text-[0.95rem] leading-relaxed">
+        <p>
+          Shoreline Scholars is a 501(c)(3) nonprofit creating a hands-on, nature-based learning
+          community for children ages 5–12 in Indialantic, Florida. Founded by Rachel Glover — a
+          Licensed Mental Health Counselor with a doctorate in Developmental Psychology — and Chi
+          Reece, a veteran educator with 20 years of individualized instruction experience, our
+          program integrates academics, outdoor exploration, creative arts, and social-emotional
+          development in a setting unlike any other: the beach.
+        </p>
+        <p>
+          Our beach program is already running. Children are already learning on the sand. Now we
+          need a permanent home — a beachside house within walking distance of the shoreline where
+          up to 60 children across three programs can learn, build, explore, and grow together.
+        </p>
+        <p class="font-medium text-deep-sea text-lg font-heading italic">
+          We can't do it without you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 3: CAMPAIGN GOAL ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-deep-sea mb-3">Our Goal: $150,000</h2>
+        <p class="text-[0.95rem] leading-relaxed">
+          To secure a permanent beachside learning home for Shoreline Scholars
+        </p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container mb-8">
+        <div class="progress-track">
+          <div class="progress-fill" style={`width: ${progressPercent}%;`} data-raised={raisedAmount} data-goal={goalAmount}></div>
+        </div>
+        <div class="flex justify-between mt-3">
+          <span class="font-body font-medium text-xs tracking-wide text-driftwood">
+            ${raisedAmount.toLocaleString()} raised
+          </span>
+          <span class="font-body font-medium text-xs tracking-wide text-driftwood">
+            ${goalAmount.toLocaleString()} goal
+          </span>
+        </div>
+      </div>
+
+      <p class="text-[0.95rem] leading-relaxed text-center max-w-2xl mx-auto mb-10">
+        $150,000 gives 60 children a place to learn by the ocean. That's $2,500 per child to
+        build something permanent in our community.
+      </p>
+
+      <div class="text-center">
+        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate Now</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 4: WHERE YOUR DONATION GOES ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-deep-sea mb-4">Where Your Donation Goes</h2>
+        <p class="text-[0.95rem] leading-relaxed max-w-2xl mx-auto">
+          Every dollar goes directly toward building a learning environment where children thrive.
+        </p>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2" style="gap: 1.25rem;">
+        <div class="donation-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-3">Our Learning Home</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Security deposit and move-in costs for a beachside house within walking distance of the
+            ocean. A space with room for three concurrent programs, indoor and outdoor learning areas,
+            and a garden where children grow food alongside knowledge.
+          </p>
+        </div>
+
+        <div class="donation-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-3">Furniture &amp; Learning Environment</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Child-sized tables, chairs, shelving, reading nooks, cubbies, rugs, and outdoor seating.
+            The space should feel like a home — warm, inviting, and designed for exploration — not a
+            classroom with fluorescent lights.
+          </p>
+        </div>
+
+        <div class="donation-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-3">Supplies &amp; Equipment</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Science tools, art supplies, building materials, soft-top surfboards, gardening tools,
+            books, curriculum materials, and everything children need to learn with their hands,
+            not just their eyes.
+          </p>
+        </div>
+
+        <div class="donation-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-3">Scholarships</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Ensuring that family income never determines whether a child can participate. Every
+            dollar in the scholarship fund goes directly to covering tuition for families who
+            need support.
+          </p>
+        </div>
+
+        <div class="donation-card md:col-span-2 md:max-w-[calc(50%-0.625rem)]">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-3">Educators &amp; Operations</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Compensating qualified educators, covering insurance, and sustaining day-to-day operations
+            so the program can run reliably — not just this month, but for years to come.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 5: THE ROAD AHEAD ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">The Road Ahead</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1 — Active -->
+        <div class="timeline-item">
+          <div class="timeline-marker active"></div>
+          <div class="timeline-content">
+            <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Now — Beach Launch</h3>
+            <p class="text-[0.95rem] leading-relaxed">
+              Our beach program is running. First students enrolled. Building community, proving the
+              model, and growing our family of learners.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Next — Our Learning Home</h3>
+            <p class="text-[0.95rem] leading-relaxed">
+              Secure a dedicated beachside house. Furnish and equip it for hands-on learning. Begin
+              full-day enrichment programs Monday through Friday.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Future — A Community Institution</h3>
+            <p class="text-[0.95rem] leading-relaxed">
+              Three concurrent programs serving up to 60 children. A scholarship fund supporting
+              families in need. A model for what beachside education can be.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 6: WHAT YOUR GIFT PROVIDES ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">What Your Gift Provides</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style="gap: 1.25rem;">
+        <div class="impact-card">
+          <span class="impact-amount">$25</span>
+          <p>Art supplies for a month of creative exploration</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$50</span>
+          <p>A soft-top surfboard for Friday surf lessons</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$100</span>
+          <p>One month of science equipment for hands-on learning</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$250</span>
+          <p>One student's scholarship for a month</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$500</span>
+          <p>One month of insurance protecting every child in the program</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$1,000</span>
+          <p>One month of an educator's stipend</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$5,000</span>
+          <p>Furnishes an entire learning station — table, chairs, shelving, and materials</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$25,000</span>
+          <p>Names a room in the Shoreline Scholars learning home</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 7: DONOR RECOGNITION ═══ -->
+  <section class="bg-shell-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-deep-sea mb-4">Founding Supporters</h2>
+        <p class="text-[0.95rem] leading-relaxed max-w-2xl mx-auto">
+          Early supporters of Shoreline Scholars will be recognized as founding members of our community.
+        </p>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto mt-6"></div>
+      </div>
+
+      <div class="donor-table">
+        <div class="donor-row donor-header">
+          <span class="donor-level">Level</span>
+          <span class="donor-amount">Amount</span>
+          <span class="donor-recognition">Recognition</span>
+        </div>
+        <div class="donor-row sand">
+          <span class="donor-level">Founding Patron</span>
+          <span class="donor-amount">$25,000+</span>
+          <span class="donor-recognition">Named room or space in the learning home, permanent recognition, annual founder's dinner</span>
+        </div>
+        <div class="donor-row">
+          <span class="donor-level">Champion</span>
+          <span class="donor-amount">$10,000–$24,999</span>
+          <span class="donor-recognition">Named on the donor wall, annual impact report, private program tour</span>
+        </div>
+        <div class="donor-row sand">
+          <span class="donor-level">Builder</span>
+          <span class="donor-amount">$5,000–$9,999</span>
+          <span class="donor-recognition">Named on website, quarterly newsletter with program updates</span>
+        </div>
+        <div class="donor-row">
+          <span class="donor-level">Sustainer</span>
+          <span class="donor-amount">$1,000–$4,999</span>
+          <span class="donor-recognition">Named on website, annual thank-you event</span>
+        </div>
+        <div class="donor-row sand">
+          <span class="donor-level">Friend</span>
+          <span class="donor-amount">$100–$999</span>
+          <span class="donor-recognition">Named on website donor page</span>
+        </div>
+        <div class="donor-row">
+          <span class="donor-level">Supporter</span>
+          <span class="donor-amount">Any amount</span>
+          <span class="donor-recognition">Tax-deductible receipt and our deepest gratitude</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 8: OTHER WAYS TO HELP ═══ -->
+  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Other Ways to Help</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2" style="gap: 1.25rem;">
+        <div class="help-card">
+          <div class="help-icon">&#x1F91D;</div>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Volunteer Your Skills</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Share your expertise with our students — marine science, gardening, art, music,
+            engineering, storytelling. If you have a skill, our kids want to learn it.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">&#x1F3A8;</div>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Donate Materials</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Gently used books, art supplies, science equipment, and outdoor gear are always
+            welcome. Donations to a 501(c)(3) are tax-deductible.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">&#x1F4E2;</div>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Spread the Word</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Share our mission with a friend, a family, or a local business. Community awareness
+            is how we grow.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">&#x1F3E2;</div>
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-2">Partner With Us</h3>
+          <p class="text-[0.95rem] leading-relaxed">
+            Local businesses and organizations interested in sponsorships, events, or educational
+            partnerships — we'd love to collaborate.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 9: EMOTIONAL CLOSE & CTA ═══ -->
+  <section class="bg-deep-sea py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-shell-white text-4xl md:text-5xl mb-6">
+        Every Contribution Builds Something Real
+      </h2>
+      <p class="text-shell-white/80 text-[0.95rem] font-light leading-relaxed mb-10 max-w-xl mx-auto">
+        A donation to Shoreline Scholars isn't an abstraction — it's a surfboard for Friday mornings,
+        a microscope for tide pool science, a seat at the table for a child whose family couldn't
+        afford it otherwise. It's a home by the beach where learning feels alive.
+      </p>
+      <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
+        <Button variant="warm" href="mailto:shorelinescholars@gmail.com">Donate Now</Button>
+        <Button variant="secondary" href="mailto:shorelinescholars@gmail.com">
+          <span class="cta-outline-text">Get in Touch</span>
+        </Button>
+      </div>
+      <p class="text-shell-white/60 text-sm mt-8 font-body">
+        shorelinescholars@gmail.com
+      </p>
+      <p class="text-shell-white/40 text-xs mt-3 font-body max-w-md mx-auto leading-relaxed">
+        Shoreline Scholars is a 501(c)(3) nonprofit organization. All donations are tax-deductible
+        to the extent allowed by law.
+      </p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ─── CTA button overrides for dark background ─── */
+  .cta-outline-text {
+    color: #FAF7F2;
+  }
+  section:last-of-type :global(.bg-transparent) {
+    border-color: rgba(250, 247, 242, 0.6);
+    color: #FAF7F2;
+  }
+  section:last-of-type :global(.bg-transparent:hover) {
+    background: rgba(250, 247, 242, 0.12);
+    border-color: #FAF7F2;
+  }
+  section:last-of-type :global(.bg-transparent span) {
+    color: inherit;
+  }
+
+  /* ─── Progress Bar ─── */
+  .progress-track {
+    width: 100%;
+    height: 12px;
+    background: #1B4F52;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #2A7F62;
+    border-radius: 6px;
+    transition: width 0.8s ease;
+    min-width: 0;
+  }
+
+  /* ─── Donation Category Cards ─── */
+  .donation-card {
+    background: rgba(232, 213, 183, 0.3);
+    border-left: 4px solid #5AAFA6;
+    border-radius: 1rem;
+    padding: 1.75rem 2rem;
+  }
+
+  /* ─── Timeline ─── */
+  .timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.6rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: #5AAFA6;
+    border-radius: 1px;
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.35rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FAF7F2;
+    border: 3px solid #5AAFA6;
+    z-index: 1;
+  }
+  .timeline-marker.active {
+    background: #2A7F62;
+    border-color: #2A7F62;
+    box-shadow: 0 0 0 4px rgba(42, 127, 98, 0.2);
+  }
+
+  /* ─── Impact Cards ─── */
+  .impact-card {
+    background: #FAF7F2;
+    border-radius: 1rem;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 1px 4px rgba(27, 79, 82, 0.06);
+    text-align: center;
+  }
+  .impact-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .impact-amount {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2A7F62;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ─── Donor Table ─── */
+  .donor-table {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .donor-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    align-items: start;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .donor-row.sand {
+    background: rgba(232, 213, 183, 0.25);
+  }
+  .donor-header {
+    background: #1B4F52;
+    color: #FAF7F2;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.5rem;
+  }
+  .donor-level {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: #1B4F52;
+  }
+  .donor-header .donor-level,
+  .donor-header .donor-amount,
+  .donor-header .donor-recognition {
+    font-family: var(--font-body);
+    color: #FAF7F2;
+  }
+  .donor-amount {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: #B8977E;
+    font-size: 0.85rem;
+  }
+
+  /* ─── Help Cards ─── */
+  .help-card {
+    background: #FAF7F2;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 4px rgba(27, 79, 82, 0.06);
+  }
+  .help-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ─── Mobile: Donor table stacked ─── */
+  @media (max-width: 640px) {
+    .donor-row {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      padding: 1rem 1.25rem;
+    }
+    .donor-header {
+      display: none;
+    }
+    .donor-level {
+      font-size: 1.1rem;
+    }
+    .donor-amount {
+      font-size: 0.8rem;
+    }
+  }
+</style>
