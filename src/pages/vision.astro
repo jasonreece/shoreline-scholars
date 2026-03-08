@@ -206,6 +206,104 @@ import Button from '../components/Button.astro';
     </div>
   </section>
 
+  <!-- ═══ AFTER SCHOOL ENRICHMENT ═══ -->
+  <section class="py-20" style="background-color: #E8D5B7;">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-deep-sea mb-6">After School Enrichment</h2>
+        <div class="w-12 h-0.5 bg-sea-glass mx-auto mb-8"></div>
+        <p class="text-driftwood font-body font-medium text-sm tracking-wide mb-8">
+          Monday – Friday &nbsp;|&nbsp; 3:00 – 4:00 PM &nbsp;|&nbsp; Ages 5–12
+        </p>
+        <p class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto" style="color: #4A5859;">
+          One-hour enrichment classes open to all children — homeschooled and traditional school
+          students alike. Each day offers two groups to choose from, covering hands-on arts, music,
+          culinary skills, life skills, and strategy. No two days are the same.
+        </p>
+      </div>
+
+      <div class="enrichment-grid">
+        <!-- Monday -->
+        <div class="enrichment-card">
+          <h3 class="font-heading text-deep-sea text-xl font-semibold mb-4">Monday</h3>
+          <div class="enrichment-groups">
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 1</span>
+              <span class="enrichment-activity">Gardening Club</span>
+            </div>
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 2</span>
+              <span class="enrichment-activity">Music Lesson (Piano)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="enrichment-card">
+          <h3 class="font-heading text-deep-sea text-xl font-semibold mb-4">Tuesday</h3>
+          <div class="enrichment-groups">
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 1</span>
+              <span class="enrichment-activity">Painting</span>
+            </div>
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 2</span>
+              <span class="enrichment-activity">Culinary Arts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="enrichment-card">
+          <h3 class="font-heading text-deep-sea text-xl font-semibold mb-4">Wednesday</h3>
+          <div class="enrichment-groups">
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 1</span>
+              <span class="enrichment-activity">Knitting Class</span>
+            </div>
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 2</span>
+              <span class="enrichment-activity">Music Lesson (Guitar)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="enrichment-card">
+          <h3 class="font-heading text-deep-sea text-xl font-semibold mb-4">Thursday</h3>
+          <div class="enrichment-groups">
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 1</span>
+              <span class="enrichment-activity">Drawing</span>
+            </div>
+            <div class="enrichment-group">
+              <span class="enrichment-label">Group 2</span>
+              <span class="enrichment-activity">Chess Club</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday -->
+        <div class="enrichment-card">
+          <h3 class="font-heading text-deep-sea text-xl font-semibold mb-4">Friday</h3>
+          <div class="enrichment-groups">
+            <div class="enrichment-group enrichment-group--single">
+              <span class="enrichment-activity">Band Practice</span>
+              <span class="enrichment-note">Advanced music students</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="font-body font-light text-lg mb-8" style="color: #4A5859;">
+          Open to all families in the community — not just homeschoolers.
+        </p>
+        <Button variant="primary" href="mailto:info@shorelinescholars.org">Get in Touch</Button>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ EDUCATIONAL ECOSYSTEM ═══ -->
   <section class="bg-warm-sand/15 py-24 md:py-32">
     <div class="max-w-4xl mx-auto px-6">
@@ -366,5 +464,72 @@ import Button from '../components/Button.astro';
     .accordion-content {
       padding: 0 2.5rem 2rem;
     }
+  }
+
+  /* ─── Enrichment Grid ─── */
+  .enrichment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .enrichment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .enrichment-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .enrichment-card {
+    background: #FAF7F2;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);
+    text-align: center;
+  }
+
+  .enrichment-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .enrichment-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .enrichment-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #B8977E;
+  }
+
+  .enrichment-activity {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #4A5859;
+  }
+
+  .enrichment-note {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #B8977E;
+    font-style: italic;
+  }
+
+  .enrichment-group--single {
+    padding-top: 0.25rem;
   }
 </style>
