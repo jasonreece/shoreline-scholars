@@ -15,4 +15,17 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { events };
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    date: z.string(),
+    author: z.string(),
+    description: z.string(),
+    image: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    published: z.boolean().default(true),
+  }),
+});
+
+export const collections = { events, blog };

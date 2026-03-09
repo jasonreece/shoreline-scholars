@@ -12,6 +12,7 @@ import Ecosystem from '../components/Ecosystem.jsx';
   <Header />
   <SectionNav sections={[
     { label: 'Overview', id: 'hero-top' },
+    { label: 'Curriculum', id: 'curriculum' },
     { label: 'Weekly Schedule', id: 'weekly-schedule' },
     { label: 'Daily Schedules', id: 'daily-schedules' },
     { label: 'After School', id: 'after-school' },
@@ -41,6 +42,83 @@ import Ecosystem from '../components/Ecosystem.jsx';
         ecosystem integrates eight pillars: academics, outdoor learning, creative arts,
         social-emotional growth, entrepreneurship, trade skills, financial literacy, and
         life skills. Every day touches multiple pillars. Every week tells a complete story.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT WE TEACH ═══ -->
+  <section id="curriculum" class="bg-shell-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">What We Teach</h2>
+        <div class="w-12 h-0.5 bg-sea-glass mx-auto mb-10"></div>
+        <p class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto">
+          Our curriculum is built around the belief that real education connects subjects to each
+          other and to the world outside. Every course is taught through hands-on projects, outdoor
+          exploration, and collaborative discovery — not textbooks and tests.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2" style="gap: 1.5rem;">
+        <!-- Ages 9–12 -->
+        <div class="curriculum-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-6">Ages 9–12 (4th–8th Grade)</h3>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Language & Ideas</span>
+            <p class="curriculum-courses">Literature, Critical Thinking, Public Speaking</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Science & Nature</span>
+            <p class="curriculum-courses">Animal Science & Marine Biology, Horticulture, Food Prep & Nutrition</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">World & Society</span>
+            <p class="curriculum-courses">Government, History, Geography, Art History</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Building & Business</span>
+            <p class="curriculum-courses">Entrepreneurship, Financial Literacy</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Creative Arts</span>
+            <p class="curriculum-courses">Art, Music</p>
+          </div>
+
+          <p class="curriculum-note">
+            Guest speakers and educators join us for occasional workshops in carpentry, sewing, and electrical engineering.
+          </p>
+        </div>
+
+        <!-- Ages 5–8 -->
+        <div class="curriculum-card">
+          <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-6">Ages 5–8 (K–3rd Grade)</h3>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Core Skills</span>
+            <p class="curriculum-courses">Reading, Writing, Math</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Expression & Communication</span>
+            <p class="curriculum-courses">Public Speaking, Art</p>
+          </div>
+
+          <div class="curriculum-group">
+            <span class="curriculum-label">Discovery</span>
+            <p class="curriculum-courses">Science (hands-on exploration)</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="font-body font-light text-lg leading-relaxed text-center max-w-3xl mx-auto mt-12" style="color: #4A5859;">
+        Every subject connects back to our eight ecosystem pillars. A horticulture lesson is science,
+        nutrition, and life skills in one. An entrepreneurship project is math, public speaking, and
+        creative thinking. Nothing is taught in isolation.
       </p>
     </div>
   </section>
@@ -343,6 +421,51 @@ import Ecosystem from '../components/Ecosystem.jsx';
 </Layout>
 
 <style>
+  /* ─── Curriculum Cards ─── */
+  .curriculum-card {
+    background: rgba(232, 213, 183, 0.25);
+    border-left: 4px solid #5AAFA6;
+    border-radius: 1rem;
+    padding: 2rem 2.25rem;
+  }
+
+  .curriculum-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .curriculum-group:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .curriculum-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #B8977E;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .curriculum-courses {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.92rem;
+    color: #4A5859;
+    line-height: 1.6;
+  }
+
+  .curriculum-note {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: #B8977E;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+  }
+
   /* ─── Accordion ─── */
   details summary::-webkit-details-marker,
   details summary::marker {

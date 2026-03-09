@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+}
+---
+
+<Layout title={`${entry.data.title} — Shoreline Scholars`} description={entry.data.description}>
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 4rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-4xl md:text-5xl font-medium mb-4">{entry.data.title}</h1>
+      <p class="font-body font-light text-shell-white/80 text-base md:text-lg tracking-wide">
+        {formatDate(entry.data.date)} &middot; {entry.data.author}
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CONTENT ═══ -->
+  <section class="bg-shell-white py-16">
+    <div class="max-w-3xl mx-auto px-6">
+
+      {entry.data.image && (
+        <div class="mb-12 flex justify-center">
+          <img
+            src={entry.data.image}
+            alt={entry.data.title}
+            class="max-w-2xl w-full rounded-xl shadow"
+          />
+        </div>
+      )}
+
+      <div class="blog-content">
+        <Content />
+      </div>
+
+      <div class="mt-12">
+        <a href="/blog" class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
+          &larr; Back to Blog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Want to stay connected?"
+    description="Reach out to learn more about upcoming events, programs, and ways to get involved with Shoreline Scholars."
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .blog-content :global(p) {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-content :global(strong) {
+    font-weight: 600;
+    color: #1B4F52;
+  }
+
+  .blog-content :global(em) {
+    font-style: italic;
+  }
+
+  .blog-content :global(h2) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #1B4F52;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-content :global(h3) {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #1B4F52;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-content :global(ul) {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-content :global(ol) {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-content :global(li) {
+    margin-bottom: 0.4rem;
+  }
+
+  .blog-content :global(a) {
+    color: #2A7F62;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+  }
+
+  .blog-content :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .blog-content :global(blockquote) {
+    border-left: 3px solid #5AAFA6;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+
+  .blog-content :global(blockquote p) {
+    color: #4A5859;
+  }
+
+  .blog-content :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(232, 213, 183, 0.4);
+    margin: 2rem 0;
+  }
+</style>
