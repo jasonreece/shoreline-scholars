@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Button from '../../components/Button.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import { getCollection } from 'astro:content';
+
+const allEvents = await getCollection('events');
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const activeEvents = allEvents.filter(e => e.data.active);
+
+const upcomingEvents = activeEvents
+  .filter(e => new Date(e.data.date) >= today)
+  .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+
+const pastEvents = activeEvents
+  .filter(e => new Date(e.data.date) < today)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+const cardStyles = [
+  { bg: 'background: #1B4F52;', titleColor: 'color: #FAF7F2;', metaColor: 'color: rgba(250, 247, 242, 0.7);' },
+  { bg: 'background: #E8D5B7;', titleColor: 'color: #1B4F52;', metaColor: 'color: rgba(27, 79, 82, 0.6);' },
+  { bg: 'background: linear-gradient(135deg, #2A7F62 0%, #1B4F52 100%);', titleColor: 'color: #FAF7F2;', metaColor: 'color: rgba(250, 247, 242, 0.7);' },
+];
+
+function getCardStyle(index: number) {
+  return cardStyles[index % cardStyles.length];
+}
+---
+
+<Layout title="Events — Shoreline Scholars" description="Upcoming events, programs, and community gatherings from Shoreline Scholars in Indialantic, Florida.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Upcoming Events</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        Gatherings, programs, and community moments
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ UPCOMING EVENTS ═══ -->
+  <section class="bg-shell-white py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      {upcomingEvents.length > 0 ? (
+        <div class="flex flex-col" style="gap: 2rem;">
+          {upcomingEvents.map((event, i) => {
+            const style = getCardStyle(i);
+            return (
+              <article class="rounded-xl shadow overflow-hidden">
+                <a href={`/events/${event.slug}`} class="block hover:opacity-90 transition-opacity" style={style.bg}>
+                  <div class="py-10 px-8 md:px-10">
+                    <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{event.data.title}</h2>
+                    <p class="font-body font-light text-sm" style={style.metaColor}>
+                      {formatDate(event.data.date)} &middot; {event.data.time}
+                    </p>
+                  </div>
+                </a>
+                <div class="bg-shell-white p-8 md:p-10">
+                  <p class="font-body text-driftwood text-sm mb-4">{event.data.location}</p>
+                  <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4 line-clamp-3">{event.data.description}</p>
+                  <a href={`/events/${event.slug}`} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
+                    Learn More &rarr;
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="font-body text-driftwood text-lg">No upcoming events at the moment. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ═══ PAST EVENTS ═══ -->
+  {pastEvents.length > 0 && (
+    <section class="bg-shell-white pb-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-driftwood text-2xl font-medium mb-4">Past Events</h2>
+          <div class="w-12 h-0.5 bg-driftwood/30 mx-auto"></div>
+        </div>
+        <div class="flex flex-col opacity-60" style="gap: 2rem;">
+          {pastEvents.map((event, i) => {
+            const style = getCardStyle(i);
+            return (
+              <article class="rounded-xl shadow overflow-hidden">
+                <a href={`/events/${event.slug}`} class="block hover:opacity-90 transition-opacity" style={style.bg}>
+                  <div class="py-10 px-8 md:px-10">
+                    <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{event.data.title}</h2>
+                    <p class="font-body font-light text-sm" style={style.metaColor}>
+                      {formatDate(event.data.date)} &middot; {event.data.time}
+                    </p>
+                  </div>
+                </a>
+                <div class="bg-shell-white p-8 md:p-10">
+                  <p class="font-body text-driftwood text-sm mb-4">{event.data.location}</p>
+                  <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4 line-clamp-3">{event.data.description}</p>
+                  <a href={`/events/${event.slug}`} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
+                    Learn More &rarr;
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CallToAction
+    heading="Want to stay in the loop?"
+    description="Reach out to learn more about upcoming events, programs, and ways to get involved with Shoreline Scholars."
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
