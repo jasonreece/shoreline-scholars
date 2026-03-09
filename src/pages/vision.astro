@@ -11,7 +11,7 @@ import Ecosystem from '../components/Ecosystem.jsx';
 <Layout title="Our Vision — Shoreline Scholars" description="A week in the life of a Shoreline Scholar. Discover our integrated educational ecosystem blending academics, nature, creativity, and real-world skills.">
   <Header />
   <SectionNav sections={[
-    { label: 'Overview', id: 'hero-top' },
+    { label: 'Overview', id: 'overview' },
     { label: 'Curriculum', id: 'curriculum' },
     { label: 'Weekly Schedule', id: 'weekly-schedule' },
     { label: 'Daily Schedules', id: 'daily-schedules' },
@@ -20,7 +20,7 @@ import Ecosystem from '../components/Ecosystem.jsx';
   ]} />
 
   <!-- ═══ HERO ═══ -->
-  <section id="hero-top" class="relative flex items-center justify-center text-center px-6"
+  <section class="relative flex items-center justify-center text-center px-6"
     style="padding-top: 12rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
     <div class="absolute inset-0 opacity-10"
       style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
@@ -34,7 +34,7 @@ import Ecosystem from '../components/Ecosystem.jsx';
   </section>
 
   <!-- ═══ INTRODUCTION ═══ -->
-  <section id="overview" class="bg-shell-white py-24 md:py-32">
+  <section id="overview" class="bg-shell-white py-20">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <p class="text-[0.95rem] leading-relaxed">
         Shoreline Scholars is building a learning community where academics, nature,
@@ -200,15 +200,14 @@ import Ecosystem from '../components/Ecosystem.jsx';
             <div class="schedule-grid">
               <div class="schedule-row"><span class="schedule-time">9:00 AM</span><span>Morning meeting and check-in with advisor</span></div>
               <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Gardening and gentle exercise outside (30 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">9:40 AM</span><span>Academic Lesson 1: Math (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">10:15 AM</span><span>Rest (5 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">10:20 AM</span><span>Academic Lesson 2: Science (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">10:55 AM</span><span>Lunch outside (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Academic Lesson 3: Reading &amp; Writing (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:05 PM</span><span>Rest (5 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:10 PM</span><span>Academic Lesson 4: Geography (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:45 PM</span><span>Self-projects / Individual tutoring with guidance (1 hr)</span></div>
-              <div class="schedule-row"><span class="schedule-time">1:45 PM</span><span>Clean up and end-of-day meeting</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:40 AM</span><span>Academic Lesson 1: Literature (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:25 AM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Academic Lesson 2: Art (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:15 AM</span><span>Lunch and explore outside (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 3: Geography (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:45 PM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:50 PM</span><span>Self-projects with guidance / Individual tutoring (1 hr)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:50 PM</span><span>Clean up and end-of-day circle (10 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
             </div>
           </div>
@@ -231,8 +230,8 @@ import Ecosystem from '../components/Ecosystem.jsx';
               <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Gentle stretching exercises and guided play (40 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">9:50 AM</span><span>Academic Lesson 1: Science with hands-on projects (30 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">10:20 AM</span><span>Rest and play (10 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Academic Lesson 2: Reading &amp; Writing (30 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch and play outside (25 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Academic Lesson 2: Reading, Writing &amp; Public Speaking (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch then play outside (25 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">11:25 AM</span><span>Closing circle (5 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Dismissal and pick-up</span></div>
             </div>
@@ -253,9 +252,9 @@ import Ecosystem from '../components/Ecosystem.jsx';
           <div class="accordion-content">
             <div class="schedule-grid">
               <div class="schedule-row"><span class="schedule-time">11:30 AM</span><span>Greeting, meet with advisor, and lunch outside (30 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Science with hands-on projects (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Art (30 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">12:30 PM</span><span>Rest and play (10 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:40 PM</span><span>Academic Lesson 2: Reading &amp; Writing (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:40 PM</span><span>Academic Lesson 2: Math (30 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">1:10 PM</span><span>Gentle stretching exercises and guided play (40 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">1:50 PM</span><span>Closing circle (5 min)</span></div>
               <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
@@ -277,15 +276,14 @@ import Ecosystem from '../components/Ecosystem.jsx';
           <div class="accordion-content">
             <div class="schedule-grid">
               <div class="schedule-row"><span class="schedule-time">9:00 AM</span><span>Meeting on the beach, greeting</span></div>
-              <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Surfing (if available) or somatic exercises (80 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Community service: beach cleanup (30 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch and clean-up (45 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">11:45 AM</span><span>Return to center</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Animal Science (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:35 PM</span><span>Rest (5 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">12:40 PM</span><span>Academic Lesson 2: Entrepreneurship (35 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">1:15 PM</span><span>Self-projects / Older kids read to younger kids / Reading with therapy dogs / Individual tutoring (30 min)</span></div>
-              <div class="schedule-row"><span class="schedule-time">1:45 PM</span><span>Clean up and end-of-day meeting</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:10 AM</span><span>Surfing (if available) or mind and body exercises</span></div>
+              <div class="schedule-row"><span class="schedule-time">10:30 AM</span><span>Community service: pick up trash (30 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:00 AM</span><span>Lunch and clean-up</span></div>
+              <div class="schedule-row"><span class="schedule-time">11:45 AM</span><span>Return to the center</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:00 PM</span><span>Academic Lesson 1: Animal Science / Marine Biology or special lesson with guest speakers (45 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:45 PM</span><span>Rest (5 min)</span></div>
+              <div class="schedule-row"><span class="schedule-time">12:50 PM</span><span>Self-projects with guidance / Older kids read to younger kids / Reading with therapy dogs / Individual tutoring (1 hr)</span></div>
+              <div class="schedule-row"><span class="schedule-time">1:50 PM</span><span>End-of-day circle and clean-up</span></div>
               <div class="schedule-row"><span class="schedule-time">2:00 PM</span><span>Dismissal and pick-up</span></div>
             </div>
           </div>
