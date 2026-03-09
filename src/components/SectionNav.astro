@@ -44,21 +44,6 @@ const { sections } = Astro.props;
   positionNav();
   window.addEventListener('resize', positionNav);
 
-  // Show/hide nav based on hero scroll position
-  let isScrollingToSection = false;
-  const hero = document.querySelector('section:first-of-type') as HTMLElement;
-  if (hero) {
-    const topMargin = getOffset() + 4; // +4 for sub-pixel rounding
-    const heroObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (isScrollingToSection) return;
-        nav.classList.toggle('section-nav--visible', !entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: `-${topMargin}px 0px 0px 0px` }
-    );
-    heroObserver.observe(hero);
-  }
-
   // Active state tracking via Intersection Observer
   const activeObserver = new IntersectionObserver(
     (entries) => {
@@ -90,25 +75,15 @@ const { sections } = Astro.props;
 
   sections.forEach(section => activeObserver.observe(section));
 
-  // Shared scroll handler: show subnav first, then scroll with correct offset
+  // Smooth scroll on click — subnav links
   const scrollToSection = (id: string) => {
     const target = document.getElementById(id);
     if (!target) return;
-    isScrollingToSection = true;
-    nav.classList.add('section-nav--visible');
     const top = target.getBoundingClientRect().top + window.scrollY - getOffset();
     window.scrollTo({ top, behavior: 'smooth' });
     history.replaceState(null, '', `#${id}`);
-    // Release after scroll animation completes
-    const release = () => { isScrollingToSection = false; };
-    if ('onscrollend' in window) {
-      window.addEventListener('scrollend', release, { once: true });
-    } else {
-      setTimeout(release, 800);
-    }
   };
 
-  // Smooth scroll on click — subnav links
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -133,20 +108,10 @@ const { sections } = Astro.props;
     left: 0;
     right: 0;
     z-index: 40;
-    background: rgba(250, 247, 242, 0.92);
+    background: rgba(250, 247, 242, 0.95);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(232, 213, 183, 0.3);
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    pointer-events: none;
-  }
-
-  .section-nav--visible {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.3);
   }
 
   .section-nav-inner {

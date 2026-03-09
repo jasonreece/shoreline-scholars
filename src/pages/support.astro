@@ -14,18 +14,18 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
 <Layout title="Support — Shoreline Scholars" description="Help us build a beachside home for learning. Support Shoreline Scholars, a nonprofit beachside learning community in Indialantic, Florida.">
   <Header />
   <SectionNav sections={[
-    { label: 'Our Story', id: 'story' },
-    { label: 'Campaign', id: 'campaign' },
-    { label: 'Donations', id: 'donations' },
+    { label: "What We're Building", id: 'hero-top' },
+    { label: 'Our Goal', id: 'campaign' },
+    { label: 'Where It Goes', id: 'donations' },
     { label: 'Road Ahead', id: 'road-ahead' },
-    { label: 'Your Gift', id: 'your-gift' },
-    { label: 'Recognition', id: 'recognition' },
+    { label: 'Give', id: 'your-gift' },
+    { label: 'Donor Tiers', id: 'recognition' },
     { label: 'Get Involved', id: 'get-involved' },
   ]} />
 
   <!-- ═══ SECTION 1: HERO ═══ -->
-  <section class="relative flex items-center justify-center text-center px-6"
-    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+  <section id="hero-top" class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 12rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
     <div class="absolute inset-0 opacity-10"
       style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
     </div>
