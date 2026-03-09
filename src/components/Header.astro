@@ -3,6 +3,7 @@ const navLinks = [
   { label: 'Our Vision', href: '/vision' },
   { label: 'Support', href: '/support' },
 ];
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-shell-white/95 backdrop-blur-sm border-b border-warm-sand/30">
@@ -15,14 +16,18 @@ const navLinks = [
 
     <!-- Desktop Nav -->
     <div class="hidden md:flex items-center gap-8">
-      {navLinks.map(link => (
-        <a
-          href={link.href}
-          class="font-body font-medium text-[0.85rem] text-deep-sea/80 hover:text-shoreline transition-colors"
-        >
-          {link.label}
-        </a>
-      ))}
+      {navLinks.map(link => {
+        const isActive = currentPath === link.href;
+        return (
+          <a
+            href={link.href}
+            class={`font-body font-medium text-[0.85rem] transition-colors ${isActive ? 'text-shoreline' : 'text-deep-sea/80 hover:text-shoreline'}`}
+            aria-current={isActive ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        );
+      })}
       <a
         href="#get-involved"
         class="get-involved-btn inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-6 py-2.5 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
@@ -48,16 +53,20 @@ const navLinks = [
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="hidden md:hidden bg-shell-white border-t border-warm-sand/30 px-6 pb-4">
     <ul class="flex flex-col gap-3">
-      {navLinks.map(link => (
-        <li>
-          <a
-            href={link.href}
-            class="block font-body font-medium text-[0.85rem] text-deep-sea/80 hover:text-shoreline py-2 transition-colors"
-          >
-            {link.label}
-          </a>
-        </li>
-      ))}
+      {navLinks.map(link => {
+        const isActive = currentPath === link.href;
+        return (
+          <li>
+            <a
+              href={link.href}
+              class={`block font-body font-medium text-[0.85rem] py-2 transition-colors ${isActive ? 'text-shoreline' : 'text-deep-sea/80 hover:text-shoreline'}`}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        );
+      })}
       <li>
         <a
           href="#get-involved"

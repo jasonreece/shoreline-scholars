@@ -3,10 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import SectionNav from '../components/SectionNav.astro';
 ---
 
 <Layout title="Brand Identity Guide — Shoreline Scholars" description="Internal brand identity guide for the Shoreline Scholars visual system.">
   <Header />
+  <SectionNav sections={[
+    { label: 'Essence', id: 'essence' },
+    { label: 'Colors', id: 'colors' },
+    { label: 'Typography', id: 'typography' },
+    { label: 'Wordmark', id: 'wordmark' },
+    { label: 'Logo', id: 'logo' },
+    { label: 'Buttons', id: 'buttons' },
+    { label: 'Imagery', id: 'imagery' },
+    { label: 'Voice', id: 'voice' },
+  ]} />
 
   <!-- ═══ COVER ═══ -->
   <section class="relative flex items-center justify-center text-center px-6"
@@ -27,7 +38,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ BRAND ESSENCE ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="essence" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Brand Essence</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -77,7 +88,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ COLOR PALETTE ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+  <section id="colors" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Color Palette</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -169,7 +180,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ TYPOGRAPHY ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="typography" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Typography</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -307,7 +318,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ WORDMARK & LOGO USAGE ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+  <section id="wordmark" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Wordmark &amp; Logo Usage</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -348,7 +359,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ LOGO DOWNLOADS ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+  <section id="logo" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Logo Downloads</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -429,7 +440,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ BUTTONS & INTERACTIVE ELEMENTS ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="buttons" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Buttons &amp; Interactive Elements</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -466,7 +477,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ IMAGERY & PHOTOGRAPHY DIRECTION ═══ -->
-  <section class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
+  <section id="imagery" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.15);">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Imagery &amp; Photography Direction</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
@@ -528,7 +539,7 @@ import Button from '../components/Button.astro';
   </section>
 
   <!-- ═══ VOICE & TONE ═══ -->
-  <section class="bg-shell-white py-20 md:py-28">
+  <section id="voice" class="bg-shell-white py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="font-heading text-deep-sea mb-6">Voice &amp; Tone</h2>
       <div class="w-16 h-0.5 bg-shoreline mb-10"></div>
