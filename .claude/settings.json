@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/jasonreece/shoreline-scholars/public/logo-raw.png)",
+      "Bash(sips -z 32 32 logo-raw.png --out favicon-32.png)",
+      "Bash(sips -z 16 16 logo-raw.png --out favicon-16.png)",
+      "Bash(sips -z 180 180 logo-raw.png --out apple-touch-icon.png)"
+    ]
+  }
+}
