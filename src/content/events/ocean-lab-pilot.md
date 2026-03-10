@@ -3,7 +3,7 @@ title: "Ocean Lab — New Pilot Program"
 date: "2026-05-05"
 time: "9:30 AM – 12:00 PM"
 location: "8th Ave Beach Access, Indialantic"
-description: "An 8-week oceanfront pilot program for ages 5–12. Tuesdays, May 5 – June 23 at 8th Ave Beach Access in Indialantic. Tide pool studies, beach ecology, creative STEM projects, nature journaling, and mindfulness by the sea. Only 10 spots available — RSVP by April 21."
+description: "An 8-week oceanfront pilot program for ages 5–12. Tuesdays, May 5 – June 23 at 8th Ave Beach Access in Indialantic. Tide pool studies, beach ecology, creative STEM projects, nature journaling, and mindfulness by the sea. $200 for the full program. Only 10 spots available — RSVP soon."
 image: "/images/events/ocean-lab-pilot.jpg"
 cta: "Visit shorelinescholars.org"
 ctaLink: "https://shorelinescholars.org"
@@ -16,9 +16,11 @@ Join our brand new pilot program — an oceanfront learning adventure at 8th Ave
 
 Ocean Lab meets once a week on **Tuesdays, May 5 through June 23** — eight mornings of hands-on marine science, nature exploration, and creative projects right by the shore. Ages 5–12, small group learning.
 
+**Program Fee — $200** for all eight weeks. That's eight mornings of hands-on learning by the ocean.
+
 **Free Trial Day — Tuesday, April 14.** Come experience a morning at Ocean Lab before the program begins. No commitment, just curiosity.
 
-**RSVP by April 21** to secure your spot. Space is limited to **10 learners** so every child gets the attention and room to explore they deserve.
+**RSVP soon** to secure your spot. Space is limited to **10 learners** so every child gets the attention and room to explore they deserve.
 
 **Join Our Ocean Lab:**
 - Tide Pool Studies
