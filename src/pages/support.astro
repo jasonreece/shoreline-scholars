@@ -6,7 +6,7 @@ import Button from '../components/Button.astro';
 import SectionNav from '../components/SectionNav.astro';
 import CallToAction from '../components/CallToAction.astro';
 
-const goalAmount = 150000;
+const goalAmount = 250000;
 const raisedAmount = 0;
 const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
 ---
@@ -70,9 +70,9 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
   <section id="campaign" class="py-20 md:py-28" style="background: rgba(232, 213, 183, 0.3);">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-deep-sea mb-3">Our Goal: $150,000</h2>
+        <h2 class="font-heading text-deep-sea mb-3">Our Goal: $250,000</h2>
         <p class="text-[0.95rem] leading-relaxed">
-          To secure a permanent beachside learning home for Shoreline Scholars
+          To purchase a permanent beachside home for Shoreline Scholars
         </p>
       </div>
 
@@ -92,8 +92,8 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
       </div>
 
       <p class="text-[0.95rem] leading-relaxed text-center max-w-2xl mx-auto mb-10">
-        $150,000 gives 60 children a place to learn by the ocean. That's $2,500 per child to
-        build something permanent in our community.
+        $250,000 gives 60 children a permanent home for learning by the ocean. That's roughly
+        $4,000 per child to build something that lasts.
       </p>
 
       <div class="text-center">
@@ -219,36 +219,40 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style="gap: 1.25rem;">
         <div class="impact-card">
-          <span class="impact-amount">$25</span>
+          <span class="impact-amount">$50</span>
           <p>Art supplies for a month of creative exploration</p>
         </div>
         <div class="impact-card">
-          <span class="impact-amount">$50</span>
+          <span class="impact-amount">$100</span>
           <p>A soft-top surfboard for Friday surf lessons</p>
         </div>
         <div class="impact-card">
-          <span class="impact-amount">$100</span>
-          <p>One month of science equipment for hands-on learning</p>
-        </div>
-        <div class="impact-card">
           <span class="impact-amount">$250</span>
-          <p>One student's scholarship for a month</p>
+          <p>One month of science and outdoor learning equipment</p>
         </div>
         <div class="impact-card">
           <span class="impact-amount">$500</span>
-          <p>One month of insurance protecting every child in the program</p>
+          <p>One student's scholarship for a month</p>
         </div>
         <div class="impact-card">
           <span class="impact-amount">$1,000</span>
-          <p>One month of an educator's stipend</p>
+          <p>One month of insurance protecting every child in the program</p>
         </div>
         <div class="impact-card">
-          <span class="impact-amount">$5,000</span>
-          <p>Furnishes an entire learning station — table, chairs, shelving, and materials</p>
+          <span class="impact-amount">$2,500</span>
+          <p>One month of program operating costs</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$10,000</span>
+          <p>Furnishes an entire classroom — tables, chairs, shelving, and materials</p>
         </div>
         <div class="impact-card">
           <span class="impact-amount">$25,000</span>
-          <p>Names a room in the Shoreline Scholars learning home</p>
+          <p>Names a learning space in our beachside home</p>
+        </div>
+        <div class="impact-card impact-card--featured">
+          <span class="impact-amount">$50,000</span>
+          <p>Founding Patron — names a room and helps secure our home</p>
         </div>
       </div>
     </div>
@@ -273,27 +277,27 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
         </div>
         <div class="donor-row sand">
           <span class="donor-level">Founding Patron</span>
-          <span class="donor-amount">$25,000+</span>
-          <span class="donor-recognition">Named room or space in the learning home, permanent recognition, annual founder's dinner</span>
+          <span class="donor-amount">$50,000+</span>
+          <span class="donor-recognition">Named room in the learning home, permanent recognition, annual founder's dinner</span>
         </div>
         <div class="donor-row">
           <span class="donor-level">Champion</span>
-          <span class="donor-amount">$10,000–$24,999</span>
-          <span class="donor-recognition">Named on the donor wall, annual impact report, private program tour</span>
+          <span class="donor-amount">$25,000–$49,999</span>
+          <span class="donor-recognition">Named learning space, donor wall, annual impact report, private tour</span>
         </div>
         <div class="donor-row sand">
           <span class="donor-level">Builder</span>
-          <span class="donor-amount">$5,000–$9,999</span>
-          <span class="donor-recognition">Named on website, quarterly newsletter with program updates</span>
+          <span class="donor-amount">$10,000–$24,999</span>
+          <span class="donor-recognition">Named on donor wall, quarterly newsletter with program updates</span>
         </div>
         <div class="donor-row">
           <span class="donor-level">Sustainer</span>
-          <span class="donor-amount">$1,000–$4,999</span>
+          <span class="donor-amount">$2,500–$9,999</span>
           <span class="donor-recognition">Named on website, annual thank-you event</span>
         </div>
         <div class="donor-row sand">
           <span class="donor-level">Friend</span>
-          <span class="donor-amount">$100–$999</span>
+          <span class="donor-amount">$500–$2,499</span>
           <span class="donor-recognition">Named on website donor page</span>
         </div>
         <div class="donor-row">
@@ -444,6 +448,15 @@ const progressPercent = Math.min((raisedAmount / goalAmount) * 100, 100);
     font-size: 2rem;
     color: #2A7F62;
     margin-bottom: 0.5rem;
+  }
+  .impact-card--featured {
+    background: #1B4F52;
+  }
+  .impact-card--featured .impact-amount {
+    color: #5AAFA6;
+  }
+  .impact-card--featured p {
+    color: #FAF7F2;
   }
 
   /* ─── Donor Table ─── */
