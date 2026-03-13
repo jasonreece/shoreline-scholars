@@ -19,7 +19,7 @@ const pillars = [
   {
     name: 'Social-Emotional Growth',
     description:
-      'Trauma-informed, attachment-focused support helping children develop emotional intelligence, empathy, and healthy relationships.',
+      'Relationship-centered support helping children develop emotional intelligence, empathy, and healthy connections.',
   },
   {
     name: 'Entrepreneurship',

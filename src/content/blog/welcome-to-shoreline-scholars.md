@@ -16,7 +16,7 @@ When we met, we realized we were saying the same thing in different words. And w
 
 ## Why Shoreline Scholars
 
-We looked at the options available to homeschool families in our community and saw a gap. There are co-ops, tutoring centers, and online programs. But there was nothing that combined serious academic enrichment with trauma-informed care, outdoor learning, and the kind of small-group, relational environment where children are truly seen.
+We looked at the options available to homeschool families in our community and saw a gap. There are co-ops, tutoring centers, and online programs. But there was nothing that combined serious academic enrichment with relationship-centered care, outdoor learning, and the kind of small-group, relational environment where children are truly seen.
 
 We wanted a place where a child could study science by exploring a tide pool, learn math through real-world projects, develop social skills through collaborative discovery, and grow emotionally in the care of adults who understand attachment, regulation, and the developmental needs of the whole child.
 

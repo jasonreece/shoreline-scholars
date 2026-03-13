@@ -36,7 +36,7 @@ Here's what often gets overlooked in conversations about outdoor education: natu
 
 In my work as a counselor, I've seen firsthand how natural environments create space for emotional regulation. The rhythm of waves. The openness of the sky. The sensory grounding of sand between toes. These aren't just pleasant — they're therapeutic. They calm the nervous system, reduce cortisol, and create the conditions for children to feel safe enough to learn, connect, and take risks.
 
-For children who carry anxiety, trauma, or sensory sensitivities, the outdoor classroom isn't just an alternative — it can be transformative. The pressure of four walls, fluorescent lights, and 25 peers in a closed room is replaced by open air, natural light, and the gentle structure of a small group working together in a space that feels inherently safe.
+For children who carry anxiety, stress, or sensory sensitivities, the outdoor classroom isn't just an alternative — it can be transformative. The pressure of four walls, fluorescent lights, and 25 peers in a closed room is replaced by open air, natural light, and the gentle structure of a small group working together in a space that feels inherently safe.
 
 ## Beyond Enrichment
 
