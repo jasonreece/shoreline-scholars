@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+
+const flyers = [
+  {
+    title: 'Ocean Lab — Pilot Program',
+    description: 'An 8-week oceanfront learning adventure for ages 5–12. Tuesdays, May 5 – June 23 at 8th Ave Beach Access in Indialantic.',
+    href: '/flyers/ocean-lab-pilot',
+    date: 'May 2026',
+  },
+];
+---
+
+<Layout title="Flyers — Shoreline Scholars" description="Printable flyers for Shoreline Scholars programs and events.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Flyers</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        Printable flyers for our programs and&nbsp;events
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ FLYER LIST ═══ -->
+  <section class="bg-shell-white py-24" style="margin-top: -1px;">
+    <div class="max-w-4xl mx-auto px-6">
+      {flyers.length > 0 ? (
+        <div class="flex flex-col" style="gap: 2rem;">
+          {flyers.map((flyer, i) => {
+            const styles = [
+              { bg: 'background: #1B4F52;', titleColor: 'color: #FAF7F2;', metaColor: 'color: rgba(250, 247, 242, 0.7);' },
+              { bg: 'background: #E8D5B7;', titleColor: 'color: #1B4F52;', metaColor: 'color: rgba(27, 79, 82, 0.6);' },
+              { bg: 'background: linear-gradient(135deg, #2A7F62 0%, #1B4F52 100%);', titleColor: 'color: #FAF7F2;', metaColor: 'color: rgba(250, 247, 242, 0.7);' },
+            ];
+            const style = styles[i % styles.length];
+            return (
+              <article class="rounded-xl shadow overflow-hidden">
+                <a href={flyer.href} class="block hover:opacity-90 transition-opacity" style={style.bg}>
+                  <div class="py-10 px-8 md:px-10">
+                    <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{flyer.title}</h2>
+                    <p class="font-body font-light text-sm" style={style.metaColor}>
+                      {flyer.date}
+                    </p>
+                  </div>
+                </a>
+                <div class="bg-shell-white p-8 md:p-10">
+                  <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4">{flyer.description}</p>
+                  <a href={flyer.href} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
+                    View Flyer &rarr;
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="font-body text-driftwood text-lg">No flyers yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Want to stay connected?"
+    description="Reach out to learn more about upcoming events, programs, and ways to get involved with Shoreline Scholars."
+  />
+
+  <Footer />
+</Layout>
