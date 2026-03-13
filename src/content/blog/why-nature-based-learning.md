@@ -3,7 +3,7 @@ title: "Why Nature-Based Learning Works"
 date: "2026-03-02"
 author: "Rachel Glover"
 description: "The research behind outdoor education — and why the beach might be the best classroom your child has ever had."
-image: "/images/blog/why-nature-based-learning-works.png"
+image: "/images/blog/why-nature-based-learning-works.jpg"
 tags: ["research", "outdoor learning", "child development"]
 published: true
 ---

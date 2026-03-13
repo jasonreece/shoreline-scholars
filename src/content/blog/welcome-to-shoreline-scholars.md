@@ -3,7 +3,7 @@ title: "Welcome to Shoreline Scholars"
 date: "2026-02-20"
 author: "Rachel Glover & Chi Reece"
 description: "We're building something new in Indialantic — a learning community where the shoreline is the classroom and every child is seen, known, and valued."
-image: "/images/blog/welcome-to-shoreline-scholars.png"
+image: "/images/blog/welcome-to-shoreline-scholars.jpeg"
 tags: ["community", "announcement"]
 published: true
 ---
