@@ -10,7 +10,7 @@ published: true
 
 We've been dreaming about this for a long time.
 
-Both of us came to this moment from different paths — Rachel through years of counseling, developmental psychology, and a deep belief that emotional safety is the foundation of all learning. Chi through two decades of teaching math, science, and yoga to children in individualized settings, and the conviction that every child has a natural desire to learn when you stop getting in the way.
+Both of us came to this moment from different paths — Rachel through years of counseling and a research focus on developmental psychology, with a deep belief that emotional safety is the foundation of all learning. Chi through two decades of teaching math, science, and yoga to children in individualized settings, and the conviction that every child has a natural desire to learn when you stop getting in the way.
 
 When we met, we realized we were saying the same thing in different words. And we decided to build something together.
 

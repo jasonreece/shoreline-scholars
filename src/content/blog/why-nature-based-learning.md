@@ -8,7 +8,7 @@ tags: ["research", "outdoor learning", "child development"]
 published: true
 ---
 
-As a developmental psychologist and counselor, I've spent years studying how children grow — emotionally, socially, and cognitively. And one finding comes up again and again in the research, across disciplines, across decades: children who learn in nature do better. Not marginally. Significantly.
+As a counselor with a research focus on developmental psychology, I've spent years studying how children grow — emotionally, socially, and cognitively. And one finding comes up again and again in the research, across disciplines, across decades: children who learn in nature do better. Not marginally. Significantly.
 
 It's not a trend. It's not a philosophy. It's how human brains were designed to learn.
 
@@ -50,4 +50,4 @@ The beach isn't a break from learning. It's where learning comes to life.
 
 ---
 
-*Rachel Glover is the founder of Shoreline Scholars and a Licensed Mental Health Counselor with a doctorate in Developmental Psychology. Learn more about our approach on our [Vision page](/vision).*
+*Rachel Glover is the founder of Shoreline Scholars and a Licensed Mental Health Counselor with a research focus on developmental psychology. Learn more about our approach on our [Vision page](/vision).*
