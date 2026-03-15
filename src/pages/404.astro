@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Page Not Found — Shoreline Scholars" description="The page you're looking for doesn't exist.">
+  <Header />
+
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%); min-height: 100vh;">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <p class="font-body font-medium text-shell-white/50 uppercase mb-6" style="font-size: 0.75rem; letter-spacing: 0.04em;">404</p>
+      <h1 class="font-heading text-shell-white text-4xl md:text-5xl font-medium mb-6 leading-tight">
+        The tide took this one
+      </h1>
+      <p class="font-body text-shell-white/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        The page you're looking for doesn't exist — it may have been moved or the link may be outdated.
+      </p>
+      <a href="/"
+        class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110">
+        Back to Shore
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
