@@ -3,7 +3,7 @@ title: "Creative Writing Lab — Watercolor for Story Illustrations"
 date: "2026-05-16"
 time: "10:00 AM – 12:00 PM"
 location: "Chi's Backyard, Indialantic"
-description: "A creative writing and watercolor illustration workshop for kids. Students will craft original stories and learn to illustrate them with watercolor techniques — taught by Stacey Marmolejo, a published author, writing coach, and 40-year veteran educator."
+description: "A creative writing and watercolor illustration workshop for kids. Students will craft original stories and learn to illustrate them with watercolor techniques — taught by Stacey Marmolejo, a published author, writing coach, and 40-year veteran educator. $35 per student."
 image: "/images/events/creative-writing-lab.jpeg"
 cta: "RSVP Now"
 ctaLink: "mailto:shorelinescholars@gmail.com?subject=Creative%20Writing%20Lab%20RSVP"
@@ -32,6 +32,7 @@ A hands-on workshop where storytelling meets art — students will write origina
 |--------|------|
 | Date | Saturday, May 16 |
 | Time | 10:00 AM – 12:00 PM |
+| Cost | $35 per student |
 | Location | Chi's Backyard |
 | Instructor | Stacey Marmolejo |
 
