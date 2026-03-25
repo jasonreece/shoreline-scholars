@@ -1,7 +1,7 @@
 ---
 title: "Secret Spots and Sea Snails"
 date: "2026-03-23"
-author: "Shoreline Scholars"
+author: "Chi Reece"
 description: "Sometimes the best discoveries are hiding just around the corner — in tide pools, under sea grape branches, and in the palm of a child's hand."
 image: "/images/blog/indian-river-explorers-1.jpg"
 tags: ["nature", "community", "Indian River", "exploration"]
