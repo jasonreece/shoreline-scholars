@@ -38,4 +38,4 @@ And that's where real learning begins.
 
 ---
 
-*This is Ocean Lab at Shoreline Scholars. Our next session begins May 5 at 8th Ave Beach Access. [Learn more about the program](/events/ocean-lab-pilot) or visit our [Vision page](/vision) to see what we're building.*
+*This is Ocean Lab at Shoreline Scholars. Our next session begins May 5 at Nance Park. [Learn more about the program](/events/ocean-lab-pilot) or visit our [Vision page](/vision) to see what we're building.*

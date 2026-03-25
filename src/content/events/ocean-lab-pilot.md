@@ -2,15 +2,15 @@
 title: "Ocean Lab — New Pilot Program"
 date: "2026-05-05"
 time: "9:30 AM – 12:00 PM"
-location: "8th Ave Beach Access, Indialantic"
-description: "An 8-week oceanfront pilot program for ages 5–12. Tuesdays, May 5 – June 23 at 8th Ave Beach Access in Indialantic. Tide pool studies, beach ecology, creative STEM projects, nature journaling, and mindfulness by the sea. $200 for the full program. Only 10 spots available — RSVP soon."
+location: "Nance Park, Indialantic"
+description: "An 8-week oceanfront pilot program for ages 5–12. Tuesdays, May 5 – June 23 at Nance Park in Indialantic. Tide pool studies, beach ecology, creative STEM projects, nature journaling, and mindfulness by the sea. $200 for the full program. Only 10 spots available — RSVP soon."
 image: "/images/events/ocean-lab-pilot.jpg"
 cta: "Visit shorelinescholars.org"
 ctaLink: "https://shorelinescholars.org"
 active: true
 ---
 
-Join our brand new pilot program — an oceanfront learning adventure at 8th Ave Beach Access in Indialantic.
+Join our brand new pilot program — an oceanfront learning adventure at Nance Park in Indialantic.
 
 ## Program Details
 
