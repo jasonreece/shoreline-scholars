@@ -5,8 +5,8 @@ time: "10:00 AM – 12:00 PM"
 location: "Chi's Kitchen, Indialantic"
 description: "A hands-on cooking experience for kids ages 8 and up. Students will learn to make Vietnamese spring rolls and Korean kimbap while building knife safety, food preparation, and rolling techniques. $55 per student. Drop-off optional."
 image: "/images/events/kitchen-lab.png"
-cta: "RSVP Now"
-ctaLink: "mailto:shorelinescholars@gmail.com?subject=Kitchen%20Lab%20RSVP"
+cta: "Enroll Now"
+ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Kitchen%20Lab"
 active: true
 ---
 

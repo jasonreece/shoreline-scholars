@@ -5,8 +5,8 @@ time: "2:00 PM"
 location: "Orlando Park, Indialantic"
 description: "Discover and collaborate for a new enrichment program and learning community for homeschooled students."
 image: "/images/events/parent-interest-meeting.jpg"
-cta: "Text Chi – 404-503-8233"
-ctaLink: "sms:4045038233"
+cta: ""
+ctaLink: ""
 active: true
 ---
 

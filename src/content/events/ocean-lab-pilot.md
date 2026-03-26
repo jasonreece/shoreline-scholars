@@ -5,8 +5,8 @@ time: "9:30 AM – 12:00 PM"
 location: "Nance Park, Indialantic"
 description: "An 8-week oceanfront pilot program for ages 5–12. Tuesdays, May 5 – June 23 at Nance Park in Indialantic. Tide pool studies, beach ecology, creative STEM projects, nature journaling, and mindfulness by the sea. $200 for the full program. Only 10 spots available — RSVP soon."
 image: "/images/events/ocean-lab-pilot.jpg"
-cta: "Visit shorelinescholars.org"
-ctaLink: "https://shorelinescholars.org"
+cta: "Enroll Now"
+ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Ocean%20Lab"
 active: true
 ---
 

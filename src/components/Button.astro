@@ -2,10 +2,12 @@
 interface Props {
   variant?: 'primary' | 'secondary' | 'warm';
   href?: string;
+  target?: string;
+  rel?: string;
   class?: string;
 }
 
-const { variant = 'primary', href, class: className } = Astro.props;
+const { variant = 'primary', href, target, rel, class: className } = Astro.props;
 
 const baseStyles = 'inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer';
 
@@ -19,7 +21,7 @@ const classes = `${baseStyles} ${variantStyles[variant]} ${className || ''}`.tri
 ---
 
 {href ? (
-  <a href={href} class={classes}>
+  <a href={href} class={classes} target={target} rel={rel}>
     <slot />
   </a>
 ) : (

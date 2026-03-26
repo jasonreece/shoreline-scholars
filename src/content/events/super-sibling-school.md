@@ -5,8 +5,8 @@ time: "2:00 PM – 3:30 PM"
 location: "Chi's House, Indialantic"
 description: "Prepare your child to become an amazing big sibling. A fun, hands-on class that reduces jealousy and sibling anxiety, teaches safe baby interaction, and gives families tools to welcome a new baby with confidence and connection."
 image: "/images/events/super-sibling-school.jpg"
-cta: "Call/Text 321-345-1468"
-ctaLink: "tel:3213451468"
+cta: "Enroll Now"
+ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Super%20Sibling%20School"
 active: true
 ---
 

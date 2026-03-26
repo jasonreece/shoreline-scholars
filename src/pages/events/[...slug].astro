@@ -64,6 +64,8 @@ function formatDate(dateStr: string): string {
         <div class="mt-10 text-center">
           <a
             href={entry.data.ctaLink}
+            target={entry.data.ctaLink.startsWith('http') ? '_blank' : undefined}
+            rel={entry.data.ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
             class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
           >
             {entry.data.cta}
