@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Completing Enrollment — Shoreline Scholars" description="Redirecting you to complete your enrollment payment.">
+
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="min-height: 100vh; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+
+    <!-- Loading state -->
+    <div id="loading-state" class="relative z-10 max-w-md mx-auto">
+      <img
+        src="/logos/mark-white.png"
+        alt="Shoreline Scholars"
+        class="breathe-logo mx-auto mb-10"
+        width="80"
+        height="80"
+      />
+      <p id="status-message" class="font-body text-shell-white/80 text-base md:text-lg leading-relaxed mb-8">
+        Completing your enrollment...
+      </p>
+      <p id="fallback-link" class="fallback-fade font-body text-shell-white/50 text-sm">
+        If you are not redirected automatically,
+        <a id="fallback-anchor" href="/" class="text-shell-white/70 underline hover:text-shell-white transition-colors">click here</a>.
+      </p>
+    </div>
+
+    <!-- Error state -->
+    <div id="error-state" class="relative z-10 max-w-2xl mx-auto" hidden>
+      <p class="font-body font-medium text-shell-white/50 uppercase mb-6" style="font-size: 0.75rem; letter-spacing: 0.04em;">Hmm</p>
+      <h1 class="font-heading text-shell-white text-4xl md:text-5xl font-medium mb-6 leading-tight">
+        We couldn't find that program
+      </h1>
+      <p class="font-body text-shell-white/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        We weren't able to determine your program. Please visit our events page or get in touch and we'll help you get enrolled.
+      </p>
+      <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
+        <a href="/events"
+          class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110">
+          View Programs
+        </a>
+        <a href="/"
+          class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer border-2 text-shell-white hover:bg-white/10"
+          style="border-color: rgba(250, 247, 242, 0.6);">
+          Return Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Noscript fallback -->
+    <noscript>
+      <div class="relative z-10 max-w-md mx-auto">
+        <h1 class="font-heading text-shell-white text-3xl font-medium mb-6">Complete Your Payment</h1>
+        <p class="font-body text-shell-white/70 text-base mb-8">JavaScript is required for automatic redirect. Please click your program below:</p>
+        <ul class="font-body text-left" style="list-style: none; padding: 0;">
+          <li class="mb-3"><a href="https://www.zeffy.com/en-US/ticketing/shoreline-scholars-ocean-lab-spring--2026" class="text-shell-white underline hover:text-warm-sand">Ocean Lab</a></li>
+          <li class="mb-3"><a href="https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-creative-writing-lab-spring--2026" class="text-shell-white underline hover:text-warm-sand">Creative Writing Lab</a></li>
+          <li class="mb-3"><a href="https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-kitchen-lab-spring--2026" class="text-shell-white underline hover:text-warm-sand">Kitchen Lab</a></li>
+          <li class="mb-3"><a href="https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-civics-in-action" class="text-shell-white underline hover:text-warm-sand">Civics in Action</a></li>
+          <li class="mb-3"><a href="https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-super-sibling-school-summer--2026" class="text-shell-white underline hover:text-warm-sand">Super Sibling School</a></li>
+        </ul>
+      </div>
+    </noscript>
+  </section>
+
+</Layout>
+
+<script is:inline>
+  (function () {
+    var PROGRAMS = {
+      'Ocean Lab': 'https://www.zeffy.com/en-US/ticketing/shoreline-scholars-ocean-lab-spring--2026',
+      'Creative Writing Lab': 'https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-creative-writing-lab-spring--2026',
+      'Kitchen Lab': 'https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-kitchen-lab-spring--2026',
+      'Civics in Action': 'https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-civics-in-action',
+      'Super Sibling School': 'https://www.zeffy.com/en-US/ticketing/click-add-to-enroll-shoreline-scholars-super-sibling-school-summer--2026'
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var program = params.get('program');
+    var zeffyUrl = program ? PROGRAMS[program] : null;
+
+    if (!zeffyUrl) {
+      document.getElementById('loading-state').hidden = true;
+      document.getElementById('error-state').hidden = false;
+      return;
+    }
+
+    var statusEl = document.getElementById('status-message');
+    var fallbackAnchor = document.getElementById('fallback-anchor');
+
+    fallbackAnchor.href = zeffyUrl;
+
+    setTimeout(function () {
+      statusEl.textContent = 'Redirecting to payment...';
+      window.location.href = zeffyUrl;
+    }, 2500);
+  })();
+</script>
+
+<style>
+  .breathe-logo {
+    animation: breathe 2.5s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+  }
+
+  .fallback-fade {
+    opacity: 0;
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>

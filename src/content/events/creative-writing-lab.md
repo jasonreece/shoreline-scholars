@@ -6,7 +6,8 @@ location: "Chi's Backyard, Indialantic"
 description: "A creative writing and watercolor illustration workshop for kids. Students will craft original stories and learn to illustrate them with watercolor techniques — taught by Stacey Marmolejo, a published author, writing coach, and 40-year veteran educator. $35 per student."
 image: "/images/events/creative-writing-lab.jpeg"
 cta: "Enroll Now"
-ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Creative%20Writing%20Lab"
+ctaLink: ""
+tallyProgram: "Creative Writing Lab"
 active: true
 ---
 

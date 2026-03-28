@@ -6,7 +6,8 @@ location: "Indialantic Town Hall, Council Chambers"
 description: "A free civics class for students and families taught by Councilman John Brady. Learn how local government works, discover our town's history, and tour Town Hall, the Police Station, and the Fire Station."
 image: "/images/events/civics-in-action.jpg"
 cta: "Register Free"
-ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Civics%20in%20Action"
+ctaLink: ""
+tallyProgram: "Civics in Action"
 active: true
 ---
 

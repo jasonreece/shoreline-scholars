@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const jotformApiKey = import.meta.env.PUBLIC_JOTFORM_API_KEY || '';
+const tallyProgram = entry.data.tallyProgram || '';
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
@@ -62,16 +62,25 @@ function formatDate(dateStr: string): string {
         <Content />
       </div>
 
-      {entry.data.cta && entry.data.ctaLink && (
+      {tallyProgram && entry.data.cta && (
+        <div class="mt-10 text-center">
+          <button
+            id="tally-enroll-btn"
+            data-tally-program={tallyProgram}
+            class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
+          >
+            {entry.data.cta}
+          </button>
+        </div>
+      )}
+
+      {!tallyProgram && entry.data.cta && entry.data.ctaLink && (
         <div class="mt-10 text-center">
           <a
-            id="enroll-btn"
             href={entry.data.ctaLink}
             target={entry.data.ctaLink.startsWith('http') ? '_blank' : undefined}
             rel={entry.data.ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
             class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
-            data-api-key={jotformApiKey}
-            data-event-slug={entry.slug}
           >
             {entry.data.cta}
           </a>
@@ -96,33 +105,26 @@ function formatDate(dateStr: string): string {
 
 <script is:inline>
   (function () {
-    var btn = document.getElementById('enroll-btn');
+    var btn = document.getElementById('tally-enroll-btn');
     if (!btn) return;
 
-    var apiKey = btn.getAttribute('data-api-key');
-    if (!apiKey) return;
+    var program = btn.getAttribute('data-tally-program');
 
-    var slug = btn.getAttribute('data-event-slug') || '';
-    var title = slug.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
-    var mailtoUrl = 'mailto:shorelinescholars@gmail.com?subject=' + encodeURIComponent('Enrollment Request — ' + title) + '&body=' + encodeURIComponent("Hi Shoreline Scholars,\n\nWe're interested in enrolling our child in " + title + ". Could you send us the enrollment and waiver information when you get a chance?\n\nThank you!");
+    btn.addEventListener('click', function () {
+      if (typeof Tally === 'undefined') {
+        window.open('https://tally.so/r/WOPbpN?program=' + encodeURIComponent(program), '_blank');
+        return;
+      }
 
-    fetch('https://api.jotform.com/user/usage?apiKey=' + apiKey)
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        var submissions = data.content.submissions;
-        console.log('[Jotform] Monthly submissions:', submissions);
-        if (submissions >= 10) {
-          btn.href = mailtoUrl;
-          btn.removeAttribute('target');
-          btn.removeAttribute('rel');
-          console.log('[Jotform] Threshold reached — routing to mailto fallback');
-        } else {
-          console.log('[Jotform] Under threshold — routing to Jotform');
+      Tally.openPopup('WOPbpN', {
+        layout: 'default',
+        width: 480,
+        overlay: true,
+        hiddenFields: {
+          program: program
         }
-      })
-      .catch(function (err) {
-        console.warn('[Jotform] Usage check failed, keeping default:', err);
       });
+    });
   })();
 </script>
 

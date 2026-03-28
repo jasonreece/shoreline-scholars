@@ -6,7 +6,8 @@ location: "Chi's Kitchen, Indialantic"
 description: "A hands-on cooking experience for kids ages 8 and up. Students will learn to make Vietnamese spring rolls and Korean kimbap while building knife safety, food preparation, and rolling techniques. $55 per student. Drop-off optional."
 image: "/images/events/kitchen-lab.png"
 cta: "Enroll Now"
-ctaLink: "https://form.jotform.com/260838399463068?q10_dropdown8=Kitchen%20Lab"
+ctaLink: ""
+tallyProgram: "Kitchen Lab"
 active: true
 ---
 

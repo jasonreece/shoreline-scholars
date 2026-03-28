@@ -12,7 +12,7 @@ interface Props {
 const {
   heading,
   description,
-  showEnroll = false,
+  showEnroll = true,
   showDonate = true,
   showContact = true,
 } = Astro.props;
@@ -30,7 +30,12 @@ const {
     )}
     <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
       {showEnroll && (
-        <Button variant="primary" href="https://form.jotform.com/260838399463068" target="_blank" rel="noopener noreferrer">Enroll</Button>
+        <button
+          id="tally-enroll-cta"
+          class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-shoreline text-white hover:bg-deep-sea"
+        >
+          Enroll
+        </button>
       )}
       {showDonate && (
         <Button variant="warm" href="https://www.zeffy.com/en-US/donation-form/support-shoreline-scholars" target="_blank" rel="noopener noreferrer">Donate</Button>
@@ -65,3 +70,26 @@ const {
     color: #FAF7F2;
   }
 </style>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById('tally-enroll-cta');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      if (typeof Tally === 'undefined') {
+        window.open('https://tally.so/r/WOPbpN', '_blank');
+        return;
+      }
+
+      Tally.openPopup('WOPbpN', {
+        layout: 'default',
+        width: 480,
+        overlay: true,
+        hiddenFields: {
+          program: ''
+        }
+      });
+    });
+  })();
+</script>
