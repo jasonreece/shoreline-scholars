@@ -8,6 +8,7 @@ image: "/images/events/summer-review-activities.png"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Summer Review & Activities"
+capacity: 8
 active: true
 ---
 

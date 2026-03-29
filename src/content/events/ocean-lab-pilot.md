@@ -8,6 +8,7 @@ image: "/images/events/ocean-lab-pilot.jpg"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Ocean Lab"
+capacity: 10
 active: true
 ---
 

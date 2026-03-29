@@ -8,6 +8,7 @@ image: "/images/events/kitchen-lab.png"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Kitchen Lab"
+capacity: 6
 active: true
 ---
 

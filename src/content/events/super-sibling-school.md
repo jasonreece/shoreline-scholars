@@ -8,6 +8,7 @@ image: "/images/events/super-sibling-school.jpg"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Super Sibling School"
+capacity: 8
 active: true
 ---
 

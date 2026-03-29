@@ -8,6 +8,7 @@ image: "/images/events/creative-writing-lab.jpeg"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Creative Writing Lab"
+capacity: 6
 active: true
 ---
 

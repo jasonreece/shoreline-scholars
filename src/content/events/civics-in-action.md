@@ -8,6 +8,7 @@ image: "/images/events/civics-in-action.jpg"
 cta: "Register Free"
 ctaLink: ""
 tallyProgram: "Civics in Action"
+capacity: 12
 active: true
 ---
 

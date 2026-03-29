@@ -12,6 +12,7 @@ const events = defineCollection({
     cta: z.string().optional(),
     ctaLink: z.string().optional(),
     tallyProgram: z.string().optional(),
+    capacity: z.number().optional(),
     active: z.boolean().default(true),
   }),
 });

@@ -17,6 +17,8 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const tallyProgram = entry.data.tallyProgram || '';
+const capacity = entry.data.capacity || 0;
+const googleApiKey = import.meta.env.PUBLIC_GOOGLE_API_KEY || '';
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
@@ -62,8 +64,21 @@ function formatDate(dateStr: string): string {
         <Content />
       </div>
 
+      {capacity > 0 && tallyProgram && (
+        <div id="seat-counter" class="mt-10 text-center" style="display: none;"
+          data-capacity={capacity}
+          data-program={tallyProgram}
+          data-api-key={googleApiKey}
+          data-sheet-id="1UxFKX9kJBOU4wLeyVzQiaivnflQB0aR-CzA7DGzyPQo"
+        >
+          <p class="font-body text-sm text-driftwood mb-4">
+            <span id="seat-text"></span>
+          </p>
+        </div>
+      )}
+
       {tallyProgram && entry.data.cta && (
-        <div class="mt-10 text-center">
+        <div class="mt-4 text-center">
           <button
             id="tally-enroll-btn"
             data-tally-program={tallyProgram}
@@ -125,6 +140,58 @@ function formatDate(dateStr: string): string {
         }
       });
     });
+  })();
+</script>
+
+<script is:inline>
+  (function () {
+    var counter = document.getElementById('seat-counter');
+    if (!counter) return;
+
+    var capacity = parseInt(counter.getAttribute('data-capacity'), 10);
+    var program = counter.getAttribute('data-program');
+    var apiKey = counter.getAttribute('data-api-key');
+    var sheetId = counter.getAttribute('data-sheet-id');
+
+    if (!capacity || !program || !apiKey) return;
+
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1!A:B?key=' + apiKey;
+
+    fetch(url)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        console.log('[Seats] Google Sheets response:', data);
+        if (!data.values) return;
+
+        var enrolled = 0;
+        for (var i = 0; i < data.values.length; i++) {
+          if (data.values[i][0] === program) {
+            enrolled = parseInt(data.values[i][1], 10) || 0;
+            break;
+          }
+        }
+
+        var remaining = Math.max(0, capacity - enrolled);
+        var textEl = document.getElementById('seat-text');
+
+        if (enrolled === 0) {
+          // No enrollments yet — don't show anything
+        } else if (remaining === 0) {
+          textEl.textContent = 'This program is currently full.';
+          counter.style.display = '';
+        } else if (remaining <= 3) {
+          textEl.textContent = remaining + ' of ' + capacity + ' spots remaining — almost full';
+          counter.style.display = '';
+        } else {
+          textEl.textContent = remaining + ' of ' + capacity + ' spots remaining';
+          counter.style.display = '';
+        }
+
+        console.log('[Seats] ' + program + ': ' + enrolled + ' enrolled, ' + remaining + ' remaining');
+      })
+      .catch(function (err) {
+        console.warn('[Seats] Failed to fetch enrollment data:', err);
+      });
   })();
 </script>
 
