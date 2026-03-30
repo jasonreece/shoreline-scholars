@@ -2,23 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import Button from '../../components/Button.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import { getCollection } from 'astro:content';
 
 const allEvents = await getCollection('events');
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-
-const activeEvents = allEvents.filter(e => e.data.active);
-
-const upcomingEvents = activeEvents
-  .filter(e => new Date(e.data.date) >= today)
+const activeEvents = allEvents
+  .filter(e => e.data.active)
   .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
-
-const pastEvents = activeEvents
-  .filter(e => new Date(e.data.date) < today)
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
@@ -56,74 +46,47 @@ function getCardStyle(index: number) {
   <!-- ═══ UPCOMING EVENTS ═══ -->
   <section class="bg-shell-white py-24">
     <div class="max-w-4xl mx-auto px-6">
-      {upcomingEvents.length > 0 ? (
-        <div class="flex flex-col" style="gap: 2rem;">
-          {upcomingEvents.map((event, i) => {
-            const style = getCardStyle(i);
-            return (
-              <article class="rounded-xl shadow overflow-hidden">
-                <a href={`/events/${event.slug}`} class="block hover:opacity-90 transition-opacity" style={style.bg}>
-                  <div class="py-10 px-8 md:px-10">
-                    <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{event.data.title}</h2>
-                    <p class="font-body font-light text-sm" style={style.metaColor}>
-                      {formatDate(event.data.date)} &middot; {event.data.time}
-                    </p>
-                  </div>
-                </a>
-                <div class="bg-shell-white p-8 md:p-10">
-                  <p class="font-body text-driftwood text-sm mb-4">{event.data.location}</p>
-                  <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4 line-clamp-3">{event.data.description}</p>
-                  <a href={`/events/${event.slug}`} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
-                    Learn More &rarr;
-                  </a>
+      <div id="upcoming-events" class="flex flex-col" style="gap: 2rem;">
+        {activeEvents.map((event, i) => {
+          const style = getCardStyle(i);
+          return (
+            <article class="event-card rounded-xl shadow overflow-hidden" data-event-date={event.data.date} style="display: none;">
+              <a href={`/events/${event.slug}`} class="block hover:opacity-90 transition-opacity" style={style.bg}>
+                <div class="py-10 px-8 md:px-10">
+                  <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{event.data.title}</h2>
+                  <p class="font-body font-light text-sm" style={style.metaColor}>
+                    {formatDate(event.data.date)} &middot; {event.data.time}
+                  </p>
                 </div>
-              </article>
-            );
-          })}
-        </div>
-      ) : (
-        <div class="text-center py-12">
-          <p class="font-body text-driftwood text-lg">No upcoming events at the moment. Check back soon!</p>
-        </div>
-      )}
+              </a>
+              <div class="bg-shell-white p-8 md:p-10">
+                <p class="font-body text-driftwood text-sm mb-4">{event.data.location}</p>
+                <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4 line-clamp-3">{event.data.description}</p>
+                <a href={`/events/${event.slug}`} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
+                  Learn More &rarr;
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <div id="no-upcoming" class="text-center py-12" style="display: none;">
+        <p class="font-body text-driftwood text-lg">No upcoming events at the moment. Check back soon!</p>
+      </div>
     </div>
   </section>
 
   <!-- ═══ PAST EVENTS ═══ -->
-  {pastEvents.length > 0 && (
-    <section class="bg-shell-white pb-24">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="font-heading text-driftwood text-2xl font-medium mb-4">Past Events</h2>
-          <div class="w-12 h-0.5 bg-driftwood/30 mx-auto"></div>
-        </div>
-        <div class="flex flex-col opacity-60" style="gap: 2rem;">
-          {pastEvents.map((event, i) => {
-            const style = getCardStyle(i);
-            return (
-              <article class="rounded-xl shadow overflow-hidden">
-                <a href={`/events/${event.slug}`} class="block hover:opacity-90 transition-opacity" style={style.bg}>
-                  <div class="py-10 px-8 md:px-10">
-                    <h2 class="font-heading text-2xl md:text-3xl font-medium mb-2" style={style.titleColor}>{event.data.title}</h2>
-                    <p class="font-body font-light text-sm" style={style.metaColor}>
-                      {formatDate(event.data.date)} &middot; {event.data.time}
-                    </p>
-                  </div>
-                </a>
-                <div class="bg-shell-white p-8 md:p-10">
-                  <p class="font-body text-driftwood text-sm mb-4">{event.data.location}</p>
-                  <p class="font-body text-[0.95rem] text-deep-sea/70 leading-relaxed mb-4 line-clamp-3">{event.data.description}</p>
-                  <a href={`/events/${event.slug}`} class="font-body font-medium text-shoreline text-sm hover:text-deep-sea transition-colors">
-                    Learn More &rarr;
-                  </a>
-                </div>
-              </article>
-            );
-          })}
-        </div>
+  <section id="past-events-section" class="bg-shell-white pb-24" style="display: none;">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-driftwood text-2xl font-medium mb-4">Past Events</h2>
+        <div class="w-12 h-0.5 bg-driftwood/30 mx-auto"></div>
       </div>
-    </section>
-  )}
+      <div id="past-events" class="flex flex-col opacity-60" style="gap: 2rem;">
+      </div>
+    </div>
+  </section>
 
   <CallToAction
     heading="Want to stay in the loop?"
@@ -132,6 +95,69 @@ function getCardStyle(index: number) {
 
   <Footer />
 </Layout>
+
+<script is:inline>
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    var cards = document.querySelectorAll('.event-card');
+    var upcomingContainer = document.getElementById('upcoming-events');
+    var pastContainer = document.getElementById('past-events');
+    var pastSection = document.getElementById('past-events-section');
+    var noUpcoming = document.getElementById('no-upcoming');
+
+    var hasUpcoming = false;
+    var hasPast = false;
+
+    // Sort cards into upcoming and past
+    var upcoming = [];
+    var past = [];
+
+    cards.forEach(function (card) {
+      var dateStr = card.getAttribute('data-event-date');
+      var eventDate = new Date(dateStr + 'T00:00:00');
+
+      if (eventDate >= today) {
+        upcoming.push(card);
+      } else {
+        past.push(card);
+      }
+    });
+
+    // Sort upcoming by date ascending
+    upcoming.sort(function (a, b) {
+      return new Date(a.getAttribute('data-event-date') + 'T00:00:00') - new Date(b.getAttribute('data-event-date') + 'T00:00:00');
+    });
+
+    // Sort past by date descending
+    past.sort(function (a, b) {
+      return new Date(b.getAttribute('data-event-date') + 'T00:00:00') - new Date(a.getAttribute('data-event-date') + 'T00:00:00');
+    });
+
+    // Render upcoming
+    upcoming.forEach(function (card) {
+      upcomingContainer.appendChild(card);
+      card.style.display = '';
+      hasUpcoming = true;
+    });
+
+    // Render past
+    past.forEach(function (card) {
+      pastContainer.appendChild(card);
+      card.style.display = '';
+      hasPast = true;
+    });
+
+    if (!hasUpcoming) {
+      noUpcoming.style.display = '';
+    }
+
+    if (hasPast) {
+      pastSection.style.display = '';
+    }
+  })();
+</script>
 
 <style>
   .line-clamp-3 {
