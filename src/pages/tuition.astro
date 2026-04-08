@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<Layout title="Tuition — Shoreline Scholars" description="Tuition and fees for the Rooted Learning Program at Shoreline Scholars in Indialantic, Florida.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Tuition</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        Rooted Learning Program Fees
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ TUITION & FEES ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Tuition and Fees</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="tuition-table">
+          <div class="tuition-row tuition-row--header">
+            <span class="tuition-label">Item</span>
+            <span class="tuition-amount">Cost</span>
+          </div>
+          <div class="tuition-row">
+            <span class="tuition-label">Registration Fee <span class="tuition-note">(one-time)</span></span>
+            <span class="tuition-amount">$100</span>
+          </div>
+          <div class="tuition-row">
+            <span class="tuition-label">Material Fees <span class="tuition-note">(annual)</span></span>
+            <span class="tuition-amount">$50 per year</span>
+          </div>
+          <div class="tuition-row">
+            <span class="tuition-label">2-Day/Week Tuition <span class="tuition-note">(monthly)</span></span>
+            <span class="tuition-amount">$520 per month</span>
+          </div>
+          <div class="tuition-row tuition-row--highlight">
+            <span class="tuition-label">2-Day/Week Tuition <span class="tuition-note">(annual, paid in full)</span></span>
+            <span class="tuition-amount">$4,680 per year <span class="tuition-savings">one month free</span></span>
+          </div>
+          <div class="tuition-row">
+            <span class="tuition-label">3-Day/Week Tuition <span class="tuition-note">(monthly)</span></span>
+            <span class="tuition-amount">$750 per month</span>
+          </div>
+          <div class="tuition-row tuition-row--highlight">
+            <span class="tuition-label">3-Day/Week Tuition <span class="tuition-note">(annual, paid in full)</span></span>
+            <span class="tuition-amount">$6,750 per year <span class="tuition-savings">one month free</span></span>
+          </div>
+          <div class="tuition-row">
+            <span class="tuition-label">Field Trip Admission</span>
+            <span class="tuition-amount tuition-amount--note">Not included <span class="tuition-note">(most locations are free)</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT'S INCLUDED ═══ -->
+  <section class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">What Tuition Covers</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <ul class="includes-list max-w-3xl mx-auto">
+        <li>All academic instruction across core and enrichment subjects (3 days/week or 2 days/week)</li>
+        <li>Differentiated curriculum delivery for two age groups (5–7 and 8–12)</li>
+        <li>Workbooks for all enrolled students</li>
+        <li>Daily outdoor learning, including gardening and coastal exploration</li>
+        <li>Beach-based instructional sessions on Thursdays and Fridays</li>
+        <li>Entrepreneurship programming and self-directed project guidance</li>
+        <li>Morning check-ins and advisory support from qualified instructors</li>
+        <li>Access to monthly field trip experiences (admission fees not included)</li>
+        <li>Ongoing support for student well-being, character development, and academic confidence</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ NOT INCLUDED ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">What Is Not Included in Tuition</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <ul class="includes-list max-w-3xl mx-auto">
+        <li>Registration fee ($100, one-time)</li>
+        <li>Material fees ($50 per year for workbooks and supplies)</li>
+        <li>Field trip admission tickets (most locations offer free admission)</li>
+        <li>Lunch (families provide daily meals)</li>
+        <li>Sunscreen, towels, and personal beach gear</li>
+      </ul>
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Be Part of the Journey"
+    description="We're building something special in Indialantic. Whether you're a family looking to enroll, a community member who wants to volunteer, or a supporter who believes in our mission — we'd love to hear from you."
+    showEnroll={true}
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .tuition-table {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);
+  }
+
+  .tuition-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid rgba(232, 213, 183, 0.4);
+    background: #FAF7F2;
+  }
+
+  .tuition-row:last-child {
+    border-bottom: none;
+  }
+
+  .tuition-row--header {
+    background: #1B4F52;
+  }
+
+  .tuition-row--header .tuition-label,
+  .tuition-row--header .tuition-amount {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #FAF7F2;
+  }
+
+  .tuition-row--highlight {
+    background: rgba(90, 175, 166, 0.06);
+  }
+
+  .tuition-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #1B4F52;
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .tuition-amount {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2A7F62;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .tuition-amount--note {
+    color: #B8977E;
+    font-weight: 500;
+  }
+
+  .tuition-note {
+    font-weight: 400;
+    font-size: 0.82rem;
+    color: #B8977E;
+  }
+
+  .tuition-savings {
+    display: block;
+    font-weight: 400;
+    font-size: 0.78rem;
+    color: #E8956D;
+    font-style: italic;
+  }
+
+  .includes-list {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  .includes-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .tuition-row {
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1rem 1.5rem;
+    }
+
+    .tuition-amount {
+      text-align: left;
+    }
+  }
+</style>

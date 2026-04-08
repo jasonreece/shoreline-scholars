@@ -40,4 +40,4 @@ That's a child who spent their afternoon being exactly what they're supposed to 
 
 ---
 
-*At Shoreline Scholars, outdoor exploration isn't a break from learning — it is the learning. Want to learn more about our nature-based programs? [Visit our Vision page](/vision) or [get in touch](/support).*
+*At Shoreline Scholars, outdoor exploration isn't a break from learning — it is the learning. Want to learn more about our nature-based programs? [Visit our Program page](/program) or [get in touch](/support).*

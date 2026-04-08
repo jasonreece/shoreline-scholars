@@ -50,4 +50,4 @@ The beach isn't a break from learning. It's where learning comes to life.
 
 ---
 
-*Rachel Glover is the founder of Shoreline Scholars and a Licensed Mental Health Counselor with a research focus on developmental psychology. Learn more about our approach on our [Vision page](/vision).*
+*Rachel Glover is the founder of Shoreline Scholars and a Licensed Mental Health Counselor with a research focus on developmental psychology. Learn more about our approach on our [Program page](/program).*

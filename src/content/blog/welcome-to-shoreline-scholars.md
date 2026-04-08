@@ -50,4 +50,4 @@ This is Shoreline Scholars. And we're just getting started.
 
 ---
 
-*Rachel Glover & Chi Reece are the co-founders of Shoreline Scholars. To learn more about the program, visit our [Vision page](/vision). To support what we're building, visit [Support](/support).*
+*Rachel Glover & Chi Reece are the co-founders of Shoreline Scholars. To learn more about the program, visit our [Program page](/program). To support what we're building, visit [Support](/support).*
