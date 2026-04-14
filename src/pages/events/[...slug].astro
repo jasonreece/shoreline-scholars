@@ -155,22 +155,32 @@ function formatDate(dateStr: string): string {
 
     if (!capacity || !program || !apiKey) return;
 
-    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values:batchGet?ranges=Sheet1!M:M&ranges=Sheet1!AC:AC&key=' + apiKey;
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1?key=' + apiKey;
 
     fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         console.log('[Seats] Google Sheets response:', data);
-        if (!data.valueRanges) return;
+        if (!data.values || data.values.length < 2) return;
 
-        var programs = data.valueRanges[0].values || [];
-        var payments = data.valueRanges[1].values || [];
+        var headers = data.values[0];
+        var programCol = -1;
+        var paymentCol = -1;
+        for (var h = 0; h < headers.length; h++) {
+          var header = (headers[h] || '').toLowerCase().trim();
+          if (header.indexOf('which program') !== -1) programCol = h;
+          if (header.indexOf('payment status') !== -1) paymentCol = h;
+        }
+        console.log('[Seats] programCol:', programCol, 'paymentCol:', paymentCol);
+
+        if (programCol === -1 || paymentCol === -1) return;
 
         var enrolled = 0;
-        for (var i = 1; i < programs.length; i++) {
-          var rowProgram = (programs[i] && programs[i][0]) || '';
-          var rowPayment = (payments[i] && payments[i][0]) || '';
-          if (rowProgram === program && rowPayment === 'Paid in Full') {
+        for (var i = 1; i < data.values.length; i++) {
+          var row = data.values[i];
+          var rowProgram = (row[programCol] || '').trim();
+          var rowPayment = (row[paymentCol] || '').toLowerCase().trim();
+          if (rowProgram === program && rowPayment === 'paid in full') {
             enrolled++;
           }
         }
