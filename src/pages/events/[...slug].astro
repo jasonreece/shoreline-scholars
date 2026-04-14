@@ -155,7 +155,7 @@ function formatDate(dateStr: string): string {
 
     if (!capacity || !program || !apiKey) return;
 
-    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1!A:C?valueRenderOption=UNFORMATTED_VALUE&key=' + apiKey;
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet2!A:C?valueRenderOption=UNFORMATTED_VALUE&key=' + apiKey;
 
     fetch(url)
       .then(function (res) { return res.json(); })
