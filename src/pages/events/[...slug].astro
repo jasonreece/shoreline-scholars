@@ -155,33 +155,21 @@ function formatDate(dateStr: string): string {
 
     if (!capacity || !program || !apiKey) return;
 
-    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1?key=' + apiKey;
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1!A:C?key=' + apiKey;
 
     fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         console.log('[Seats] Google Sheets response:', data);
-        if (!data.values || data.values.length < 2) return;
-
-        var headers = data.values[0];
-        var programCol = -1;
-        var paymentCol = -1;
-        for (var h = 0; h < headers.length; h++) {
-          var header = (headers[h] || '').toLowerCase().trim();
-          if (header.indexOf('which program') !== -1) programCol = h;
-          if (header.indexOf('payment status') !== -1) paymentCol = h;
-        }
-        console.log('[Seats] programCol:', programCol, 'paymentCol:', paymentCol);
-
-        if (programCol === -1 || paymentCol === -1) return;
+        if (!data.values) return;
 
         var enrolled = 0;
         for (var i = 1; i < data.values.length; i++) {
           var row = data.values[i];
-          var rowProgram = (row[programCol] || '').trim();
-          var rowPayment = (row[paymentCol] || '').toLowerCase().trim();
-          if (rowProgram === program && rowPayment === 'paid in full') {
-            enrolled++;
+          if (row[0] === program) {
+            // Try column C first, fall back to column B
+            enrolled = parseInt(row[2], 10) || parseInt(row[1], 10) || 0;
+            break;
           }
         }
 
