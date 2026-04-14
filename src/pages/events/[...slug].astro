@@ -155,19 +155,23 @@ function formatDate(dateStr: string): string {
 
     if (!capacity || !program || !apiKey) return;
 
-    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/Sheet1!A:B?key=' + apiKey;
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values:batchGet?ranges=Sheet1!M:M&ranges=Sheet1!AC:AC&key=' + apiKey;
 
     fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         console.log('[Seats] Google Sheets response:', data);
-        if (!data.values) return;
+        if (!data.valueRanges) return;
+
+        var programs = data.valueRanges[0].values || [];
+        var payments = data.valueRanges[1].values || [];
 
         var enrolled = 0;
-        for (var i = 0; i < data.values.length; i++) {
-          if (data.values[i][0] === program) {
-            enrolled = parseInt(data.values[i][1], 10) || 0;
-            break;
+        for (var i = 1; i < programs.length; i++) {
+          var rowProgram = (programs[i] && programs[i][0]) || '';
+          var rowPayment = (payments[i] && payments[i][0]) || '';
+          if (rowProgram === program && rowPayment === 'Paid in Full') {
+            enrolled++;
           }
         }
 
