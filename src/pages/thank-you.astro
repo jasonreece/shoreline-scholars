@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Thank You — Shoreline Scholars" description="Thank you for reaching out to Shoreline Scholars.">
+  <Header />
+
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-6">Thank You</h1>
+      <div class="w-12 h-0.5 bg-shell-white/40 mx-auto mb-6"></div>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        We appreciate your interest in Shoreline Scholars.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <div class="bg-shell-white rounded-2xl p-8 md:p-12" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+        <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-6">
+          Your request has been received. A member of our team will be in touch soon to share more about our programs and answer any questions you may have.
+        </p>
+        <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-10">
+          In the meantime, feel free to explore what we're building in Indialantic.
+        </p>
+        <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
+          <a href="/program" class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 bg-shoreline text-white hover:brightness-110">
+            Our Program
+          </a>
+          <a href="/" class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 border-2 border-shoreline text-shoreline hover:bg-shoreline hover:text-white">
+            Back to Home
+          </a>
+        </div>
+      </div>
+      <p class="text-driftwood text-sm mt-8 font-body">
+        Questions? Reach us at <a href="mailto:shorelinescholars@gmail.com" class="text-shoreline hover:text-deep-sea transition-colors">shorelinescholars@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

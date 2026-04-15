@@ -41,12 +41,12 @@ const {
         <Button variant="warm" href="https://www.zeffy.com/en-US/donation-form/support-shoreline-scholars" target="_blank" rel="noopener noreferrer">Donate</Button>
       )}
       {showContact && (
-        <a
-          href="mailto:shorelinescholars@gmail.com"
+        <button
+          id="tally-request-info"
           class="cta-outline-btn inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer border-2"
         >
-          Get in Touch
-        </a>
+          Request Information
+        </button>
       )}
     </div>
     <p class="text-shell-white/60 text-sm mt-8 font-body">
@@ -88,6 +88,27 @@ const {
         overlay: true,
         hiddenFields: {
           program: ''
+        }
+      });
+    });
+  })();
+
+  (function () {
+    var btn = document.getElementById('tally-request-info');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      if (typeof Tally === 'undefined') {
+        window.open('https://tally.so/r/vGOkvg', '_blank');
+        return;
+      }
+
+      Tally.openPopup('vGOkvg', {
+        layout: 'default',
+        width: 480,
+        overlay: true,
+        onSubmit: function () {
+          window.location.href = '/thank-you';
         }
       });
     });
