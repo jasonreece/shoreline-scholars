@@ -3,10 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CallToAction from '../components/CallToAction.astro';
+import SectionNav from '../components/SectionNav.astro';
 ---
 
-<Layout title="Tuition — Shoreline Scholars" description="Tuition and fees for the Rooted Learning Program at Shoreline Scholars in Indialantic, Florida.">
+<Layout title="Tuition — Shoreline Scholars" description="Program details, curriculum, schedule, and tuition for the Rooted Learning Program at Shoreline Scholars in Indialantic, Florida.">
   <Header />
+  <SectionNav sections={[
+    { label: 'Overview', id: 'overview' },
+    { label: 'Curriculum', id: 'curriculum' },
+    { label: 'Schedule', id: 'schedule' },
+    { label: 'Beach Learning', id: 'beach-learning' },
+    { label: 'Field Trips', id: 'field-trips' },
+    { label: 'Family Partnership', id: 'family-partnership' },
+    { label: 'Admissions', id: 'admissions' },
+    { label: 'Tuition', id: 'tuition' },
+  ]} />
 
   <!-- ═══ HERO ═══ -->
   <section class="relative flex items-center justify-center text-center px-6"
@@ -17,17 +28,282 @@ import CallToAction from '../components/CallToAction.astro';
     <div class="relative z-10 max-w-3xl mx-auto">
       <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Tuition</h1>
       <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
-        Rooted Learning Program Fees
+        Rooted Learning Program
       </p>
     </div>
   </section>
 
-  <!-- ═══ TUITION & FEES ═══ -->
+  <!-- ═══ PROGRAM OVERVIEW ═══ -->
+  <section id="overview" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Program Overview</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          Shoreline Scholars is a nature-oriented, whole-child enrichment program for homeschooled students ages 5 through 12 in Indialantic, Florida. The program operates as a homeschool support organization, providing structured academic instruction, hands-on learning experiences, and social-emotional development within a coastal outdoor setting.
+        </p>
+        <p>
+          The Rooted Learning Program runs Wednesday through Friday, 9:30 AM to 2:00 PM, during both the Fall semester (August through December) and Spring semester (January through May). Families may enroll in either a 2-day or 3-day weekly schedule. The program is led by a team whose credentials include a doctorate-level Licensed Mental Health Counselor and 20 years of classroom teaching experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CURRICULUM ═══ -->
+  <section id="curriculum" class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Curriculum and Academic Scope</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          The Rooted Learning Program delivers comprehensive academic instruction across all major subject areas. Students enrolled in the full-time 3-day schedule receive instruction in the following disciplines:
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto mt-12 grid md:grid-cols-3" style="gap: 2rem;">
+        <!-- Year-Round -->
+        <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+          <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-sea-glass mb-4">Year-Round</p>
+          <p class="font-body text-driftwood text-[0.78rem] mb-5">August through May</p>
+          <ul class="curriculum-list">
+            <li>English Literature</li>
+            <li>Art</li>
+            <li>Science (Chemistry, Physics, Animal Science, Marine Biology, Plant Studies, and Oceanography)</li>
+            <li>Daily Reading and Writing Concepts</li>
+            <li>Mathematics Integration</li>
+          </ul>
+        </div>
+
+        <!-- Fall Semester -->
+        <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+          <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-sea-glass mb-4">Fall Semester</p>
+          <p class="font-body text-driftwood text-[0.78rem] mb-5">August through December</p>
+          <ul class="curriculum-list">
+            <li>Civics and Government Studies</li>
+            <li>Creative Writing</li>
+            <li>Critical Thinking</li>
+          </ul>
+        </div>
+
+        <!-- Spring Semester -->
+        <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+          <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-sea-glass mb-4">Spring Semester</p>
+          <p class="font-body text-driftwood text-[0.78rem] mb-5">January through May</p>
+          <ul class="curriculum-list">
+            <li>History</li>
+            <li>Geography</li>
+            <li>Eastern and Western Philosophy</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Applied Learning -->
+      <div class="max-w-3xl mx-auto mt-16">
+        <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-6">Applied and Experiential Learning</h3>
+        <div class="content-prose">
+          <p>
+            Beyond traditional academics, students participate in real-world, applied learning that builds practical life skills:
+          </p>
+        </div>
+        <ul class="curriculum-list mt-4">
+          <li>Entrepreneurship, including Business and Economic Principles and Financial Literacy</li>
+          <li>Horticulture and Gardening</li>
+          <li>Carpentry</li>
+        </ul>
+        <div class="content-prose mt-6">
+          <p>
+            Students have regular opportunities to participate in entrepreneurial events, designing and selling handmade products. All enrichment areas are introduced in age-appropriate, hands-on formats that encourage critical thinking, creativity, and practical capability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INSTRUCTIONAL DELIVERY ═══ -->
   <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Instructional Delivery</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          Academic content is delivered through thoughtfully created workbooks and guided instruction. The program serves two age groups with differentiated schedules: younger students (ages 5–7) receive shorter lesson blocks with more structured play and movement, while older students (ages 8–12) engage in longer instructional periods with self-directed project time. Both groups benefit from daily outdoor learning, including gardening, gentle exercise, and coastal exploration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROGRAM SCHEDULE ═══ -->
+  <section id="schedule" class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Program Schedule</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose mb-12">
+        <p>
+          <strong>Wednesday and Thursday:</strong> 9:30 AM to 2:00 PM at St. Sebastian by-the-Sea, 2010 Oak St, Melbourne Beach, FL.
+        </p>
+        <p>
+          <strong>Friday (Nature Day):</strong> 9:30 AM to 1:00 PM at Paradise Beach (August through October, April and May) or Orlando Park (November through March).
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <h3 class="font-heading text-deep-sea text-[1.5rem] font-semibold mb-8">Weekly Structure</h3>
+
+        <div class="schedule-cards" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <!-- Wednesday -->
+          <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+            <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-shoreline mb-3">Wednesday</p>
+            <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed">
+              Core academics (English Literature, Art, Chemistry and Physics) with entrepreneurship and self-directed project time. Younger students cover Math, Reading/Writing & Public Speaking, Science, and Art.
+            </p>
+          </div>
+
+          <!-- Thursday -->
+          <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+            <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-shoreline mb-3">Thursday</p>
+            <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed">
+              Semester-specific subjects (Civics/History, Critical Thinking/Geography, Creative Writing/Philosophy) with entrepreneurship and self-directed project time. Younger students follow a parallel structure with the same enrichment integrated.
+            </p>
+          </div>
+
+          <!-- Friday -->
+          <div class="bg-shell-white rounded-2xl p-8" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
+            <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-shoreline mb-3">Friday <span class="text-driftwood font-normal">&mdash; Nature Day</span></p>
+            <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed">
+              All ages come together for nature-focused science instruction. Ocean Lab (August–October, April–May) at Paradise Beach covers Oceanography and Marine Biology. Park Lab (November–March) at Orlando Park covers Animal Science and Plant Studies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BEACH-BASED LEARNING ═══ -->
+  <section id="beach-learning" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Beach-Based Learning</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          Thursdays and Fridays include structured outdoor learning at the beach, focused on nature studies, marine science, observation, and environmental awareness. These are educational experiences, not recreational swim sessions.
+        </p>
+        <p>
+          Students are not permitted to enter the water during program hours. On Fridays, students may enter the water only with a parent or guardian present and directly supervising. Comprehensive safety protocols are in place and enforced at all times.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MONTHLY FIELD TRIPS ═══ -->
+  <section id="field-trips" class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Monthly Field Trips</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          From August through May, students participate in one field trip per month to locations across Brevard County. These excursions are designed to extend classroom learning into real-world settings. Destinations include nature preserves, farms, museums, botanical gardens, and cultural sites. Field trip admission costs are separate from tuition; most destinations offer free admission.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAMILY PARTNERSHIP ═══ -->
+  <section id="family-partnership" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Family Partnership and Homeschool Compliance</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose">
+        <p>
+          Shoreline Scholars is designed to complement each family's home education. Parents are encouraged to actively engage with their child's workbooks and daily learning, and are free to continue using any additional curriculum that fits their family's needs.
+        </p>
+        <p>
+          As a homeschool support program, Shoreline Scholars does not assign grades, administer standardized tests, or provide formal academic assessments. Families remain responsible for maintaining their homeschool status and ensuring compliance with all applicable Florida state regulations. The program team is available to support student well-being, character development, and academic progress and confidence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ADMISSIONS ═══ -->
+  <section id="admissions" class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Admissions Process</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose mb-12">
+        <p>
+          Enrollment follows a five-step process designed to ensure mutual fit:
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <ol class="admissions-steps">
+          <li>
+            <span class="step-number">1</span>
+            <span class="step-text">Submit an online inquiry form</span>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <span class="step-text">Family connection call to learn about the program</span>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <span class="step-text">Meet-and-greet play date with the children</span>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <span class="step-text">Enrollment invitation if aligned</span>
+          </li>
+          <li>
+            <span class="step-number">5</span>
+            <span class="step-text">Submit enrollment forms and pay registration fee and tuition to secure placement</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TUITION & FEES ═══ -->
+  <section id="tuition" class="bg-shell-white py-24 md:py-32">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">Tuition and Fees</h2>
         <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto content-prose mb-6">
+        <p>
+          All tuition and fee details for the Rooted Learning Program are outlined below.
+        </p>
+        <p>
+          Wed and Thurs: 9:30 AM to 2:00 PM (4.5 hrs) &middot; Friday (Nature Day): 9:30 AM to 1:00 PM
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-8">
+        <p class="font-body font-semibold text-[0.75rem] uppercase tracking-[0.12em] text-sea-glass">Founding Rates &mdash; Fall 2026 to Spring 2027</p>
       </div>
 
       <div class="max-w-3xl mx-auto">
@@ -46,27 +322,27 @@ import CallToAction from '../components/CallToAction.astro';
           </div>
           <div class="tuition-row">
             <span class="tuition-label">1-Day/Week Tuition <span class="tuition-note">(monthly)</span></span>
-            <span class="tuition-amount">$260 per month</span>
+            <span class="tuition-amount">$280 per month</span>
           </div>
           <div class="tuition-row tuition-row--highlight">
             <span class="tuition-label">1-Day/Week Tuition <span class="tuition-note">(annual, paid in full)</span></span>
-            <span class="tuition-amount">$2,340 per year <span class="tuition-savings">one month free</span></span>
+            <span class="tuition-amount">$2,520 per year <span class="tuition-savings">one month free</span></span>
           </div>
           <div class="tuition-row">
             <span class="tuition-label">2-Day/Week Tuition <span class="tuition-note">(monthly)</span></span>
-            <span class="tuition-amount">$520 per month</span>
+            <span class="tuition-amount">$560 per month</span>
           </div>
           <div class="tuition-row tuition-row--highlight">
             <span class="tuition-label">2-Day/Week Tuition <span class="tuition-note">(annual, paid in full)</span></span>
-            <span class="tuition-amount">$4,680 per year <span class="tuition-savings">one month free</span></span>
+            <span class="tuition-amount">$5,040 per year <span class="tuition-savings">one month free</span></span>
           </div>
           <div class="tuition-row">
             <span class="tuition-label">3-Day/Week Tuition <span class="tuition-note">(monthly)</span></span>
-            <span class="tuition-amount">$750 per month</span>
+            <span class="tuition-amount">$780 per month</span>
           </div>
           <div class="tuition-row tuition-row--highlight">
             <span class="tuition-label">3-Day/Week Tuition <span class="tuition-note">(annual, paid in full)</span></span>
-            <span class="tuition-amount">$6,750 per year <span class="tuition-savings">one month free</span></span>
+            <span class="tuition-amount">$7,020 per year <span class="tuition-savings">one month free</span></span>
           </div>
           <div class="tuition-row">
             <span class="tuition-label">Field Trip Admission</span>
@@ -86,9 +362,8 @@ import CallToAction from '../components/CallToAction.astro';
       </div>
 
       <ul class="includes-list max-w-3xl mx-auto">
-        <li>All academic instruction across core and enrichment subjects (1, 2, or 3 days/week)</li>
+        <li>All academic instruction across core and enrichment subjects with customized workbooks for each subject (3 days/week or 2 days/week)</li>
         <li>Differentiated curriculum delivery for two age groups (5–7 and 8–12)</li>
-        <li>Workbooks for all enrolled students</li>
         <li>Daily outdoor learning, including gardening and coastal exploration</li>
         <li>Beach-based instructional sessions on Thursdays and Fridays</li>
         <li>Entrepreneurship programming and self-directed project guidance</li>
@@ -144,6 +419,76 @@ import CallToAction from '../components/CallToAction.astro';
 </Layout>
 
 <style>
+  .content-prose p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  .curriculum-list {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  .curriculum-list li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* ─── Admissions Steps ─── */
+  .admissions-steps {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .admissions-steps li {
+    display: flex;
+    align-items: center;
+    background: #FAF7F2;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);
+    gap: 1.25rem;
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    border-radius: 50%;
+    background: #5AAFA6;
+    color: #FAF7F2;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .step-text {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #1B4F52;
+    line-height: 1.5;
+  }
+
+  /* ─── Tuition Table ─── */
   .tuition-table {
     border-radius: 1rem;
     overflow: hidden;
