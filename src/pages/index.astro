@@ -248,99 +248,152 @@ import CallToAction from '../components/CallToAction.astro';
 
   <!-- ═══ OUR TEAM ═══ -->
   <section id="our-team" class="py-24 md:py-32" style="background: rgba(232, 213, 183, 0.15);">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="font-heading text-deep-sea mb-6">Our Team</h2>
         <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Emily -->
-        <div class="bg-shell-white rounded-2xl p-10 text-center">
-          <img src="/headshot-emily.png" alt="Emily Warner" class="w-28 h-28 rounded-full object-cover mx-auto mb-6" />
-          <h3 class="font-heading text-deep-sea text-2xl mb-1">Emily Warner</h3>
-          <p class="text-shoreline font-body font-medium text-sm uppercase tracking-wider mb-4">
-            Educator
-          </p>
-          <div class="w-10 h-px bg-driftwood mx-auto mb-4"></div>
-          <p class="text-sm leading-relaxed mb-3">
-            Emily brings a storyteller's eye to everything she does. With a degree in
-            English and a minor in World Cultures and Literature from Kent State, plus
-            seven years of professional writing across industries as wide-ranging as
-            travel, local journalism, and wellness, she knows how to find the thread
-            that makes ideas come alive.
-          </p>
-          <p class="text-sm leading-relaxed mb-3">
-            She's also a personal trainer — which means she understands firsthand that
-            real growth, whether physical or intellectual, happens through consistency,
-            encouragement, and showing up.
-          </p>
-          <p class="text-sm leading-relaxed">
-            At Shoreline Scholars, Emily is here to show students that literature isn't
-            just something you read — it's how you understand the world. She'll bring
-            books to life, build critical thinkers, and remind every young reader that
-            their own story matters too.
-          </p>
-        </div>
+      <div class="grid grid-cols-2 md:grid-cols-4" style="gap: 2.5rem;">
+        <button class="team-tile" data-team="emily" type="button">
+          <img src="/headshot-emily.png" alt="Emily Warner" class="team-tile-photo" />
+          <h3 class="team-tile-name">Emily Warner</h3>
+          <p class="team-tile-title">Educator</p>
+        </button>
 
-        <!-- Stacey -->
-        <div class="bg-shell-white rounded-2xl p-10 text-center">
-          <img src="/headshot-stacey.jpg" alt="Stacey Marmolejo" class="w-28 h-28 rounded-full object-cover mx-auto mb-6" />
-          <h3 class="font-heading text-deep-sea text-2xl mb-1">Stacey Marmolejo</h3>
-          <p class="text-shoreline font-body font-medium text-sm uppercase tracking-wider mb-4">
-            Guest Educator
-          </p>
-          <div class="w-10 h-px bg-driftwood mx-auto mb-4"></div>
-          <p class="text-sm leading-relaxed mb-3">
-            Stacey Marmolejo is a published author, writing coach, and veteran
-            educator with 40 years of experience in the classroom — and a career
-            that proves what happens when someone genuinely believes in the people
-            in front of them.
-          </p>
-          <p class="text-sm leading-relaxed mb-3">
-            She's built School of Rock franchises, produced large-scale live events,
-            and written six books, including the Insider's Guide to the Space Coast.
-            She's the kind of person who shows up for a community and leaves it
-            measurably better.
-          </p>
-          <p class="text-sm leading-relaxed">
-            In Shoreline Scholars' Creative Writing Lab, Stacey brings that same
-            energy to young writers. Her workshops blend writing craft with visual
-            art, helping students find their voice, trust their ideas, and discover
-            the joy of putting stories on the page. She's not here to teach rules —
-            she's here to help kids fall in love with storytelling.
-          </p>
-        </div>
+        <button class="team-tile" data-team="stacey" type="button">
+          <img src="/headshot-stacey.jpg" alt="Stacey Marmolejo" class="team-tile-photo" />
+          <h3 class="team-tile-name">Stacey Marmolejo</h3>
+          <p class="team-tile-title">Guest Educator</p>
+        </button>
 
-        <!-- John -->
-        <div class="bg-shell-white rounded-2xl p-10 text-center">
-          <img src="/images/events/john-brady.jpg" alt="John Brady" class="w-28 h-28 rounded-full object-cover mx-auto mb-6" />
-          <h3 class="font-heading text-deep-sea text-2xl mb-1">John Brady</h3>
-          <p class="text-shoreline font-body font-medium text-sm uppercase tracking-wider mb-4">
-            Guest Educator
-          </p>
-          <div class="w-10 h-px bg-driftwood mx-auto mb-4"></div>
-          <p class="text-sm leading-relaxed mb-3">
-            John N. Brady is a retired US Coast Guard Senior Chief Boatswain's Mate
-            and former law enforcement officer whose career spans military service,
-            criminal investigation, and maritime security at Port Canaveral.
-          </p>
-          <p class="text-sm leading-relaxed mb-3">
-            A recipient of the VCSO Medal of Valor and Purple Heart, John holds a
-            B.S. in Criminal Justice from University of Maryland University College.
-            Since settling in Indialantic in 2020, he has served on the Town's Code
-            Enforcement Board and, since 2024, on the Indialantic Town Council.
-          </p>
-          <p class="text-sm leading-relaxed">
-            Through Shoreline Scholars' Civics in Action program, John brings local
-            government to life for students and families — opening the doors to Town
-            Hall, the police station, and the fire station so kids can see civics
-            firsthand.
-          </p>
-        </div>
+        <button class="team-tile" data-team="john" type="button">
+          <img src="/images/events/john-brady.jpg" alt="John Brady" class="team-tile-photo" />
+          <h3 class="team-tile-name">John Brady</h3>
+          <p class="team-tile-title">Guest Educator</p>
+        </button>
+
+        <button class="team-tile" data-team="isabel" type="button">
+          <img src="/headshot-isabel.jpg" alt="Isabel Hunt" class="team-tile-photo" />
+          <h3 class="team-tile-name">Isabel Hunt</h3>
+          <p class="team-tile-title">Administrative Assistant</p>
+        </button>
       </div>
     </div>
   </section>
+
+  <!-- ═══ TEAM BIO MODALS ═══ -->
+  <div id="team-modal-backdrop" class="team-modal-backdrop" hidden>
+    <div class="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-name">
+      <button class="team-modal-close" aria-label="Close" type="button">&times;</button>
+      <img id="team-modal-photo" src="" alt="" class="team-modal-photo" />
+      <h3 id="team-modal-name" class="team-modal-name"></h3>
+      <p id="team-modal-title" class="team-modal-title"></p>
+      <div class="w-10 h-px bg-driftwood mx-auto mb-6"></div>
+      <div id="team-modal-bio" class="team-modal-bio"></div>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      var teamData = {
+        emily: {
+          name: 'Emily Warner',
+          title: 'Educator',
+          photo: '/headshot-emily.png',
+          bio: '<p>Emily brings a storyteller\u2019s eye to everything she does. With a degree in English and a minor in World Cultures and Literature from Kent State, plus seven years of professional writing across industries as wide-ranging as travel, local journalism, and wellness, she knows how to find the thread that makes ideas come alive.</p><p>She\u2019s also a personal trainer \u2014 which means she understands firsthand that real growth, whether physical or intellectual, happens through consistency, encouragement, and showing up.</p><p>At Shoreline Scholars, Emily is here to show students that literature isn\u2019t just something you read \u2014 it\u2019s how you understand the world. She\u2019ll bring books to life, build critical thinkers, and remind every young reader that their own story matters too.</p>'
+        },
+        stacey: {
+          name: 'Stacey Marmolejo',
+          title: 'Guest Educator',
+          photo: '/headshot-stacey.jpg',
+          bio: '<p>Stacey Marmolejo is a published author, writing coach, and veteran educator with 40 years of experience in the classroom \u2014 and a career that proves what happens when someone genuinely believes in the people in front of them.</p><p>She\u2019s built School of Rock franchises, produced large-scale live events, and written six books, including the Insider\u2019s Guide to the Space Coast. She\u2019s the kind of person who shows up for a community and leaves it measurably better.</p><p>In Shoreline Scholars\u2019 Creative Writing Lab, Stacey brings that same energy to young writers. Her workshops blend writing craft with visual art, helping students find their voice, trust their ideas, and discover the joy of putting stories on the page. She\u2019s not here to teach rules \u2014 she\u2019s here to help kids fall in love with storytelling.</p>'
+        },
+        john: {
+          name: 'John Brady',
+          title: 'Guest Educator',
+          photo: '/images/events/john-brady.jpg',
+          bio: '<p>John N. Brady is a retired US Coast Guard Senior Chief Boatswain\u2019s Mate and former law enforcement officer whose career spans military service, criminal investigation, and maritime security at Port Canaveral.</p><p>A recipient of the VCSO Medal of Valor and Purple Heart, John holds a B.S. in Criminal Justice from University of Maryland University College. Since settling in Indialantic in 2020, he has served on the Town\u2019s Code Enforcement Board and, since 2024, on the Indialantic Town Council.</p><p>Through Shoreline Scholars\u2019 Civics in Action program, John brings local government to life for students and families \u2014 opening the doors to Town Hall, the police station, and the fire station so kids can see civics firsthand.</p>'
+        },
+        isabel: {
+          name: 'Isabel Hunt',
+          title: 'Administrative Assistant',
+          photo: '/headshot-isabel.jpg',
+          bio: '<p>Isabel brings more than 15 years of experience in caregiving, travel, and client services to Shoreline Scholars \u2014 and a deep belief that the best things in life happen outside.</p><p>Before joining the team, Isabel spent a decade as a certified nursing assistant supporting seniors with compassion and dignity, then brought that same people-first warmth to the travel industry. Her career began with an internship at the Court of Appeals, where she built a foundation in responsibility, empathy, and service that has shaped every role since. She holds a Bachelor of Arts in International Studies.</p><p>At Shoreline Scholars, Isabel keeps the day-to-day running smoothly \u2014 family communication, enrollment, scheduling, and program logistics \u2014 so that instructors and students can focus on what matters most. Her background in caregiving gives her a natural sensitivity to the needs of both children and parents, and her global experiences \u2014 from South Korea and Japan to Italy, France, and across Southeast Asia \u2014 have given her a rich appreciation for curiosity and learning through experience.</p><p>Married to a proud Kiwi, and mom to her four-year-old daughter Eloise, Isabel\u2019s favorite classroom has always been the beach \u2014 which is exactly where you\u2019ll find her, Eloise, and their dog Coco when the day is done.</p>'
+        }
+      };
+
+      var backdrop = document.getElementById('team-modal-backdrop');
+      var modal = backdrop.querySelector('.team-modal');
+      var closeBtn = backdrop.querySelector('.team-modal-close');
+      var photoEl = document.getElementById('team-modal-photo');
+      var nameEl = document.getElementById('team-modal-name');
+      var titleEl = document.getElementById('team-modal-title');
+      var bioEl = document.getElementById('team-modal-bio');
+      var lastFocused = null;
+
+      function openModal(key) {
+        var data = teamData[key];
+        if (!data) return;
+        lastFocused = document.activeElement;
+        photoEl.src = data.photo;
+        photoEl.alt = data.name;
+        nameEl.textContent = data.name;
+        titleEl.textContent = data.title;
+        bioEl.innerHTML = data.bio;
+        backdrop.hidden = false;
+        document.body.style.overflowY = 'scroll';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = '-' + window.scrollY + 'px';
+        backdrop.dataset.scrollY = window.scrollY;
+        requestAnimationFrame(function () {
+          backdrop.classList.add('team-modal-backdrop--visible');
+        });
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        backdrop.classList.remove('team-modal-backdrop--visible');
+        var scrollY = backdrop.dataset.scrollY || '0';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        document.body.style.overflowY = '';
+        window.scrollTo(0, parseInt(scrollY, 10));
+        setTimeout(function () {
+          backdrop.hidden = true;
+        }, 250);
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.querySelectorAll('.team-tile').forEach(function (tile) {
+        tile.addEventListener('click', function () {
+          openModal(tile.getAttribute('data-team'));
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+
+      backdrop.addEventListener('click', function (e) {
+        if (e.target === backdrop) closeModal();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !backdrop.hidden) closeModal();
+        if (e.key === 'Tab' && !backdrop.hidden) {
+          var focusable = modal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (e.shiftKey) {
+            if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+          } else {
+            if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+        }
+      });
+    })();
+  </script>
 
   <CallToAction
     heading="Ready to explore?"
@@ -364,5 +417,151 @@ import CallToAction from '../components/CallToAction.astro';
   }
   section:first-of-type :global(a span) {
     color: inherit;
+  }
+
+  /* ─── Team Tiles ─── */
+  .team-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .team-tile:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 20px rgba(27, 79, 82, 0.08);
+  }
+  .team-tile:focus-visible {
+    outline: 2px solid #5AAFA6;
+    outline-offset: 4px;
+    border-radius: 1rem;
+  }
+  .team-tile-photo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .team-tile-name {
+    font-family: var(--font-heading);
+    color: #1B4F52;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .team-tile-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2A7F62;
+  }
+
+  /* ─── Team Modal ─── */
+  .team-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(27, 79, 82, 0);
+    transition: background 0.25s ease;
+    padding: 1.5rem;
+  }
+  .team-modal-backdrop--visible {
+    background: rgba(27, 79, 82, 0.55);
+  }
+  .team-modal {
+    position: relative;
+    background: #FAF7F2;
+    border-radius: 1.25rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2.5rem 2.5rem 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 8px 40px rgba(27, 79, 82, 0.15);
+  }
+  .team-modal-backdrop--visible .team-modal {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .team-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: #B8977E;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.15s ease;
+  }
+  .team-modal-close:hover {
+    color: #1B4F52;
+  }
+  .team-modal-close:focus-visible {
+    outline: 2px solid #5AAFA6;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .team-modal-photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.25rem;
+    display: block;
+  }
+  .team-modal-name {
+    font-family: var(--font-heading);
+    color: #1B4F52;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+  }
+  .team-modal-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2A7F62;
+    margin-bottom: 1.25rem;
+  }
+  .team-modal-bio :global(p) {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .team-modal-bio :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    .team-modal {
+      padding: 2rem 1.5rem 1.5rem;
+    }
+    .team-modal-photo {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 </style>
