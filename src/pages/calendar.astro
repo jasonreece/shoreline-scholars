@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<Layout title="Calendar — Shoreline Scholars" description="Academic calendar for the 2026–2027 Rooted Learning Program at Shoreline Scholars in Indialantic, Florida.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Calendar</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        2026–2027 Academic Year
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CALENDAR ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Academic Calendar</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="cal-timeline">
+        <!-- Meet & Greet -->
+        <div class="cal-item cal-item--event">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">August 5</p>
+            <h3 class="cal-title">Meet & Greet / Orientation</h3>
+            <p class="cal-detail">9:30 AM – 11:30 AM</p>
+          </div>
+        </div>
+
+        <!-- First Day -->
+        <div class="cal-item cal-item--event">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">August 12</p>
+            <h3 class="cal-title">First Day of Classes</h3>
+          </div>
+        </div>
+
+        <!-- 1st Term -->
+        <div class="cal-item cal-item--term">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">August 12 – October 2</p>
+            <h3 class="cal-title">1st Term</h3>
+            <p class="cal-detail">8 weeks</p>
+          </div>
+        </div>
+
+        <!-- 2nd Term -->
+        <div class="cal-item cal-item--term">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">October 7 – December 4</p>
+            <h3 class="cal-title">2nd Term</h3>
+            <p class="cal-detail">8 weeks</p>
+          </div>
+        </div>
+
+        <!-- Review & Presentations -->
+        <div class="cal-item cal-item--review">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">December 9 – December 18</p>
+            <h3 class="cal-title">Review & Presentations</h3>
+            <p class="cal-detail">3 weeks</p>
+          </div>
+        </div>
+
+        <!-- Christmas Break -->
+        <div class="cal-item cal-item--break">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">December 23 – January 1</p>
+            <h3 class="cal-title">Christmas & New Year Break</h3>
+            <p class="cal-detail">No Classes</p>
+          </div>
+        </div>
+
+        <!-- 3rd Term -->
+        <div class="cal-item cal-item--term">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">January 6 – February 26</p>
+            <h3 class="cal-title">3rd Term</h3>
+            <p class="cal-detail">8 weeks</p>
+          </div>
+        </div>
+
+        <!-- 4th Term -->
+        <div class="cal-item cal-item--term">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">March 3 – April 30</p>
+            <h3 class="cal-title">4th Term</h3>
+            <p class="cal-detail">8 weeks</p>
+          </div>
+        </div>
+
+        <!-- Spring Break -->
+        <div class="cal-item cal-item--break">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">March 24 – March 26</p>
+            <h3 class="cal-title">Spring Break</h3>
+            <p class="cal-detail">No Classes</p>
+          </div>
+        </div>
+
+        <!-- Review & Presentations -->
+        <div class="cal-item cal-item--review">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">May 5 – May 21</p>
+            <h3 class="cal-title">Review & Presentations</h3>
+            <p class="cal-detail">3 weeks</p>
+          </div>
+        </div>
+
+        <!-- Last Day -->
+        <div class="cal-item cal-item--event">
+          <div class="cal-marker"></div>
+          <div class="cal-content">
+            <p class="cal-date">May 21</p>
+            <h3 class="cal-title">Last Day of Classes</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="cal-legend">
+        <div class="cal-legend-item">
+          <span class="cal-legend-dot" style="background: #5AAFA6;"></span>
+          <span>Term</span>
+        </div>
+        <div class="cal-legend-item">
+          <span class="cal-legend-dot" style="background: #E8956D;"></span>
+          <span>Review & Presentations</span>
+        </div>
+        <div class="cal-legend-item">
+          <span class="cal-legend-dot" style="background: #B8977E;"></span>
+          <span>Break — No Classes</span>
+        </div>
+        <div class="cal-legend-item">
+          <span class="cal-legend-dot" style="background: #1B4F52;"></span>
+          <span>Key Date</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Be Part of the Journey"
+    description="We're building something special in Indialantic. Whether you're a family looking to enroll, a community member who wants to volunteer, or a supporter who believes in our mission — we'd love to hear from you."
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ─── Timeline ─── */
+  .cal-timeline {
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cal-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.4375rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: rgba(232, 213, 183, 0.5);
+  }
+
+  .cal-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.25rem 0;
+  }
+
+  .cal-marker {
+    position: absolute;
+    left: -2rem;
+    top: 1.55rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 50%;
+    background: #1B4F52;
+    flex-shrink: 0;
+  }
+
+  .cal-content {
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    width: 100%;
+  }
+
+  /* ─── Item Types ─── */
+
+  /* Terms — primary rhythm */
+  .cal-item--term .cal-marker {
+    background: #5AAFA6;
+  }
+  .cal-item--term .cal-content {
+    background: rgba(90, 175, 166, 0.08);
+    border-left: 3px solid #5AAFA6;
+  }
+
+  /* Review & Presentations */
+  .cal-item--review .cal-marker {
+    background: #E8956D;
+  }
+  .cal-item--review .cal-content {
+    background: rgba(232, 149, 109, 0.08);
+    border-left: 3px solid #E8956D;
+  }
+
+  /* Breaks — muted, pauses */
+  .cal-item--break .cal-marker {
+    background: #B8977E;
+  }
+  .cal-item--break .cal-content {
+    background: rgba(184, 151, 126, 0.08);
+    border-left: 3px solid #B8977E;
+  }
+  .cal-item--break .cal-title {
+    color: #B8977E;
+    font-style: italic;
+  }
+  .cal-item--break .cal-detail {
+    color: #B8977E;
+    font-style: italic;
+  }
+
+  /* Key dates (events) */
+  .cal-item--event .cal-marker {
+    background: #1B4F52;
+  }
+  .cal-item--event .cal-content {
+    background: rgba(232, 213, 183, 0.2);
+    border-left: 3px solid #1B4F52;
+  }
+
+  /* ─── Typography ─── */
+  .cal-date {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #B8977E;
+    margin-bottom: 0.25rem;
+  }
+
+  .cal-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1B4F52;
+    margin-bottom: 0.15rem;
+  }
+
+  .cal-detail {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.88rem;
+    color: #4A5859;
+  }
+
+  /* ─── Legend ─── */
+  .cal-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(232, 213, 183, 0.4);
+    gap: 1.5rem;
+  }
+
+  .cal-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #4A5859;
+  }
+
+  .cal-legend-dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .cal-content {
+      padding: 1rem 1.25rem;
+    }
+  }
+</style>
