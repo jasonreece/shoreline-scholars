@@ -13,9 +13,9 @@ import Footer from '../components/Footer.astro';
       style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
     </div>
     <div class="relative z-10 max-w-2xl mx-auto">
-      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-6">Thank You</h1>
+      <h1 id="thank-you-heading" class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-6">Thank You</h1>
       <div class="w-12 h-0.5 bg-shell-white/40 mx-auto mb-6"></div>
-      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+      <p id="thank-you-subtitle" class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
         We appreciate your interest in Shoreline Scholars.
       </p>
     </div>
@@ -24,10 +24,10 @@ import Footer from '../components/Footer.astro';
   <section class="bg-shell-white py-24 md:py-32">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <div class="bg-shell-white rounded-2xl p-8 md:p-12" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.06);">
-        <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-6">
+        <p id="thank-you-body" class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-6">
           Your request has been received. A member of our team will be in touch soon to share more about our programs and answer any questions you may have.
         </p>
-        <p class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-10">
+        <p id="thank-you-cta-text" class="font-body text-[0.95rem] text-deep-sea/80 leading-relaxed mb-10">
           In the meantime, feel free to explore what we're building in Indialantic.
         </p>
         <div class="flex flex-wrap justify-center" style="gap: 1.25rem;">
@@ -47,3 +47,20 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Layout>
+
+<script is:inline>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('source') !== 'enrollment') return;
+
+    var heading = document.getElementById('thank-you-heading');
+    var subtitle = document.getElementById('thank-you-subtitle');
+    var body = document.getElementById('thank-you-body');
+    var ctaText = document.getElementById('thank-you-cta-text');
+
+    if (heading) heading.textContent = 'Welcome to Shoreline Scholars';
+    if (subtitle) subtitle.textContent = 'Your enrollment has been submitted.';
+    if (body) body.textContent = 'We\u2019re so glad your family is joining us. A member of our team will follow up with next steps, including program details and everything you need to get ready for the first day.';
+    if (ctaText) ctaText.textContent = 'In the meantime, take a look at our program and calendar.';
+  })();
+</script>

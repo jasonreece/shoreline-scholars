@@ -82,9 +82,15 @@ import Layout from '../../layouts/Layout.astro';
     var program = params.get('program');
     var days = params.get('days');
     var payment = params.get('payment');
+    var paymentType = params.get('stepUp');
     var zeffyUrl = null;
 
     if (program === 'Rooted Learning') {
+      var isStepUp = paymentType && paymentType.trim().toLowerCase() === 'yes';
+      if (isStepUp) {
+        window.location.href = '/thank-you?source=enrollment';
+        return;
+      }
       var isMonthly = payment && payment.trim().toLowerCase().indexOf('monthly') !== -1;
       if (isMonthly) {
         zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/registration-and-materials-fees';
