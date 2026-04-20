@@ -80,7 +80,27 @@ import Layout from '../../layouts/Layout.astro';
 
     var params = new URLSearchParams(window.location.search);
     var program = params.get('program');
-    var zeffyUrl = program ? PROGRAMS[program] : null;
+    var days = params.get('days');
+    var payment = params.get('payment');
+    var zeffyUrl = null;
+
+    if (program === 'Rooted Learning') {
+      var isMonthly = payment && payment.trim().toLowerCase().indexOf('monthly') !== -1;
+      if (isMonthly) {
+        zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/registration-and-materials-fees';
+      } else {
+        var dayNum = days ? days.trim().charAt(0) : '';
+        if (dayNum === '1') {
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-1-day';
+        } else if (dayNum === '2') {
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-2-day';
+        } else if (dayNum === '3') {
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-3-day';
+        }
+      }
+    } else {
+      zeffyUrl = program ? PROGRAMS[program] : null;
+    }
 
     if (!zeffyUrl) {
       document.getElementById('loading-state').hidden = true;
