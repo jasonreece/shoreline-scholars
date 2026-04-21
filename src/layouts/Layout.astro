@@ -4,12 +4,24 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  // ogImage?: string;
+  ogType?: string;
+  canonical?: string;
 }
 
 const {
   title = 'Shoreline Scholars — Where Curiosity Meets the Coastline',
-  description = 'A relational, hands-on learning community designed to support the whole-child development of homeschooled students in Indialantic, Florida.'
+  description = 'A relational, hands-on learning community designed to support the whole-child development of homeschooled students in Indialantic, Florida.',
+  // ogImage = '/og-image.png',
+  ogType = 'website',
+  canonical
 } = Astro.props;
+
+const siteUrl = Astro.site ?? new URL('https://shorelinescholars.org');
+const canonicalUrl = canonical
+  ? new URL(canonical, siteUrl).toString()
+  : new URL(Astro.url.pathname, siteUrl).toString();
+// const ogImageUrl = new URL(ogImage, siteUrl).toString();
 ---
 
 <!doctype html>
@@ -23,6 +35,21 @@ const {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Shoreline Scholars" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {/* <meta property="og:image" content={ogImageUrl} /> */}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {/* <meta name="twitter:image" content={ogImageUrl} /> */}
 
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q30BB442"></script>

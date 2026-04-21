@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /enroll/
+Disallow: /branding
+
+Sitemap: https://shorelinescholars.org/sitemap-index.xml
