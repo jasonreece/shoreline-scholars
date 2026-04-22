@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title = 'Shoreline Scholars — Where Curiosity Meets the Coastline',
-  description = 'A relational, hands-on learning community designed to support the whole-child development of homeschooled students in Indialantic, Florida.',
+  description = 'A relational, hands-on learning community designed to support the whole-child development of homeschool families in Melbourne Beach, Indialantic, and the greater Brevard County Space Coast.',
   // ogImage = '/og-image.png',
   ogType = 'website',
   canonical
@@ -22,6 +22,46 @@ const canonicalUrl = canonical
   ? new URL(canonical, siteUrl).toString()
   : new URL(Astro.url.pathname, siteUrl).toString();
 // const ogImageUrl = new URL(ogImage, siteUrl).toString();
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['EducationalOrganization', 'LocalBusiness'],
+  '@id': new URL('/#organization', siteUrl).toString(),
+  name: 'Shoreline Scholars',
+  url: siteUrl.toString(),
+  logo: new URL('/logo.png', siteUrl).toString(),
+  image: new URL('/logo.png', siteUrl).toString(),
+  email: 'shorelinescholars@gmail.com',
+  telephone: '+1-321-345-1468',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '2010 Oak St',
+    addressLocality: 'Melbourne Beach',
+    addressRegion: 'FL',
+    postalCode: '32951',
+    addressCountry: 'US'
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Wednesday', 'Thursday', 'Friday'],
+      opens: '09:30',
+      closes: '14:00'
+    }
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Melbourne Beach' },
+    { '@type': 'City', name: 'Indialantic' },
+    { '@type': 'City', name: 'Satellite Beach' },
+    { '@type': 'City', name: 'Indian Harbour Beach' },
+    { '@type': 'City', name: 'Melbourne' },
+    { '@type': 'AdministrativeArea', name: 'Brevard County' }
+  ],
+  sameAs: [
+    'https://www.instagram.com/shorelinescholars',
+    'https://www.facebook.com/profile.php?id=61587631643807'
+  ]
+};
 ---
 
 <!doctype html>
@@ -50,6 +90,9 @@ const canonicalUrl = canonical
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     {/* <meta name="twitter:image" content={ogImageUrl} /> */}
+
+    <!-- Organization schema -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q30BB442"></script>

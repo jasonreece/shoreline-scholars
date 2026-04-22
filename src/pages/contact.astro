@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<Layout
+  title="Visit & Contact — Shoreline Scholars"
+  description="Find us at 2010 Oak St, Melbourne Beach, FL 32951. Shoreline Scholars is a beachside learning community serving homeschool families across Indialantic, Melbourne Beach, Satellite Beach, and the greater Space Coast."
+>
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Visit Us</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        A beachside learning community on Florida's Space Coast
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT DETAILS ═══ -->
+  <section class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Find Us</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2" style="gap: 3rem;">
+        <!-- Address / hours / phone / email -->
+        <div class="space-y-8">
+          <div>
+            <p class="font-body font-medium text-[0.75rem] uppercase tracking-[0.15em] text-driftwood mb-2">Address</p>
+            <address class="not-italic font-body text-deep-sea text-lg leading-relaxed">
+              Shoreline Scholars<br />
+              2010 Oak St<br />
+              Melbourne Beach, FL 32951
+            </address>
+            <a
+              href="https://maps.google.com/?q=2010+Oak+St+Melbourne+Beach+FL+32951"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-3 font-body font-medium text-[0.85rem] text-shoreline hover:text-deep-sea transition-colors"
+            >
+              Get directions &rarr;
+            </a>
+          </div>
+
+          <div>
+            <p class="font-body font-medium text-[0.75rem] uppercase tracking-[0.15em] text-driftwood mb-2">Hours</p>
+            <dl class="font-body text-deep-sea/90 text-base">
+              <div class="flex justify-between py-1 border-b border-warm-sand/30">
+                <dt>Wednesday</dt>
+                <dd>9:30 AM – 2:00 PM</dd>
+              </div>
+              <div class="flex justify-between py-1 border-b border-warm-sand/30">
+                <dt>Thursday</dt>
+                <dd>9:30 AM – 2:00 PM</dd>
+              </div>
+              <div class="flex justify-between py-1 border-b border-warm-sand/30">
+                <dt>Friday</dt>
+                <dd>9:30 AM – 2:00 PM</dd>
+              </div>
+              <div class="flex justify-between py-1 text-deep-sea/50">
+                <dt>Saturday – Tuesday</dt>
+                <dd>Closed</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div>
+            <p class="font-body font-medium text-[0.75rem] uppercase tracking-[0.15em] text-driftwood mb-2">Phone</p>
+            <a href="tel:+13213451468" class="font-body text-deep-sea text-lg hover:text-shoreline transition-colors">
+              (321) 345-1468
+            </a>
+          </div>
+
+          <div>
+            <p class="font-body font-medium text-[0.75rem] uppercase tracking-[0.15em] text-driftwood mb-2">Email</p>
+            <a href="mailto:shorelinescholars@gmail.com" class="font-body text-deep-sea text-lg hover:text-shoreline transition-colors break-all">
+              shorelinescholars@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Map embed -->
+        <div class="rounded-xl overflow-hidden" style="box-shadow: 0 1px 8px rgba(27, 79, 82, 0.08); min-height: 400px;">
+          <iframe
+            title="Shoreline Scholars location map"
+            src="https://maps.google.com/maps?q=2010+Oak+St+Melbourne+Beach+FL+32951&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0; min-height: 400px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Service area -->
+      <div class="mt-20 text-center max-w-2xl mx-auto">
+        <p class="font-body font-medium text-[0.75rem] uppercase tracking-[0.15em] text-driftwood mb-3">Serving</p>
+        <p class="font-body text-deep-sea/80 text-base leading-relaxed">
+          Homeschool families across Melbourne Beach, Indialantic, Satellite Beach, Indian Harbour Beach,
+          Melbourne, and the greater Brevard County Space Coast.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Ready to learn more?"
+    description="We'd love to hear from you. Reach out with questions about our programs, schedule a visit, or request information to see if Shoreline Scholars is the right fit for your family."
+  />
+
+  <Footer />
+</Layout>

@@ -20,9 +20,43 @@ function formatDate(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
   return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 }
+
+const siteOrigin = (Astro.site ?? new URL('https://shorelinescholars.org')).origin;
+const postUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://shorelinescholars.org').toString();
+const postImageUrl = entry.data.image
+  ? new URL(entry.data.image, Astro.site ?? 'https://shorelinescholars.org').toString()
+  : undefined;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: entry.data.date,
+  ...(postImageUrl && { image: postImageUrl }),
+  url: postUrl,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': postUrl
+  },
+  author: {
+    '@type': 'Person',
+    name: entry.data.author
+  },
+  publisher: {
+    '@id': `${siteOrigin}/#organization`,
+    '@type': 'EducationalOrganization',
+    name: 'Shoreline Scholars',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteOrigin}/logo.png`
+    }
+  }
+};
 ---
 
 <Layout title={`${entry.data.title} — Shoreline Scholars`} description={entry.data.description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <Header />
 
   <!-- ═══ HERO ═══ -->

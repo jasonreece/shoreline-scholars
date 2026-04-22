@@ -24,9 +24,39 @@ function formatDate(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
   return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 }
+
+const siteOrigin = (Astro.site ?? new URL('https://shorelinescholars.org')).origin;
+const eventUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://shorelinescholars.org').toString();
+const eventImageUrl = entry.data.image
+  ? new URL(entry.data.image, Astro.site ?? 'https://shorelinescholars.org').toString()
+  : undefined;
+
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: entry.data.title,
+  description: entry.data.description,
+  startDate: entry.data.date,
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  url: eventUrl,
+  ...(eventImageUrl && { image: eventImageUrl }),
+  location: {
+    '@type': 'Place',
+    name: entry.data.location,
+    address: entry.data.location
+  },
+  organizer: {
+    '@id': `${siteOrigin}/#organization`,
+    '@type': 'EducationalOrganization',
+    name: 'Shoreline Scholars',
+    url: siteOrigin + '/'
+  }
+};
 ---
 
 <Layout title={`${entry.data.title} — Shoreline Scholars`} description={entry.data.description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
   <Header />
 
   <!-- ═══ HERO ═══ -->
