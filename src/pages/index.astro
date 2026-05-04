@@ -383,35 +383,38 @@ import CallToAction from '../components/CallToAction.astro';
         var data = teamData[key];
         if (!data) return;
         lastFocused = document.activeElement;
+        var scrollY = window.scrollY;
         photoEl.src = data.photo;
         photoEl.alt = data.name;
         nameEl.textContent = data.name;
         titleEl.textContent = data.title;
         bioEl.innerHTML = data.bio;
         backdrop.hidden = false;
+        backdrop.dataset.scrollY = scrollY;
         document.body.style.overflowY = 'scroll';
+        document.body.style.top = '-' + scrollY + 'px';
         document.body.style.position = 'fixed';
         document.body.style.width = '100%';
-        document.body.style.top = '-' + window.scrollY + 'px';
-        backdrop.dataset.scrollY = window.scrollY;
         requestAnimationFrame(function () {
           backdrop.classList.add('team-modal-backdrop--visible');
         });
-        closeBtn.focus();
+        closeBtn.focus({ preventScroll: true });
       }
 
       function closeModal() {
         backdrop.classList.remove('team-modal-backdrop--visible');
-        var scrollY = backdrop.dataset.scrollY || '0';
+        var scrollY = parseInt(backdrop.dataset.scrollY || '0', 10);
         document.body.style.position = '';
         document.body.style.width = '';
         document.body.style.top = '';
         document.body.style.overflowY = '';
-        window.scrollTo(0, parseInt(scrollY, 10));
+        window.scrollTo(0, scrollY);
         setTimeout(function () {
           backdrop.hidden = true;
         }, 250);
-        if (lastFocused) lastFocused.focus();
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus({ preventScroll: true });
+        }
       }
 
       document.querySelectorAll('.team-tile').forEach(function (tile) {
