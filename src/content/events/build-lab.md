@@ -3,7 +3,7 @@ title: "Build Lab — Architecture & Design Studio"
 date: "2026-09-08"
 time: "10:00 AM – 12:00 PM"
 location: "Shoreline Scholars, Indialantic"
-description: "Build Lab is where blueprints become real. A year-long, hands-on construction and design course taught by Contractor Benjamin — students draw floor plans, pick up real tools, and build detailed models. Tuesdays, September 8 through May 25. Ages 8 and up. $160/month plus $100 materials fee."
+description: "Build Lab is where blueprints become real. A year-long, hands-on construction and design course taught by Contractor Benjamin — students draw floor plans, pick up real tools, and build detailed models. Tuesdays, September 8 through May 25. Ages 10 and up. $160/month plus $100 materials fee."
 image: "/images/events/build-lab.jpg"
 cta: "Enroll Now"
 ctaLink: ""
@@ -40,7 +40,7 @@ This isn't a craft class. Students use X-Acto knives, drills, and hammers alongs
 | First Day | Tuesday, September 8 |
 | Last Day | Tuesday, May 25 |
 | Schedule | Tuesdays, 10:00 AM – 12:00 PM |
-| Ages | 8 and up |
+| Ages | 10 and up |
 | Tuition | $160 / month |
 | Materials Fee | $100 (project supplies & consumables) |
 | Duration | Full year, 4 terms |
