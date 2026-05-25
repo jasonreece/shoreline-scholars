@@ -2,7 +2,7 @@
 title: "Creative Expression — Acting, Improvisation & Stand-Up Comedy"
 date: "2026-09-09"
 time: "2:00 PM – 3:00 PM"
-location: "Shoreline Scholars, Indialantic"
+location: "2010 Oak St, Melbourne Beach, FL 32951"
 description: "An 8-week acting, improv, and stand-up comedy course for ages 8 and up. Wednesdays, September 9 – October 28, 2:00 PM – 3:00 PM. $200 for the full program. Taught by Wolff Bowden — poet, artist, and musician. Spaces are limited."
 image: "/images/events/creative-expression.png"
 cta: "Enroll Now"
