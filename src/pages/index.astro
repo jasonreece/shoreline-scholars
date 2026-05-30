@@ -308,6 +308,11 @@ import CallToAction from '../components/CallToAction.astro';
           <p class="team-tile-title">Guest Educator</p>
         </button>
       </div>
+
+      <div class="team-trust-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11 11 13 15 9"/></svg>
+        <span>Every educator on our team is background-checked — because trust is where learning begins.</span>
+      </div>
     </div>
   </section>
 
@@ -524,6 +529,23 @@ import CallToAction from '../components/CallToAction.astro';
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #2A7F62;
+  }
+
+  .team-trust-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 4rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1B4F52;
+  }
+
+  .team-trust-note svg {
+    color: #2A7F62;
+    flex-shrink: 0;
   }
 
   /* ─── Team Modal ─── */
