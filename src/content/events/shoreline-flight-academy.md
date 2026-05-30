@@ -3,8 +3,8 @@ title: "Shoreline Flight Academy — 8-Week Aviation & Flight Simulation Course"
 date: "2026-09-01"
 time: "12:00 PM – 1:00 PM"
 location: "2010 Oak St, Melbourne Beach, FL 32951"
-description: "An immersive, hands-on aviation program for ages 10 and up. Eight Tuesdays, September 1 – October 20, 12:00 PM – 1:00 PM. Real flight simulator time, weather, airspace, ATC, navigation, and flight planning — led by an active Airline Transport Pilot. $275 for the full course. Limited to 4–6 aviators. Step Up for Students providers accepted."
-image: "/images/events/shoreline-flight-academy.jpg"
+description: "An immersive, hands-on aviation program for ages 10 and up. Eight Tuesdays, September 1 – October 20, 12:00 PM – 1:00 PM. Real flight simulator time, weather, airspace, ATC, navigation, and flight planning — led by an active Airline Transport Pilot. $360 for the full course. Limited to 4–6 aviators. Step Up for Students providers accepted."
+image: "/images/events/shoreline-flight-academy--2.png"
 cta: "Reserve Your Spot Now"
 ctaLink: ""
 tallyProgram: "Flight Academy"
@@ -70,7 +70,7 @@ Complete the course and earn ground school logbook hours, signed off by our cert
 | Duration | 8 weeks, 1 hour per week |
 | Ages | 10 and up |
 | Class Size | 4–6 aviators |
-| Tuition | $275 for the entire course |
+| Tuition | $360 for the entire course |
 | Scholarships | Step Up for Students providers accepted |
 
 ## Meet Your Instructor
