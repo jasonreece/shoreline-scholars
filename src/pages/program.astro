@@ -80,6 +80,37 @@ import CallToAction from '../components/CallToAction.astro';
           <p class="text-[0.92rem] leading-relaxed mt-4 text-driftwood italic">
             Core science rotates by term: Chemistry (T1), Physics (T2), Biology (T3), Environmental Science (T4). Animal Science, Marine Biology, Plant Studies, and Oceanography are covered on Friday nature days throughout the year.
           </p>
+          <div class="book-list">
+            <p class="font-body text-deep-sea text-xs uppercase tracking-wider font-semibold mb-3">Required Books for English Literature</p>
+            <div class="book-term">
+              <span class="book-term-label">Term 1</span>
+              <ul class="subject-list">
+                <li><em>Charlotte's Web</em> by E.B. White</li>
+                <li><em>Because of Winn-Dixie</em> by Kate DiCamillo</li>
+              </ul>
+            </div>
+            <div class="book-term">
+              <span class="book-term-label">Term 2</span>
+              <ul class="subject-list">
+                <li><em>The Tale of Despereaux</em> by Kate DiCamillo</li>
+                <li><em>Mr. Popper's Penguins</em> by Richard &amp; Florence Atwater</li>
+              </ul>
+            </div>
+            <div class="book-term">
+              <span class="book-term-label">Term 3</span>
+              <ul class="subject-list">
+                <li><em>The One and Only Ivan</em> by Katherine Applegate</li>
+                <li><em>Frindle</em> by Andrew Clements</li>
+              </ul>
+            </div>
+            <div class="book-term">
+              <span class="book-term-label">Term 4</span>
+              <ul class="subject-list">
+                <li><em>Bridge to Terabithia</em> by Katherine Paterson</li>
+                <li><em>Matilda</em> by Roald Dahl</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Fall Semester -->
@@ -638,6 +669,31 @@ import CallToAction from '../components/CallToAction.astro';
 
   .subject-list li {
     margin-bottom: 0.3rem;
+  }
+
+  .book-list {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(184, 151, 126, 0.35);
+  }
+
+  .book-term {
+    margin-bottom: 0.85rem;
+  }
+
+  .book-term-label {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #2A7F62;
+    margin-bottom: 0.2rem;
+  }
+
+  .book-list .subject-list {
+    margin: 0;
   }
 
   .schedule-card {
