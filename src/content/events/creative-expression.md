@@ -1,10 +1,10 @@
 ---
 title: "Creative Expression — Acting, Improvisation & Stand-Up Comedy"
-date: "2026-09-09"
+date: "2026-10-07"
 time: "2:00 PM – 3:00 PM"
 location: "2010 Oak St, Melbourne Beach, FL 32951"
-description: "An 8-week acting, improv, and stand-up comedy course for ages 8 and up. Wednesdays, September 9 – October 28, 2:00 PM – 3:00 PM. $200 for the full program. Taught by Wolff Bowden — poet, artist, and musician. Spaces are limited."
-image: "/images/events/creative-expression.png"
+description: "An 8-week acting, improv, and stand-up comedy course for ages 8 and up. Wednesdays, October 7 – November 25, 2:00 PM – 3:00 PM. $200 for the full program. Taught by Wolff Bowden — poet, artist, and musician. Spaces are limited."
+image: "/images/events/creative-expression-updated.png"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Creative Expression"
@@ -38,8 +38,8 @@ Over eight weeks, students will develop stage presence, storytelling instincts, 
 |--------|------|
 | Duration | 8 weeks |
 | Schedule | Wednesdays, 2:00 PM – 3:00 PM |
-| First Class | Wednesday, September 9 |
-| Last Class | Wednesday, October 28 |
+| First Class | Wednesday, October 7 |
+| Last Class | Wednesday, November 25 |
 | Ages | 8 and up |
 | Cost | $200 for the full program |
 | Spaces | Limited |

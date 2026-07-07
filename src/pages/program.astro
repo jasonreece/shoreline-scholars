@@ -13,7 +13,8 @@ import CallToAction from '../components/CallToAction.astro';
     { label: 'Curriculum', id: 'curriculum' },
     { label: 'Schedule', id: 'weekly-schedule' },
     { label: 'Daily Schedules', id: 'daily-schedules' },
-{ label: 'Field Trips', id: 'field-trips' },
+    { label: 'Electives', id: 'electives' },
+    { label: 'Field Trips', id: 'field-trips' },
     { label: 'Family Partnership', id: 'family-partnership' },
     { label: 'Admissions', id: 'admissions' },
   ]} />
@@ -52,6 +53,17 @@ import CallToAction from '../components/CallToAction.astro';
       <p class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto">
         Based in Melbourne Beach, Florida, we welcome homeschool families from across the Space Coast — including Indialantic, Satellite Beach, Indian Harbour Beach, Melbourne, and the greater Brevard County area.
       </p>
+
+      <figure class="mt-16">
+        <img
+          src="/images/program/weekly-schedule.jpg"
+          alt="Shoreline Scholars weekly class schedule — Tuesday electives plus Wednesday, Thursday, and Friday classes for the Young Explorers, Curious Learners, and Confident Leaders groups"
+          class="w-full rounded-2xl shadow"
+        />
+        <figcaption class="font-body text-driftwood text-xs uppercase tracking-wider text-center mt-4">
+          Weekly Class Schedule
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -474,6 +486,31 @@ import CallToAction from '../components/CallToAction.astro';
         </details>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ ELECTIVES ═══ -->
+  <section id="electives" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Electives</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <p class="text-[0.95rem] leading-relaxed mb-10 max-w-3xl mx-auto">
+        Beyond the core program, students can enrich, explore, and empower their learning through our elective courses. Tuesday courses (ages 10–14) include Spanish Level 1, Build Lab, and Flight Academy, and our Wednesday Creative Expression performing arts course welcomes ages 8 and up. Classes run in 8-week sessions with limited spots — Step Up for Students funding is accepted.
+      </p>
+
+      <figure>
+        <img
+          src="/images/program/electives.jpg"
+          alt="Shoreline Scholars elective courses — Spanish Level 1, Build Lab, and Flight Academy on Tuesdays for ages 10–14, and Creative Expression performing arts on Wednesdays for ages 8 and up"
+          class="w-full rounded-2xl shadow"
+        />
+        <figcaption class="font-body text-driftwood text-xs uppercase tracking-wider text-center mt-4">
+          Elective Courses — Beginning October 6
+        </figcaption>
+      </figure>
     </div>
   </section>
 

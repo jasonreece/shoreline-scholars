@@ -1,10 +1,10 @@
 ---
 title: "Build Lab — Architecture & Design Studio"
-date: "2026-09-08"
-time: "10:00 AM – 12:00 PM"
+date: "2026-10-06"
+time: "11:00 AM – 12:00 PM"
 location: "2010 Oak St, Melbourne Beach, FL 32951"
-description: "Build Lab is where blueprints become real. A year-long, hands-on construction and design course taught by Contractor Benjamin — students draw floor plans, pick up real tools, and build detailed models. Tuesdays, September 8 through May 25. Ages 10 and up. $160/month plus $100 materials fee."
-image: "/images/events/build-lab.jpg"
+description: "Build Lab is where blueprints become real. An 8-week, hands-on construction and design course taught by Contractor Benjamin — students draw floor plans, pick up real tools, and build detailed models. Tuesdays, October 6 through December 1. Ages 10–14. $225 for the 8-week course, materials fee included."
+image: "/images/events/build-lab-updated.png"
 cta: "Enroll Now"
 ctaLink: ""
 tallyProgram: "Build Lab"
@@ -13,7 +13,7 @@ active: true
 
 *A hands-on construction & design experience for young builders.*
 
-Build Lab is where blueprints become real. In this year-long, hands-on course, students step into the roles of architect, designer, and builder — learning how to take an idea from paper to physical form. They'll draw floor plans, pick up real tools, and construct detailed models using wood, Styrofoam, and modeling supplies. Along the way, they'll develop spatial reasoning, measurement skills, and the confidence that comes from making something with their own hands.
+Build Lab is where blueprints become real. In this 8-week, hands-on course, students step into the roles of architect, designer, and builder — learning how to take an idea from paper to physical form. They'll draw floor plans, pick up real tools, and construct detailed models using wood, Styrofoam, and modeling supplies. Along the way, they'll develop spatial reasoning, measurement skills, and the confidence that comes from making something with their own hands.
 
 This isn't a craft class. Students use X-Acto knives, drills, and hammers alongside their instructor, learning precision, safety, and the kind of problem-solving that only comes from building something that has to actually stand up.
 
@@ -23,7 +23,7 @@ This isn't a craft class. Students use X-Acto knives, drills, and hammers alongs
 - Working with real tools and real materials
 - Learning measurement, geometry, and spatial relationships through building
 - Exploring interior design and functional space planning
-- Collaborating on team building projects throughout the year
+- Collaborating on team building projects throughout the course
 
 ## Skills Developed
 
@@ -37,14 +37,12 @@ This isn't a craft class. Students use X-Acto knives, drills, and hammers alongs
 
 | Detail | Info |
 |--------|------|
-| First Day | Tuesday, September 8 |
-| Last Day | Tuesday, May 25 |
-| Schedule | Tuesdays, 10:00 AM – 12:00 PM |
-| Ages | 10 and up |
-| Tuition | $160 / month |
-| Materials Fee | $100 (project supplies & consumables) |
-| Duration | Full year, 4 terms |
-| No Classes | December 22 & March 23 |
+| First Day | Tuesday, October 6 |
+| Last Day | Tuesday, December 1 |
+| Schedule | Tuesdays, 11:00 AM – 12:00 PM |
+| Ages | 10–14 |
+| Duration | 8 weeks |
+| Cost | $225 for the course (materials fee included) |
 
 ## Meet Your Educator
 
