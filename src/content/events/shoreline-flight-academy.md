@@ -1,10 +1,10 @@
 ---
 title: "Shoreline Flight Academy — 8-Week Aviation & Flight Simulation Course"
-date: "2026-09-01"
-time: "12:00 PM – 1:00 PM"
+date: "2026-10-06"
+time: "11:00 AM – 12:00 PM"
 location: "2010 Oak St, Melbourne Beach, FL 32951"
-description: "An immersive, hands-on aviation program for ages 10 and up. Eight Tuesdays, September 1 – October 20, 12:00 PM – 1:00 PM. Real flight simulator time, weather, airspace, ATC, navigation, and flight planning — led by an active Airline Transport Pilot. $360 for the full course. Limited to 4–6 aviators. Step Up for Students providers accepted."
-image: "/images/events/shoreline-flight-academy--2.png"
+description: "An immersive, hands-on introductory aviation program for ages 10–14. Eight Tuesdays, October 6 – December 1, 11:00 AM – 12:00 PM. Real flight simulator time plus weather, airspace, ATC, navigation, and flight planning — led by airline pilot Sarah Szakovits. $200 for the entire course. Limited spots. Step Up for Students Direct Provider."
+image: "/images/events/flight-academy-3.png"
 cta: "Reserve Your Spot Now"
 ctaLink: ""
 tallyProgram: "Flight Academy"
@@ -14,11 +14,11 @@ active: true
 
 *Explore. Learn. Soar.*
 
-The Shoreline Flight Academy is an 8-week immersive aviation program designed for curious young aviators ages 10 and up. Led by Sarah Szakovits — an Airline Transport Pilot with 13 years of flying experience — students get hands-on time in a real flight simulator while learning the foundational skills every pilot needs.
+The Shoreline Flight Academy is an 8-week introductory aviation program designed for curious young aviators ages 10–14. Led by Sarah Szakovits — an Airline Transport Pilot with 13 years of flying experience — students get hands-on time in a real flight simulator while learning the foundational skills every pilot needs.
 
-Each week, students explore a different facet of aviation: from weather and airspace to air traffic control, cockpit systems, and flight planning. By the end of the course, every aviator earns ground school logbook hours signed off by certified flight instructors — a real, tangible first step toward a future pilot's license.
+Each week, students explore a different facet of aviation: from weather and airspace to air traffic control, cockpit systems, and flight planning. This is an introductory course — a fun, welcoming first look at what it takes to fly, with no experience required.
 
-Classes are kept intentionally small (4–6 students) so every aviator gets meaningful time at the controls. No experience is needed — just curiosity and a willingness to soar.
+Classes are kept intentionally small and personalized so every aviator gets meaningful time at the controls. Just bring curiosity and a willingness to soar.
 
 ## What Students Will Explore
 
@@ -41,10 +41,6 @@ Students will get time in our flight simulator to practice using a yoke and real
 
 *Perfect for beginners — no experience needed.*
 
-## Earn Logbook Hours
-
-Complete the course and earn ground school logbook hours, signed off by our certified flight instructors — a real, tangible first step toward a future pilot's license.
-
 ## Course Features
 
 - **Hands-On Flight Simulation** — real cockpit time in our simulator
@@ -56,22 +52,22 @@ Complete the course and earn ground school logbook hours, signed off by our cert
 
 ## Why Families Trust This Program
 
-- **Limited spots** — only 4–6 aviators per class
+- **Limited spots** — small, personalized classes
 - **Safe, small, and personalized** learning environment
-- **Certified flight instructors** sign off every student's logbook hours
+- **Guided by experienced aviators and educators**
 
 ## Program Details
 
 | Detail | Info |
 |--------|------|
-| First Class | Tuesday, September 1 |
-| Last Class | Tuesday, October 20 |
-| Schedule | Tuesdays, 12:00 PM – 1:00 PM |
+| First Class | Tuesday, October 6 |
+| Last Class | Tuesday, December 1 |
+| Schedule | Tuesdays, 11:00 AM – 12:00 PM |
 | Duration | 8 weeks, 1 hour per week |
-| Ages | 10 and up |
-| Class Size | 4–6 aviators |
-| Tuition | $360 for the entire course |
-| Scholarships | Step Up for Students providers accepted |
+| Ages | 10–14 |
+| Class Size | Small & personalized |
+| Tuition | $200 for the entire course |
+| Scholarships | Step Up for Students Direct Provider |
 
 ## Meet Your Instructor
 
