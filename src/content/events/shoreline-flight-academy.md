@@ -1,10 +1,10 @@
 ---
 title: "Shoreline Flight Academy — 8-Week Aviation & Flight Simulation Course"
 date: "2026-10-06"
-time: "11:00 AM – 12:00 PM"
+time: "10:00 AM – 11:00 AM"
 location: "2010 Oak St, Melbourne Beach, FL 32951"
-description: "An immersive, hands-on introductory aviation program for ages 10–14. Eight Tuesdays, October 6 – December 1, 11:00 AM – 12:00 PM. Real flight simulator time plus weather, airspace, ATC, navigation, and flight planning — led by airline pilot Sarah Szakovits. $200 for the entire course. Limited spots. Step Up for Students Direct Provider."
-image: "/images/events/flight-academy-3.png"
+description: "An immersive, hands-on introductory aviation program for ages 10–14. Eight Tuesdays, October 6 – December 1, 10:00 AM – 11:00 AM. Real flight simulator time plus weather, airspace, ATC, navigation, and flight planning — led by airline pilot Sarah Szakovits. $200 for the entire course. Limited spots. Step Up for Students Direct Provider."
+image: "/images/events/flight-academy-4.png"
 cta: "Reserve Your Spot Now"
 ctaLink: ""
 tallyProgram: "Flight Academy"
@@ -62,7 +62,7 @@ Students will get time in our flight simulator to practice using a yoke and real
 |--------|------|
 | First Class | Tuesday, October 6 |
 | Last Class | Tuesday, December 1 |
-| Schedule | Tuesdays, 11:00 AM – 12:00 PM |
+| Schedule | Tuesdays, 10:00 AM – 11:00 AM |
 | Duration | 8 weeks, 1 hour per week |
 | Ages | 10–14 |
 | Class Size | Small & personalized |
