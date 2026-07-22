@@ -3,7 +3,7 @@ title: "Street & Bike Safety Course — with Indialantic Police Chief Michael Co
 date: "2026-08-10"
 time: "10:00 AM"
 location: "St. Sebastian by the Sea Church, 2010 Oak St, Melbourne Beach, FL 32951"
-description: "Safe rides. Strong minds. Bright futures. We're partnering with Indialantic Police Chief Michael Connor to offer a one-time FREE street and bike safety course for our students. Monday, August 10 at 10:00 AM. Students learn safe riding practices, traffic signs and road rules, situational awareness, street crossing, helmet safety, and proper bike etiquette."
+description: "Safe rides. Strong minds. Bright futures. We're partnering with Indialantic Police Chief Michael Connor and the Melbourne Beach Police Department to offer a one-time FREE street and bike safety course for our students. Monday, August 10 at 10:00 AM. Students learn safe riding practices, traffic signs and road rules, situational awareness, street crossing, helmet safety, and proper bike etiquette."
 image: "/images/events/bike-safety-course.jpg"
 cta: "Sign Up"
 ctaLink: ""
@@ -13,7 +13,7 @@ active: true
 
 *Safe rides. Strong minds. Bright futures.*
 
-We're partnering with Indialantic Police Chief Michael Connor to offer a one-time **free** street and bike safety course for our students. Whether your student bikes to Shoreline Scholars or just wants a refresher, this course will help them build confidence and stay safe on and off the road.
+We're partnering with Indialantic Police Chief Michael Connor and the Melbourne Beach Police Department to offer a one-time **free** street and bike safety course for our students. Whether your student bikes to Shoreline Scholars or just wants a refresher, this course will help them build confidence and stay safe on and off the road.
 
 And there's more good news on two wheels: our students now have their own bike rack! We're proud to encourage healthy, independent, and eco-friendly transportation — bikers, park here.
 
