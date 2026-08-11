@@ -3,10 +3,10 @@ title: "Publix Tour — Our First Field Trip"
 date: "2026-08-24"
 time: "10:00 AM"
 location: "Publix Super Market — Indialantic, FL"
-description: "Our very first field trip! Students go behind the scenes at Publix in Indialantic to explore the deli, bakery, meat, and produce departments, watch a cake decorator at work, peek at the loading and docking area, visit the pharmacy, and learn the cash register by checking out customers. They'll go home with goodies, knowledge, experience, and a better understanding of how our world is organized. Must be an enrolled student."
+description: "Our very first field trip! Students go behind the scenes at Publix in Indialantic to explore the deli, bakery, meat, and produce departments, watch a cake decorator at work, peek at the loading and docking area, visit the pharmacy, and learn the cash register by checking out customers. They'll go home with goodies, knowledge, experience, and a better understanding of how our world is organized. Must be an enrolled student. This field trip is now full."
 image: "/images/events/publix-tour.jpg"
-cta: "Reserve Your Spot"
-ctaLink: "https://www.zeffy.com/en-US/ticketing/august-field-trip-tour-at-publix-indialantic"
+cta: ""
+ctaLink: ""
 active: true
 ---
 
@@ -33,8 +33,9 @@ It's a fun, curious morning that turns an everyday errand into a real learning a
 | Time | 10:00 AM |
 | Location | Publix Super Market — Indialantic, FL |
 | Who | Must be an enrolled student |
-| Cost | Free — reserve your spot |
+| Cost | Free |
+| Availability | **Full** |
 
 Students go home with **goodies, knowledge, experience,** and a better understanding of how our world is organized.
 
-Spots are limited — reserve yours today!
+**This field trip is now full.** Thank you for the wonderful response — we can't wait to see everyone there! Keep an eye on our events page for more field trips throughout the year.
