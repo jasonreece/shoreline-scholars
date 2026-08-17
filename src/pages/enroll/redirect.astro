@@ -82,22 +82,22 @@ import Layout from '../../layouts/Layout.astro';
     var params = new URLSearchParams(window.location.search);
     var program = params.get('program');
     var days = params.get('days');
-    var payment = params.get('payment');
     var zeffyUrl = null;
 
     if (program === 'Rooted Learning') {
-      var isMonthly = payment && payment.trim().toLowerCase().indexOf('monthly') !== -1;
-      if (isMonthly) {
-        zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/registration-and-materials-fees';
-      } else {
-        var dayNum = days ? days.trim().charAt(0) : '';
+      var d = days ? days.trim().toLowerCase() : '';
+      var hasNatureDay = d.indexOf('friday') !== -1 || d.indexOf('nature') !== -1;
+      var dayNum = d.charAt(0);
+      if (hasNatureDay) {
         if (dayNum === '1') {
-          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-1-day';
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/one-day-a-week-plus-friday-nature-day-add-on-monthly-tuition';
         } else if (dayNum === '2') {
-          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-2-day';
-        } else if (dayNum === '3') {
-          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/rooted-learning-annual-3-day';
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/two-days-a-week-plus-friday-nature-day-add-on-monthly-tuition';
+        } else {
+          zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/friday-nature-day';
         }
+      } else if (dayNum === '1' || dayNum === '2') {
+        zeffyUrl = 'https://www.zeffy.com/en-US/ticketing/registration-and-materials-fees';
       }
     } else {
       zeffyUrl = program ? PROGRAMS[program] : null;
