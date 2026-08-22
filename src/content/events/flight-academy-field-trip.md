@@ -1,10 +1,10 @@
 ---
 title: "October Field Trip — Tour & Educational Classroom Seminar at EAA 724"
 date: "2026-10-10"
-time: "10:00 AM – 12:00 PM"
+time: "8:30 AM – 12:00 PM"
 location: "EAA 724 — Merritt Island, FL"
-description: "Explore. Learn. Get inspired. Our October field trip takes students to EAA 724 in Merritt Island for a hangar tour, a look at a variety of aircraft up close, and a classroom seminar with pilots and the chief flight instructor. Saturday, October 10, 10:00 AM – 12:00 PM. Open to Flight Academy students and all Shoreline Scholars students, preferably ages 8–17. $15 donation per participant benefits EAA 724. Reserve your spot today!"
-image: "/images/events/flight-academy-field-trip.png"
+description: "Explore. Learn. Get inspired. Our October field trip takes students to EAA 724 in Merritt Island for a hangar tour, a look at a variety of aircraft up close, and a classroom seminar with pilots and the chief flight instructor. Saturday, October 10, 8:30 AM – 12:00 PM. Open to Flight Academy students and all Shoreline Scholars students, preferably ages 8–17. $15 donation per participant benefits EAA 724. Reserve your spot today!"
+image: "/images/events/flight-academy-5.jpg"
 cta: "Reserve Your Spot"
 ctaLink: "https://www.zeffy.com/en-US/ticketing/october-field-trip-proposed-eaa-tour-and-educational-classroom-seminar"
 active: true
@@ -19,16 +19,16 @@ For our Flight Academy students, it's a wonderful way to begin the Flight Introd
 ## What to Expect
 
 - **Hangar Tour** — explore the facilities and get a behind-the-scenes look
+- **Observe Airplanes Being Built** — see aircraft under construction and learn how they come to life
 - **View Various Aircraft** — see a variety of planes up close and learn about aviation
 - **Meet with Pilots & the Chief Flight Instructor** — ask questions and learn from experienced aviators
-- **Water & Light Snacks** — provided for all participants
 
 ## Event Details
 
 | Detail | Info |
 |--------|------|
 | Date | Saturday, October 10 |
-| Time | 10:00 AM – 12:00 PM |
+| Time | 8:30 AM – 12:00 PM |
 | Location | EAA 724 — Merritt Island, FL |
 | Open To | Flight Academy students and all Shoreline Scholars students, preferably ages 8–17 |
 | Cost | $15 donation per participant — all proceeds go to EAA 724 Merritt Island |
