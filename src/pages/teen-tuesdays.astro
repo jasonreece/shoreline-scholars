@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const enrollFormUrl = 'https://tally.so/r/zxkbN0';
+
+const courses = [
+  {
+    name: 'Flight Academy',
+    level: 'Level 1',
+    time: '10:00 – 11:00 AM',
+    cost: '$240 per course',
+    description: 'Take your skills higher with advanced flight training, navigation, weather, and simulator time.',
+  },
+  {
+    name: 'Build Lab',
+    level: 'Level 1',
+    time: '11:00 AM – 12:00 PM',
+    cost: '$280 per course',
+    costNote: 'Materials fee of $40 included',
+    description: 'Advance your skills with real-world projects, design, problem-solving, and hands-on construction.',
+  },
+  {
+    name: 'Environmental Science',
+    level: '',
+    time: '12:00 – 1:00 PM',
+    cost: '$240 per course',
+    description: 'Explore our local environment and gain a deeper understanding of ecosystems, conservation, and sustainability.',
+  },
+  {
+    name: 'Creative Writing',
+    level: '',
+    time: '1:00 – 2:00 PM',
+    cost: '$240 per course',
+    description: 'Develop your unique voice through storytelling, character development, and creative expression.',
+  },
+  {
+    name: 'Introduction to Psychology',
+    level: '',
+    time: '2:00 – 3:00 PM',
+    cost: '$240 per course',
+    description: 'Explore how we think, feel, and behave through foundational psychological theories and real-world applications.',
+  },
+];
+---
+
+<Layout title="Teen Tuesdays — Shoreline Scholars" description="Teen electives for ages 13–16 on Florida's Space Coast. 8-week courses beginning January 2027: Flight Academy, Build Lab, Environmental Science, Creative Writing, and Introduction to Psychology. Real skills. Brighter futures.">
+  <Header />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative flex items-center justify-center text-center px-6"
+    style="padding-top: 10rem; padding-bottom: 6rem; background: linear-gradient(135deg, #1B4F52 0%, #2A7F62 45%, #5AAFA6 100%);">
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Teen Tuesdays</h1>
+      <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+        Teen electives &middot; Recommended ages 13&ndash;16
+      </p>
+      <p class="font-body font-light text-shell-white/70 text-sm mt-2 tracking-wide uppercase" style="letter-spacing: 0.12em;">
+        8-Week Courses &middot; Beginning January 2027
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ INTRO ═══ -->
+  <section class="bg-shell-white py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Real Skills. Brighter Futures.</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <p class="text-[0.95rem] leading-relaxed mb-6 max-w-3xl mx-auto">
+        Teen Tuesdays are built for older students who are ready to go deeper. Each 8-week elective gives teens room to explore their interests, build real-world skills, gain confidence, and make a difference — all in a small-group setting within a supportive community.
+      </p>
+      <p class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto">
+        Families may enroll in a single class or build a full Tuesday — choose one course or all five.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ COURSES ═══ -->
+  <section class="py-24" style="background: rgba(232, 213, 183, 0.15);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">The Courses</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        {courses.map(course => (
+          <div class="course-card">
+            <div class="course-card-header">
+              <h3 class="font-heading text-deep-sea text-xl">
+                {course.name}
+                {course.level && <span class="course-level">{course.level}</span>}
+              </h3>
+              <div class="course-meta">
+                <span class="time-pill">{course.time}</span>
+                <span class="cost-pill">{course.cost}</span>
+              </div>
+            </div>
+            <p class="text-[0.95rem] leading-relaxed mt-3">{course.description}</p>
+            {course.costNote && <p class="font-body text-driftwood text-xs mt-2">{course.costNote}</p>}
+          </div>
+        ))}
+      </div>
+
+      <p class="font-body text-driftwood text-sm text-center mt-10">
+        Tuesdays &middot; 8 weeks &middot; Recommended ages 13&ndash;16 &middot; Small-group learning
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ ENROLL ═══ -->
+  <section class="bg-shell-white py-24">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="text-center mb-10">
+        <h2 class="font-heading text-deep-sea mb-6">Ready to Join Us?</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+      <p class="text-[0.95rem] leading-relaxed mb-6 max-w-xl mx-auto">
+        Choose one class or all five — enrollment is per course, so your teen's Tuesday is yours to design.
+      </p>
+      <p class="font-body text-driftwood text-sm mb-10 max-w-xl mx-auto">
+        After you enroll, we'll follow up with an invoice for your selected courses.
+      </p>
+      {enrollFormUrl ? (
+        <a
+          href={enrollFormUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-8 py-3 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
+        >
+          Enroll Now
+        </a>
+      ) : (
+        <p class="font-body text-driftwood text-sm">
+          Enrollment opens soon — email <a href="mailto:shorelinescholars@gmail.com" class="text-shoreline hover:text-deep-sea transition-colors">shorelinescholars@gmail.com</a> to reserve a spot.
+        </p>
+      )}
+    </div>
+  </section>
+
+  <CallToAction
+    heading="A brighter tomorrow, rooted today."
+    description="Reach out to learn more about Teen Tuesdays, upcoming programs, and ways to get involved with Shoreline Scholars."
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .course-card {
+    background: #FAF7F2;
+    border-radius: 1rem;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 1px 3px rgba(27, 79, 82, 0.08);
+  }
+
+  .course-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .course-level {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #B8977E;
+    margin-left: 0.5rem;
+  }
+
+  .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .time-pill,
+  .cost-pill {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .time-pill {
+    background: rgba(90, 175, 166, 0.15);
+    color: #1B4F52;
+  }
+
+  .cost-pill {
+    background: rgba(232, 149, 109, 0.15);
+    color: #B8564D;
+  }
+</style>

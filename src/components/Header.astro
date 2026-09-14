@@ -1,5 +1,6 @@
 ---
 const navLinks = [
+  { label: 'Teen Tuesdays', href: '/teen-tuesdays' },
   { label: 'Our Program', href: '/program' },
   { label: 'Tuition', href: '/tuition' },
   { label: 'Calendar', href: '/calendar' },
@@ -20,13 +21,13 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     </a>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden xl:flex items-center gap-5">
       {navLinks.map(link => {
         const isActive = currentPath === link.href;
         return (
           <a
             href={link.href}
-            class={`font-body font-medium text-[0.85rem] transition-colors ${isActive ? 'text-shoreline' : 'text-deep-sea/80 hover:text-shoreline'}`}
+            class={`whitespace-nowrap font-body font-medium text-[0.82rem] transition-colors ${isActive ? 'text-shoreline' : 'text-deep-sea/80 hover:text-shoreline'}`}
             aria-current={isActive ? 'page' : undefined}
           >
             {link.label}
@@ -35,7 +36,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       })}
       <a
         href="#get-involved"
-        class="get-involved-btn inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-6 py-2.5 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
+        class="get-involved-btn whitespace-nowrap inline-block font-body font-semibold text-[0.8rem] uppercase tracking-[0.15em] px-6 py-2.5 rounded-[6px] transition-all duration-200 cursor-pointer bg-sunrise text-white hover:brightness-110"
       >
         Get Involved
       </a>
@@ -44,7 +45,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden text-deep-sea p-2"
+      class="xl:hidden text-deep-sea p-2"
       aria-label="Toggle menu"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -56,7 +57,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
   </nav>
 
   <!-- Mobile Nav -->
-  <div id="mobile-menu" class="hidden md:hidden bg-shell-white border-t border-warm-sand/30 px-6 pb-4">
+  <div id="mobile-menu" class="hidden xl:hidden bg-shell-white border-t border-warm-sand/30 px-6 pb-4">
     <ul class="flex flex-col gap-3">
       {navLinks.map(link => {
         const isActive = currentPath === link.href;
