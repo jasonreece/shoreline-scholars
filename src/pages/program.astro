@@ -15,6 +15,7 @@ import CallToAction from '../components/CallToAction.astro';
     { label: 'Daily Schedules', id: 'daily-schedules' },
     { label: 'Electives', id: 'electives' },
     { label: 'Field Trips', id: 'field-trips' },
+    { label: 'Clubs & Activities', id: 'clubs-activities' },
     { label: 'Family Partnership', id: 'family-partnership' },
     { label: 'Admissions', id: 'admissions' },
   ]} />
@@ -545,10 +546,17 @@ import CallToAction from '../components/CallToAction.astro';
           </div>
         </div>
         <div class="field-trip-row">
+          <span class="field-trip-month">October</span>
+          <div>
+            <span class="field-trip-destination">Tour &amp; Educational Classroom Seminar at EAA 724</span>
+            <span class="field-trip-date">10/10 Sat at 8:30 AM</span>
+          </div>
+        </div>
+        <div class="field-trip-row">
           <span class="field-trip-month">November</span>
           <div>
-            <span class="field-trip-destination">Turkey Creek</span>
-            <span class="field-trip-date">11/9 Mon at 11 AM</span>
+            <span class="field-trip-destination">Plant School</span>
+            <span class="field-trip-date">11/9 Mon at 10 AM</span>
           </div>
         </div>
         <div class="field-trip-row">
@@ -593,6 +601,82 @@ import CallToAction from '../components/CallToAction.astro';
             <span class="field-trip-date">TBD</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CLUBS & ACTIVITIES ═══ -->
+  <section id="clubs-activities" class="bg-shell-white py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-deep-sea mb-6">Clubs, Activities &amp; Community</h2>
+        <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
+      </div>
+
+      <p class="text-[0.95rem] leading-relaxed mb-6 max-w-3xl mx-auto">
+        One of the things that makes the Rooted Learning Program so special is the community we build together. Learning doesn't stop when a lesson ends — our students build friendships, discover new interests, work together, and turn their own ideas into real experiences.
+      </p>
+      <p class="text-[0.95rem] leading-relaxed mb-12 max-w-3xl mx-auto">
+        Our clubs and activities are student-centered and ever-changing. Rather than handing children a fixed list and expecting everyone to join in, we listen. Our students' interests, questions, needs, and ideas shape what happens within our community.
+      </p>
+
+      <div class="max-w-3xl mx-auto">
+        <h3 class="font-heading text-deep-sea text-xl mb-4">From an Idea to Reality</h3>
+        <p class="text-[0.95rem] leading-relaxed mb-6">
+          A child might say, <em>"I think we should have a chess club."</em> Another wants to open a trading post, learn to crochet, or start a podcast. Instead of simply saying "that sounds fun," we ask a better question: <strong class="text-deep-sea">How can we make it happen?</strong>
+        </p>
+        <p class="text-[0.95rem] leading-relaxed mb-6">
+          This year, students have helped dream up, build, and run:
+        </p>
+        <div class="club-pills" style="gap: 0.6rem;">
+          <span class="club-pill">Chess Club</span>
+          <span class="club-pill">Trading Post</span>
+          <span class="club-pill">Student Podcast</span>
+          <span class="club-pill">Pokémon Club</span>
+          <span class="club-pill">Garden Lab</span>
+          <span class="club-pill">Crochet Club</span>
+          <span class="club-pill">Math Mystery &amp; Escape Rooms</span>
+          <span class="club-pill">Scavenger Hunts</span>
+          <span class="club-pill">Sushi Roll-Making Pop-Ups</span>
+          <span class="club-pill">Bead &amp; Bracelet Making</span>
+          <span class="club-pill">Creative Pop-Ups</span>
+          <span class="club-pill club-pill--more">…and whatever our students dream up next</span>
+        </div>
+        <p class="text-[0.95rem] leading-relaxed mt-6 mb-12">
+          Some activities grow into ongoing clubs. Others live for an afternoon, a special project, or a few curious weeks — and that's exactly as it should be. There is room for this community to grow organically.
+        </p>
+
+        <h3 class="font-heading text-deep-sea text-xl mb-4">A Community Built Around Children</h3>
+        <p class="text-[0.95rem] leading-relaxed mb-6">
+          Our goal is not simply to offer more activities. It is to create a place where children feel they belong, contribute, and have a voice — where students collaborate across ages, share ideas, solve problems, take responsibility, and discover that their interests can become something meaningful.
+        </p>
+        <p class="community-ladder">
+          A simple interest can become a project.<br />
+          A project can become a club.<br />
+          A club can become a community tradition.
+        </p>
+        <p class="text-[0.95rem] leading-relaxed mb-12">
+          That flexibility is an important part of the Rooted Learning model.
+        </p>
+
+        <h3 class="font-heading text-deep-sea text-xl mb-4">Learning Together Beyond the Classroom</h3>
+        <p class="text-[0.95rem] leading-relaxed mb-6">
+          Throughout the year, we also create ways for students and families to connect outside of regular class time:
+        </p>
+        <ul class="community-list">
+          <li>Monthly family socials</li>
+          <li>Monthly field trips</li>
+          <li>Group activities and special events</li>
+          <li>Student-led projects and experiences</li>
+          <li>Pop-up activities born from student interests</li>
+          <li>Opportunities for families to participate and connect with one another</li>
+        </ul>
+        <p class="text-[0.95rem] leading-relaxed mb-6">
+          These experiences help students build relationships in every kind of setting — and give families a real place in the Shoreline Scholars community.
+        </p>
+        <p class="text-[0.95rem] leading-relaxed">
+          At Shoreline Scholars, community is not an extra — it is part of the learning. Children thrive when they have meaningful relationships, opportunities to contribute, and the freedom to follow their curiosity. The Rooted Learning Program gives students a place to learn, create, explore, lead, and grow — together.
+        </p>
       </div>
     </div>
   </section>
@@ -870,6 +954,57 @@ import CallToAction from '../components/CallToAction.astro';
     letter-spacing: 0.04em;
     width: 5.5rem;
     flex-shrink: 0;
+  }
+
+  /* ─── Clubs & Activities ─── */
+  .club-pills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .club-pill {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.82rem;
+    color: #1B4F52;
+    background: rgba(90, 175, 166, 0.12);
+    border: 1px solid rgba(90, 175, 166, 0.25);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    white-space: nowrap;
+  }
+
+  .club-pill--more {
+    background: transparent;
+    border-style: dashed;
+    color: #B8977E;
+    border-color: rgba(184, 151, 126, 0.4);
+    white-space: normal;
+  }
+
+  .community-ladder {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #2A7F62;
+    line-height: 1.6;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .community-list {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-size: 0.95rem;
+    color: #4A5859;
+    line-height: 1.7;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .community-list li {
+    margin-bottom: 0.4rem;
   }
 
   /* ─── Field Trip Schedule ─── */

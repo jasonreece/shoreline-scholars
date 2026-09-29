@@ -10,6 +10,7 @@ const courses = [
   {
     name: 'Flight Academy',
     level: 'Level 1',
+    day: 'Tuesday',
     time: '10:00 – 11:00 AM',
     cost: '$240 per course',
     description: 'Take your skills higher with advanced flight training, navigation, weather, and simulator time.',
@@ -17,6 +18,7 @@ const courses = [
   {
     name: 'Build Lab',
     level: 'Level 1',
+    day: 'Tuesday',
     time: '11:00 AM – 12:00 PM',
     cost: '$280 per course',
     costNote: 'Materials fee of $40 included',
@@ -25,6 +27,7 @@ const courses = [
   {
     name: 'Environmental Science',
     level: '',
+    day: 'Tuesday',
     time: '12:00 – 1:00 PM',
     cost: '$240 per course',
     description: 'Explore our local environment and gain a deeper understanding of ecosystems, conservation, and sustainability.',
@@ -32,6 +35,7 @@ const courses = [
   {
     name: 'Creative Writing',
     level: '',
+    day: 'Tuesday',
     time: '1:00 – 2:00 PM',
     cost: '$240 per course',
     description: 'Develop your unique voice through storytelling, character development, and creative expression.',
@@ -39,14 +43,23 @@ const courses = [
   {
     name: 'Introduction to Psychology',
     level: '',
+    day: 'Tuesday',
     time: '2:00 – 3:00 PM',
     cost: '$240 per course',
     description: 'Explore how we think, feel, and behave through foundational psychological theories and real-world applications.',
   },
+  {
+    name: 'Digital Photography & Basic Photo Editing',
+    level: '',
+    day: 'Wednesday',
+    time: '2:15 – 3:15 PM',
+    cost: '$240 per course',
+    description: 'Learn to see like a photographer — composition, light, and camera fundamentals, plus the photo-editing basics that make your images shine.',
+  },
 ];
 ---
 
-<Layout title="Teen Tuesdays — Shoreline Scholars" description="Teen electives for ages 13–16 on Florida's Space Coast. 8-week courses beginning January 2027: Flight Academy, Build Lab, Environmental Science, Creative Writing, and Introduction to Psychology. Real skills. Brighter futures.">
+<Layout title="Teen Electives — Shoreline Scholars" description="Teen electives for ages 13–16 on Florida's Space Coast. 8-week courses beginning January 2027: Flight Academy, Build Lab, Environmental Science, Creative Writing, Introduction to Psychology, and Digital Photography. Real skills. Brighter futures.">
   <Header />
 
   <!-- ═══ HERO ═══ -->
@@ -56,9 +69,9 @@ const courses = [
       style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);">
     </div>
     <div class="relative z-10 max-w-3xl mx-auto">
-      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Teen Tuesdays</h1>
+      <h1 class="font-heading text-shell-white text-5xl md:text-6xl font-medium mb-4">Teen Electives</h1>
       <p class="font-body font-light text-shell-white/80 text-lg md:text-xl tracking-wide max-w-xl mx-auto">
-        Teen electives &middot; Recommended ages 13&ndash;16
+        Recommended ages 13&ndash;16
       </p>
       <p class="font-body font-light text-shell-white/70 text-sm mt-2 tracking-wide uppercase" style="letter-spacing: 0.12em;">
         8-Week Courses &middot; Beginning January 2027
@@ -75,10 +88,10 @@ const courses = [
       </div>
 
       <p class="text-[0.95rem] leading-relaxed mb-6 max-w-3xl mx-auto">
-        Teen Tuesdays are built for older students who are ready to go deeper. Each 8-week elective gives teens room to explore their interests, build real-world skills, gain confidence, and make a difference — all in a small-group setting within a supportive community.
+        Teen Electives are built for older students who are ready to go deeper. Each 8-week elective gives teens room to explore their interests, build real-world skills, gain confidence, and make a difference — all in a small-group setting within a supportive community.
       </p>
       <p class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto">
-        Families may enroll in a single class or build a full Tuesday — choose one course or all five.
+        Classes run through the day on Tuesdays, with a Wednesday afternoon option — enroll in a single course or several, and build a week that fits your teen.
       </p>
     </div>
   </section>
@@ -100,7 +113,7 @@ const courses = [
                 {course.level && <span class="course-level">{course.level}</span>}
               </h3>
               <div class="course-meta">
-                <span class="time-pill">{course.time}</span>
+                <span class="time-pill">{course.day} &middot; {course.time}</span>
                 <span class="cost-pill">{course.cost}</span>
               </div>
             </div>
@@ -111,7 +124,7 @@ const courses = [
       </div>
 
       <p class="font-body text-driftwood text-sm text-center mt-10">
-        Tuesdays &middot; 8 weeks &middot; Recommended ages 13&ndash;16 &middot; Small-group learning
+        Tuesdays &amp; Wednesdays &middot; 8 weeks &middot; Recommended ages 13&ndash;16 &middot; Small-group learning
       </p>
     </div>
   </section>
@@ -124,7 +137,7 @@ const courses = [
         <div class="w-16 h-0.5 bg-sea-glass mx-auto"></div>
       </div>
       <p class="text-[0.95rem] leading-relaxed mb-6 max-w-xl mx-auto">
-        Choose one class or all five — enrollment is per course, so your teen's Tuesday is yours to design.
+        Choose one class or several — enrollment is per course, so your teen's week is yours to design.
       </p>
       <p class="font-body text-driftwood text-sm mb-10 max-w-xl mx-auto">
         After you enroll, we'll follow up with an invoice for your selected courses.
@@ -148,7 +161,7 @@ const courses = [
 
   <CallToAction
     heading="A brighter tomorrow, rooted today."
-    description="Reach out to learn more about Teen Tuesdays, upcoming programs, and ways to get involved with Shoreline Scholars."
+    description="Reach out to learn more about Teen Electives, upcoming programs, and ways to get involved with Shoreline Scholars."
   />
 
   <Footer />

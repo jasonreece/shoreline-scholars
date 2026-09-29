@@ -11,6 +11,10 @@ export default defineConfig({
   site: 'https://shorelinescholars.org',
   output: 'static',
 
+  redirects: {
+    '/teen-tuesdays': '/teen-electives'
+  },
+
   vite: {
     plugins: [tailwindcss()]
   },
