@@ -308,12 +308,6 @@ import CallToAction from '../components/CallToAction.astro';
           <p class="team-tile-title">Educator</p>
         </button>
 
-        <button class="team-tile" data-team="kyle" type="button">
-          <img src="/headshot-kyle.jpg" alt="Kyle Mahan" class="team-tile-photo" />
-          <h3 class="team-tile-name">Kyle Mahan</h3>
-          <p class="team-tile-title">Educator</p>
-        </button>
-
         <button class="team-tile" data-team="nicole" type="button">
           <img src="/headshot-nicole.png" alt="Nicole Cross" class="team-tile-photo" />
           <h3 class="team-tile-name">Nicole Cross</h3>
@@ -329,6 +323,18 @@ import CallToAction from '../components/CallToAction.astro';
         <button class="team-tile" data-team="rachel-lamoureux" type="button">
           <img src="/headshot-rachel-lamoureux.jpg" alt="Rachel Lamoureux" class="team-tile-photo" />
           <h3 class="team-tile-name">Rachel Lamoureux</h3>
+          <p class="team-tile-title">Educator</p>
+        </button>
+
+        <button class="team-tile" data-team="heidi" type="button">
+          <img src="/headshot-heidi.jpg" alt="Heidi Brewer" class="team-tile-photo" />
+          <h3 class="team-tile-name">Heidi Brewer</h3>
+          <p class="team-tile-title">Educator</p>
+        </button>
+
+        <button class="team-tile" data-team="jovany" type="button">
+          <img src="/headshot-jovany.jpg" alt="Jovany Jimenez" class="team-tile-photo" />
+          <h3 class="team-tile-name">Jovany Jimenez</h3>
           <p class="team-tile-title">Educator</p>
         </button>
 
@@ -433,11 +439,17 @@ import CallToAction from '../components/CallToAction.astro';
           photo: '/headshot-adalaide.png',
           bio: '<p>Adalaide Salas brings a rare blend of service, leadership, and steady compassion to everything she does. Twelve years as a medical professional shaped a deep belief that people flourish when they feel genuinely cared for \u2014 a conviction that now guides her work with young children as they explore and make sense of the world around them.</p><p>Her path has been anything but ordinary. Adalaide served as a Medic in the Army National Guard, where she was among the first female Sergeants assigned to an infantry unit, and worked as an EMT while studying Biochemistry \u2014 pausing her degree to raise her family full time. In 2022, her heart for supporting mothers and babies led her to become a Lactation Consultant, walking alongside families through one of the most tender and transformative seasons of their lives. Along the way she has helped build two businesses from the ground up and now serves as a medical practice manager, sharpening the entrepreneurial instincts she brings to every new venture.</p><p>As a mother of two, Adalaide has seen firsthand that children learn best through exploration, creativity, and hands-on discovery. At Shoreline Scholars, families will quickly recognize her warm heart and encouraging spirit \u2014 and her dedication to helping every child grow in confidence, curiosity, and a lifelong love of learning.</p>'
         },
-        kyle: {
-          name: 'Kyle Mahan',
+        jovany: {
+          name: 'Jovany Jimenez',
           title: 'Educator',
-          photo: '/headshot-kyle.jpg',
-          bio: '<p>Kyle Mahan brings an uncommon path to the classroom \u2014 one built on discipline, adaptability, and a deep respect for learning by doing. A U.S. Army veteran, Kyle developed his leadership and patience in environments where staying calm and present isn\u2019t optional. For the past five years, he has worked as a professional freelance climber, rigging and building concert stages across the country \u2014 work where precision, teamwork, and trust in the people beside you are everything.</p><p>Kyle\u2019s belief in hands-on education is personal. A defining influence in his life was a mentor who taught from real research and lived experience rather than the pages of a textbook \u2014 a standard Kyle has carried with him ever since. He brings that same commitment to Shoreline Scholars: creating a learning environment where students feel comfortable, curious, and free to engage directly with the world around them.</p><p>Outside the classroom, Kyle is an avid reader of graphic novels, pursues his own artistic projects, and has traveled internationally training in competitive martial arts. He\u2019s honored to help students grow and thrive this year.</p>'
+          photo: '/headshot-jovany.jpg',
+          bio: '<p>Jovany Jimenez is an aerospace engineer whose career reads like a young aviator’s dream list. A University of Florida engineering graduate with graduate studies in aeronautics at Stanford and an MBA from UCLA Anderson, he has spent his career building the systems that make flight possible — working with Northrop Grumman, NASA, Honeywell, Raytheon, and DARPA on programs ranging from the X-47B unmanned aircraft and F-35 systems to the Airbus A350 and NASA’s Artemis rocket engines. Today he leads avionics engineering for one of the nation’s largest Navy aircraft programs, guiding a team of more than forty engineers.</p><p>Jovany has been developing drone technology since his college days, writing guidance, navigation, and autonomous flight code for the Department of Defense, and he holds an FAA Part 107 drone pilot certification. In 2014, he and a filmmaker friend wondered whether a stable quadcopter and a camera could capture the Hollywood sign from the air. Jovany built the rig, the footage was beautiful — and <a href="https://dronesurf.com" target="_blank" rel="noopener noreferrer">DRONESURF</a>, his aerial cinematography venture, was born.</p><p>At Shoreline Scholars, Jovany brings that rare combination — engineering at the highest level and a tinkerer’s pure joy in making things fly — to the next generation of Space Coast engineers and aviators. He’s proof that curiosity, followed faithfully, can take you just about anywhere.</p>'
+        },
+        heidi: {
+          name: 'Heidi Brewer',
+          title: 'Educator',
+          photo: '/headshot-heidi.jpg',
+          bio: '<p>Heidi has spent nearly twenty years behind the camera as a professional photographer — and if you had asked her as a child what she wanted to be when she grew up, the answer was already the same. She took every photography class her high school and college offered, then cut her teeth as a photojournalist for her university newspaper and spent years photographing for the university’s public relations department — experiences that shaped her eye for authentic storytelling and thoughtfully crafted imagery.</p><p>Along the way, Heidi built a career in wedding and portrait photography. Family portraits remain at the heart of her work today — photographing families as they truly are. And like the rest of us at Shoreline, she is drawn to the beauty of the natural world, reaching for her camera to catch a sunset, a landscape, or a fleeting moment in beautiful light.</p><p>At Shoreline Scholars, Heidi leads our Digital Photography &amp; Basic Photo Editing teen elective, helping students learn to see the world like photographers — and to tell true stories through the images they make.</p>'
         },
         'rachel-lamoureux': {
           name: 'Rachel Lamoureux',
@@ -710,6 +722,15 @@ import CallToAction from '../components/CallToAction.astro';
   }
   .team-modal-bio :global(p:last-child) {
     margin-bottom: 0;
+  }
+  .team-modal-bio :global(a) {
+    color: #2A7F62;
+    font-weight: 500;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+  }
+  .team-modal-bio :global(a:hover) {
+    text-decoration: underline;
   }
 
   @media (max-width: 640px) {
